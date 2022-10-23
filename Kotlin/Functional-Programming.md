@@ -1,5 +1,5 @@
 ```kotlin
-    fun main() {
+fun main() {
     val grade = getGrade(true) // because getGrade returns Int soo we can equate it
     println(grade(9))
 }
