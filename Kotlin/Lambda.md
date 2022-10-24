@@ -48,6 +48,8 @@ fun main() {
     println(multiply(5))
 }
 ```
+return type of placeArgument has (Int) -> Int it means in return line we can use 'it' because we have only one parameter 
+
 placeArgument (*Int*, *(Int, Int) -> Int*) -> *Int*
 where first argument **Int** is placeArgument(**1**, ::sum) - 1
 and second is **::sum** respectively
