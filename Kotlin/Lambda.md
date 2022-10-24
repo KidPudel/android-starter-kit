@@ -60,3 +60,11 @@ Other examples:
 ```kotlin
 val reversePredicate: (Char) -> Boolean = {!originalPredicate(it)} // 'it' is a char
 ```
+
+```kotlin
+fun compose(g: (Int) -> Int, h: (Int) -> Int): (Int) -> Int {
+    return {g(h(it))}
+}
+```
+return type of compose has (Int) -> Int it means in return line we can use 'it' because we have only one parameter 
+g has the same (Int) -> Int type and when we pas into (Int) (*(Int) -> Int*)<- because it returns Int, everything is alright
