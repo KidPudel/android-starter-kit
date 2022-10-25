@@ -8,3 +8,4 @@ lookup notes for android development
 ## [When](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/When.md)
 ## [Constructors](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/Constructors.md)
 ## [Regular expressions](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/Regular-expression.md)
+## [Lists](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/Lists.md)
