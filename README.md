@@ -12,3 +12,5 @@ lookup notes for android development
 
 
 # XML
+
+## [Basic calculator with basic flow of ConstraintLayout, Guideline](https://github.com/KidPudel/android-starter-kit/blob/main/XML/Basic-calculator.md)
