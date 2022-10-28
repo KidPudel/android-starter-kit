@@ -1,3 +1,6 @@
+# Always look for method that matches predictable / pattert
+
+
 ## MutalbeList
 
 ```kotlin
