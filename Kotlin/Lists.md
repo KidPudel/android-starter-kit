@@ -41,3 +41,9 @@ also we can get an index of it
 ```kotlin
 val highestTax = incomes.indices.maxByOrNull { it * (taxes[incomes.indexOf(it)] * 0.01) } // returns 100
 ```
+
+withIndex() wraps element into IndexedValue containing index of the value and the value itself
+```kotlin
+val highestTaxIndex = incomes.withIndex().maxByOrNull { it.value * (taxes[it.index] * 0.01) }.index <- because its all wrapped in IndexedValue
+```
+```
