@@ -9,6 +9,7 @@ lookup notes for android development
 ## [Constructors](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/Constructors.md)
 ## [Regular expressions](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/Regular-expression.md)
 ## [Collections](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/Collections.md)
+## [Thread](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/Thread.md)
 
 
 # XML
