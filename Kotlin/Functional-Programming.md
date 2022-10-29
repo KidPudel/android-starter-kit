@@ -1,6 +1,6 @@
 ```kotlin
 fun main() {
-    val grade = getGrade(true) // because getGrade returns Int soo we can equate it
+    val grade = getGrade(true) // grade here has a type of (Int) -> Int
     println(grade(9))
 }
 
