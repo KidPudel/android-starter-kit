@@ -51,5 +51,7 @@ val highestTaxIndex = incomes.withIndex().maxByOrNull { it.value * (taxes[it.ind
 ```
 
 **filter** returns a list containing only elements matching the given predicatable/pattern
+
 **map** returns a list conatining results of applying the given transform function to each element in the original list
+
 **apply** executes a ginven function and applies it right away
