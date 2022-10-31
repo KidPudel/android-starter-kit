@@ -49,4 +49,7 @@ withIndex() wraps element into IndexedValue containing index of the value and th
 ```kotlin
 val highestTaxIndex = incomes.withIndex().maxByOrNull { it.value * (taxes[it.index] * 0.01) }.index <- because its all wrapped in IndexedValue
 ```
-```
+
+**filter** returns a list containing only elements matching the given predicatable/pattern
+**map** returns a list conatining results of applying the given transform function to each element in the original list
+**apply** executes a ginven function and applies it right away
