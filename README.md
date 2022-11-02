@@ -10,6 +10,7 @@ lookup notes for android development
 ## [Regular expressions](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/Regular-expression.md)
 ## [Collections](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/Collections.md)
 ## [Thread & Coroutines](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/Thread.md)
+## [Pass by reference](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/pass-by-reference.md)
 
 
 # XML
