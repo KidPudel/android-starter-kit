@@ -16,3 +16,9 @@ class Cat(val name: String, val age: Int) {
 }
 ```
  You should use ```require``` when you are validating the argument passed to the function and ```check``` when you are checking the state of the object, as in this case.
+
+```kotlin
+Exception in thread "main" java.lang.IllegalArgumentException: Invalid age: -1
+  at Cat.<init>(brokenInvariants.kt:7)
+  at BrokenInvariantsKt.main(brokenInvariants.kt:3)
+```
