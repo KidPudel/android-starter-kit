@@ -15,4 +15,4 @@ class Cat(val name: String, val age: Int) {
     }
 }
 ```
- You should use ```kotlin require``` when you are validating the argument passed to the function and check when you are checking the state of the object, as in this case.
+ You should use ```require``` when you are validating the argument passed to the function and ```check``` when you are checking the state of the object, as in this case.
