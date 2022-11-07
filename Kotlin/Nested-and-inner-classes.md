@@ -62,8 +62,8 @@ fun main() {
 }
 ```
 
-> The cat named Princess has a golden bow. 
-Princess says: "Meow". 
+> The cat named Princess has a golden bow.  
+Princess says: "Meow".  
 The bow is on!
 
 
