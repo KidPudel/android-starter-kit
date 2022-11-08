@@ -11,6 +11,8 @@ private val liveData = MutableLiveData("Hello World")
 val getLiveData: LiveData<String>
     get() = liveData
 ```
+make it **liveData** private for safety
+so it could change only inside, but outside it can only be received
 
 ```kotlin
 fun triggerLiveData() {
@@ -23,7 +25,7 @@ fun triggerLiveData() {
 that will be called whenever there is a change on the livedata value
 ```kotlin
 private fun substribeToObservalbe() {
-    viewModel.liveData.observe(this) {
+    viewModel.getViewModel.observe(this) {
         binding.tvLiveData.text = it
     }
 }
