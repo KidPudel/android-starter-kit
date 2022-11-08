@@ -7,7 +7,9 @@ all observers will be notified of the current data
 
 **VIEWMODEL**
 ```kotlin
-val liveData = MutableLiveData("Hello World")
+private val liveData = MutableLiveData("Hello World")
+val getLiveData: LiveData<String>
+    get() = liveData
 ```
 
 ```kotlin
@@ -27,3 +29,8 @@ private fun substribeToObservalbe() {
 }
 ```
 ```this``` we need to pass lifecicle owner
+
+
+_setValue_ is executed on the main thread
+_postValue_ is executed on the background thread
+when main activity is closed postValue can changed, but u will miss it, because it's going to change on the background 
