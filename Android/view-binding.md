@@ -37,11 +37,13 @@ Once enabled in gradle it generates a binding class for each XML layout file pre
         setContentView(view)
 ```
 
+
 ```kotlin
-// create an instance of viewmodel
+// // lazy instantiation of the ViewModel to actually create an instance on the first access
 val calculatorViewModel: CalculatorViewModel by viewModels()
 // View.tOnClickListener is universal listener
 // logic for what is the instructions of the listener
 val digitalListener = View.OnClickListener { view -> digitPressed(view as Button) }
 val operationListener = View.OnClickListener {view -> operationPressed(view as Button)}
 ```
+referer to [lazy instantiation]()
