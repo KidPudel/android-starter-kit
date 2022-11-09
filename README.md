@@ -12,6 +12,7 @@ lookup notes for android development
 ## [Thread & Coroutines](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/Thread.md)
 ## [Nested and inner classes](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/Nested-and-inner-classes.md)
 ## [Pass by reference](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/pass-by-reference.md)
+## [Lazy instantiation](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/lazy-instantiation.md)
 
 
 # XML
