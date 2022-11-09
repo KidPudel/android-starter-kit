@@ -46,4 +46,4 @@ val calculatorViewModel: CalculatorViewModel by viewModels()
 val digitalListener = View.OnClickListener { view -> digitPressed(view as Button) }
 val operationListener = View.OnClickListener {view -> operationPressed(view as Button)}
 ```
-referer to [lazy instantiation]()
+referer to [lazy instantiation](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/lazy-instantiation.md)
