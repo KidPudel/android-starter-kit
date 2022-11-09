@@ -22,4 +22,5 @@ lookup notes for android development
 
 # Android
 
-## [Layouts & views](https://github.com/KidPudel/android-starter-kit/blob/main/Android/layouts-views.md)
+## [View binding](https://github.com/KidPudel/android-starter-kit/blob/main/Android/view-binding.md)
+## [LiveData](https://github.com/KidPudel/android-starter-kit/blob/main/Android/live-data.md)
