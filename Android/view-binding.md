@@ -33,7 +33,7 @@ Once enabled in gradle it generates a binding class for each XML layout file pre
         binding = ActivityMainBinding.inflate(layoutInflater)
         // root view
         val view = binding.root
-        // make the active view on the screen
+        // make the view active on the screen
         setContentView(view)
 ```
 
