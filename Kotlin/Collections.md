@@ -57,3 +57,20 @@ val highestTaxIndex = incomes.withIndex().maxByOrNull { it.value * (taxes[it.ind
 **map** returns a list conatining results of applying the given transform function to each element in the original list
 
 **apply** executes a ginven function and applies it right away
+
+
+
+```kotlin
+import java.lang.Exception
+import kotlin.NumberFormatException
+
+fun parseCardNumber(cardNumber: String): Long {
+    val validSpaces: Boolean = cardNumber.count { it == ' ' } == 3
+    val groups = cardNumber.split(' ')
+    val rightGroups = groups.filter { it.length == 4 }.count() == 4
+    if (!validSpaces || !rightGroups) {
+        throw Exception("format is not right")
+    }
+    return cardNumber.filter { it != ' ' }.toLongOrNull() ?: throw NumberFormatException("Wrong format")
+}
+```
