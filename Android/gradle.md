@@ -61,5 +61,5 @@ run the task ```gradle (-q) helloGradle```
 - The settings.gradle file specifies which projects to include in your build. This file is optional for a build that has only one project, but it is mandatory for a multi-project build.
 
 
-The **repositories section** declares locations from which dependencies will be downloaded and added to the project
+The **repositories section** declares locations from which dependencies will be downloaded and added to the project  
 The **dependencies section** is used to add external libraries to the project.
