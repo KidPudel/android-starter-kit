@@ -125,5 +125,7 @@ tasks.jar {
     }
 }
 ```
-**and then repeat ```gradle jar```**
+**and then repeat ```gradle jar```**  
+
+and just run ```java -jar app/build/libs/app.jar```
 
