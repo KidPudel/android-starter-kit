@@ -47,7 +47,7 @@ description = "A basic Gradle project"
 
 tasks.register("helloGradle") {
   doLast {
-    println("Hello, Gradle")
+      println("Hello, Gradle")
   }
 }
 ```
