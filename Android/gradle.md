@@ -63,3 +63,23 @@ run the task ```gradle (-q) helloGradle```
 
 The **repositories section** declares locations from which dependencies will be downloaded and added to the project  
 The **dependencies section** is used to add external libraries to the project.
+
+
+The auto-generated build.gradle(.kts) file has a section that configures the application plugin thanks to which the application runs with the gradle run command as mentioned above.
+
+```kotlin
+
+plugins {
+    // Apply the org.jetbrains.kotlin.jvm Plugin to add support for Kotlin.
+    id("org.jetbrains.kotlin.jvm") version "1.6.21"
+
+    // Apply the application plugin to add support for building a CLI application in Java.
+    application
+}
+
+application {
+    // Defines the main class for the application
+    mainClassName = "org.hyperskill.gradleapp.App"
+}
+```
+The mainClassName property defines a class with the entry point of the application. It allows us to run the application invoking the gradle run command.
