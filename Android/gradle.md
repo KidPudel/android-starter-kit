@@ -59,3 +59,7 @@ run the task ```gradle (-q) helloGradle```
 - The build.gradle file is a primary file that specifies the Gradle's project, including its tasks and external libraries. For now, this file doesn't contain anything useful, but in real projects it is often updated with new information.
 - The files gradle-wrapper.jar, gradle-wrapper.properties, gradlew and gradlew.bat belong to Gradle Wrapper which allows you to run Gradle without its manual installation.
 - The settings.gradle file specifies which projects to include in your build. This file is optional for a build that has only one project, but it is mandatory for a multi-project build.
+
+
+The **repositories section** declares locations from which dependencies will be downloaded and added to the project
+The **dependencies section** is used to add external libraries to the project.
