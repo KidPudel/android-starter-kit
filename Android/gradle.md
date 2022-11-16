@@ -64,6 +64,9 @@ run the task ```gradle (-q) helloGradle```
 The **repositories section** declares locations from which dependencies will be downloaded and added to the project  
 The **dependencies section** is used to add external libraries to the project.
 
+![image](https://user-images.githubusercontent.com/63263301/202207309-7e59e907-c8ef-44b3-84b0-a34930538fcc.png)
+
+
 
 The auto-generated build.gradle(.kts) file has a section that configures the application plugin thanks to which the application runs with the gradle run command as mentioned above.
 
@@ -83,3 +86,44 @@ application {
 }
 ```
 The mainClassName property defines a class with the entry point of the application. It allows us to run the application invoking the gradle run command.
+
+## Running with JAR
+
+What is good about this way of running applications is that java -jar command can be run without Gradle, you only need to have a JAR beforehand.
+
+
+The classic way to run a JVM-based application is to use the java -jar command. This command can be run without Gradle, you only need to have a JAR beforehand.
+So let's build the JAR file for our application:
+```
+gradle jar
+
+BUILD SUCCESSFUL in 748ms
+2 actionable tasks: 2 executed
+```
+Now, the JAR file is in the app/build/libs directory.
+If you want to clean the project folder from all generated artifacts, just run the gradle clean command.
+
+However, if you now try to run our generated application using the classic approach, there will be a problem:
+```
+java -jar app/build/libs/app.jar
+no main manifest attribute, in app/build/libs/app.jar
+```
+The thing is that the application does not contain the Main-Class attribute in the MANIFEST.MF  
+
+To fix this we need to add the required attribute when generating an archive for the application. Just add the following declaration to the build.gradle(.kts) file:
+
+```
+jar {
+    manifest {
+        attributes("Main-Class": "org.hyperskill.gradleapp.App")   // for Groovy DSL
+    }
+}
+
+tasks.jar {
+    manifest {
+        attributes("Main-Class" to "org.hyperskill.gradleapp.AppKt")   // for Kotlin DSL
+    }
+}
+```
+**and then repeat ```gradle jar```**
+
