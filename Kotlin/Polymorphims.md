@@ -6,7 +6,9 @@ The technique to redefine methods of the parent class in its subclasses is calle
 
 We can use polymorphism to define how we want our objects to behave depending on their type or the parameters of their methods. We can:
 
-overload methods with different parameters;
-override methods in subclasses;
-use duck typing.
+- overload methods with different parameters;
+- override methods in subclasses;
+- use duck typing.
+
+
 Not all of these techniques are possible to use in your programming language, so you should check the information about it in other topics or refer to the documentation.
