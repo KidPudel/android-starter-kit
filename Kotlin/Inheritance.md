@@ -13,6 +13,8 @@ open class Book(val pages: Int, val author: String, var cost: Float = 0F) {
     }
 }
 ```
+An ```open``` modifier allows to inherit from a class  
+
 and now our class is ready for extending.  
 
 And then extend it:
@@ -34,6 +36,6 @@ fun main() {
 }
 // output: $0.14 cost
 ```
-As you can see, we've created a new Comics class (child class) as an extension of our Book class. 
+As you can see, we've created a new Comics class (child class) as an extension of our Book class.  
 
 ![image](https://user-images.githubusercontent.com/63263301/202420385-a496862b-7ce4-49d4-ae03-9948fc11cd31.png)
