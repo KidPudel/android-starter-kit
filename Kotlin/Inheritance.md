@@ -39,3 +39,21 @@ fun main() {
 As you can see, we've created a new Comics class (child class) as an extension of our Book class.  
 
 ![image](https://user-images.githubusercontent.com/63263301/202420385-a496862b-7ce4-49d4-ae03-9948fc11cd31.png)
+
+## Reuse it
+
+```kotlin
+fun isBigBook(book: Book): Boolean {
+    return book.pages >= 100
+}
+```
+```kotlin
+fun main() {
+    val spidermanBook = Comics(113, "The Universe", 8.99F)
+    val centralBooklet = Booklet(5, 0.14F)
+    println(isBigBook(spidermanBook))
+    println(isBigBook(centralBooklet))
+}
+// output: true false
+```
+more info about overriding is [here](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/overriding.md)
