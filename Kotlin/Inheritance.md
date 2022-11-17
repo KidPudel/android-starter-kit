@@ -29,7 +29,7 @@ class Comics(pages: Int, author: String, cost: Float) : Book(pages, author, cost
 ```
 ```kotlin
 fun main() {
-    val spiderManComics = Comics(5, 0.14F)
+    val spiderManComics = Comics(60, "The Universe", 8.99F)
     print(spiderManComics.getUSDCost())
 }
 // output: $0.14 cost
