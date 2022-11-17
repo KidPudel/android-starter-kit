@@ -19,8 +19,8 @@ lookup notes for android development
 ### [Debugging techniques](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/debugging-techniques.md)
 ### [let](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/let.md)
 ### [Labels](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/labels.md)
-### [Inheritance](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/Inheritance.md)
-### [Polymorphism](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/Polymorphism.md)
+### [Inheritance](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/inheritance.md)
+### [Polymorphism](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/polymorphism.md)
 ### [Overriding](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/overriding.md)
 
 
