@@ -129,3 +129,4 @@ tasks.jar {
 
 and just run ```java -jar app/build/libs/app.jar```
 
+more info [here](https://hyperskill.org/learn/step/5076)
