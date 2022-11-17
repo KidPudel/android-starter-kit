@@ -18,6 +18,7 @@ lookup notes for android development
 ### [Lazy instantiation](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/lazy-instantiation.md)
 ### [Debugging techniques](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/debugging-techniques.md)
 ### [let](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/let.md)
+### [labels](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/labels.md)
 
 
 # XML
