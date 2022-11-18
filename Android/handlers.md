@@ -74,3 +74,17 @@ button.setOnClickListener {
 ```
 This is because **we can only touch our UI elements from the main thread**. To solve this problem, we again need to use a **Handler**.
 
+So, let's utilize a handler object and `post()` our logic to it:
+```kotlin
+button.setOnClickListener {
+    thread {
+        for (i in 0..5) {
+            handler.post {
+                counterTextView.text = i.toString()
+            }
+            Thread.sleep(100) // let's pretend we're doing some work
+        }
+    }
+}
+```
+As you can see, we are looping through the values in a **separate thread** and **using `handler.post()` to apply the text setting.**
