@@ -69,5 +69,5 @@ button.setOnClickListener {
 }
 ```
 
-![#f03c15](If you attempt to run this code, you're sure to catch an error.  
-This is because we can only touch our UI elements from the main thread. To solve this problem, we again need to use a Handler.)
+![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) `If you attempt to run this code, you're sure to catch an error.  
+This is because we can only touch our UI elements from the main thread. To solve this problem, we again need to use a Handler.)`
