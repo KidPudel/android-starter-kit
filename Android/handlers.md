@@ -88,3 +88,28 @@ button.setOnClickListener {
 }
 ```
 As you can see, we are looping through the values in a **separate thread** and **using `handler.post()` to apply the text setting.**
+
+### Another example
+
+You can view another small example below. We start by creating a `StringBuilder` variable to store the characters of the alphabet:
+
+```kotlin
+val sb = StringBuilder()
+button.setOnClickListener {
+    button.isEnabled = false
+    sb.setLength(0)
+    thread {
+        for (char in 'a'..'z') {
+            val string = sb.append(char).toString()
+            handler.post {
+                counterTextView.text = string
+                if (char == 'z')
+                    button.isEnabled = true
+            }
+            Thread.sleep(100) // let's pretend we're doing some work
+        }
+    }
+}
+```
+
+Every 100 milliseconds, we increment the line containing the alphabet and append another character. This has been achieved by creating a special thread with a delay that results in the string's progressive expansion. handler.post() is required so that we can access the main thread and touch views.
