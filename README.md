@@ -35,3 +35,4 @@ lookup notes for android development
 ### [LiveData](https://github.com/KidPudel/android-starter-kit/blob/main/Android/live-data.md)
 ### [Gradle](https://github.com/KidPudel/android-starter-kit/blob/main/Android/gradle.md)
 ### [Intent](https://github.com/KidPudel/android-starter-kit/blob/main/Android/intent.md)
+### [Activity](https://github.com/KidPudel/android-starter-kit/blob/main/Android/activity.md)
