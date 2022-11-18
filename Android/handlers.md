@@ -114,6 +114,6 @@ button.setOnClickListener {
 }
 ```
 
-Every 100 milliseconds, we increment the line containing the alphabet and append another character. This has been achieved by creating a special thread with a delay that results in the string's progressive expansion. `handler.post()` is required so that we can access the main thread and touch views.
+Every 100 milliseconds, we increment the line containing the alphabet and append another character. This has been achieved by creating a special thread with a delay that results in the string's progressive expansion. `handler.post()` is **required** so that we can access the main thread and touch views.
 
 
