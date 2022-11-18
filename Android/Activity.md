@@ -65,7 +65,7 @@ openSecondActivityButton.setOnClickListener {
 
 you can use HTML syntax for this purpose
 
-<img src="https://user-images.githubusercontent.com/63263301/202726814-36d0e9de-df1d-4e4c-9650-e269844b7096.gif" width="250" height="250"/>
+<img src="https://user-images.githubusercontent.com/63263301/202726814-36d0e9de-df1d-4e4c-9650-e269844b7096.gif" width="250" height="520"/>
 
 Now let's apply the same approach to the OPEN MAIN ACTIVITY button on the `SecondActivity`:
 
@@ -89,4 +89,4 @@ openMainActivityButton.setOnClickListener {
 You should be aware that this solution isn't perfect either.  
 `finish()` destroys the Activity, meaning the state won't be saved, leading to the loss of Activity data.
 
-<img src="https://user-images.githubusercontent.com/63263301/202727367-fe18fe1b-bba7-4545-ab0e-e5e8f78a3a7d.gif" width="250" height="550"/>
+<img src="https://user-images.githubusercontent.com/63263301/202727367-fe18fe1b-bba7-4545-ab0e-e5e8f78a3a7d.gif" width="250" height="520"/>
