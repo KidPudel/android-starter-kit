@@ -58,6 +58,7 @@ if it gets destroyed, we will avoid a memory leak and prevent any interaction wi
 
 Now let's try to create a separate thread so that we can use it to increment a counter and display the result in `counterTextView`:
 
+```kotlin
 button.setOnClickListener {
     thread {
         for (i in 0..5) {
@@ -66,5 +67,7 @@ button.setOnClickListener {
         }
     }
 }
-<span style="color: red"> If you attempt to run this code, you're sure to catch an error.  
-This is because we can only touch our UI elements from the main thread. To solve this problem, we again need to use a Handler. </span>
+```
+
+![#f03c15](If you attempt to run this code, you're sure to catch an error.  
+This is because we can only touch our UI elements from the main thread. To solve this problem, we again need to use a Handler.)
