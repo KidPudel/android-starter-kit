@@ -24,7 +24,8 @@ button.setOnClickListener {
 ```
 Here, we explicitly define the context (`this` or `this@NameOfYourActivity`) as the first parameter,  
 and the name of the Activity to which the app should switch as the second parameter.  
-After, we call `startActivity(intentName)`, and we will see the layout we have requested. You can call any activity by its class name using this function.
+After, we call `startActivity(intentName)`, and we will see the layout we have requested. You can call any activity by its class name using this function.  
+Intent constructor asks us to pass a **Context** as a first parameter. A **Context** is an abstract class whose implementation is provided by Android, as Android Documentation states. It provides access to app resources, assets, and so on. Because Activity extends from Context, we can use this as an argument in this Intent.
 
 > You need to check whether the activity is defined in the manifest file. If that is not the case, your app will crash at runtime.
 
