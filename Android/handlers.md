@@ -89,6 +89,8 @@ button.setOnClickListener {
 ```
 As you can see, we are looping through the values in a **separate thread** and **using `handler.post()` to apply the text setting.**
 
+_**done in a separate thread to not freeze our main thread -> threfore freeze entire app**_
+
 ### Another example
 
 You can view another small example below. We start by creating a `StringBuilder` variable to store the characters of the alphabet:
@@ -112,4 +114,6 @@ button.setOnClickListener {
 }
 ```
 
-Every 100 milliseconds, we increment the line containing the alphabet and append another character. This has been achieved by creating a special thread with a delay that results in the string's progressive expansion. handler.post() is required so that we can access the main thread and touch views.
+Every 100 milliseconds, we increment the line containing the alphabet and append another character. This has been achieved by creating a special thread with a delay that results in the string's progressive expansion. `handler.post()` is required so that we can access the main thread and touch views.
+
+
