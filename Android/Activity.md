@@ -89,5 +89,4 @@ openMainActivityButton.setOnClickListener {
 You should be aware that this solution isn't perfect either.  
 `finish()` destroys the Activity, meaning the state won't be saved, leading to the loss of Activity data.
 
-<img src="https://user-images.githubusercontent.com/63263301/202727367-fe18fe1b-bba7-4545-ab0e-e5e8f78a3a7d.gif" width="250" height="250"/>
-![gif2]()
+<img src="https://user-images.githubusercontent.com/63263301/202727367-fe18fe1b-bba7-4545-ab0e-e5e8f78a3a7d.gif" width="250" height="550"/>
