@@ -70,5 +70,6 @@ button.setOnClickListener {
 ```
 
 ```diff
-- If you attempt to run this code, you're sure to catch an error. This is because we can only touch our UI elements from the main thread. To solve this problem, we again need to use a Handler.
+- If you attempt to run this code, you're sure to catch an error.  
+This is because we can only touch our UI elements from the main thread. To solve this problem, we again need to use a Handler.
 ```
