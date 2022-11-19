@@ -65,7 +65,7 @@ openSecondActivityButton.setOnClickListener {
 
 you can use HTML syntax for this purpose
 
-<img src="https://user-images.githubusercontent.com/63263301/202726814-36d0e9de-df1d-4e4c-9650-e269844b7096.gif" width="250" height="520"/>
+<div style= "text-align: left;"><img src="https://user-images.githubusercontent.com/63263301/202726814-36d0e9de-df1d-4e4c-9650-e269844b7096.gif" width="250" height="520"/></div>
 
 Now let's apply the same approach to the OPEN MAIN ACTIVITY button on the `SecondActivity`:
 
