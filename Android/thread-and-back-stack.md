@@ -21,7 +21,7 @@ This is the stack's standard behavior. It's known as "last in, first out" and re
 It's a launch mode that works well for most apps.
 
 Here is a diagram of the example described above:
-<img src="https://user-images.githubusercontent.com/63263301/202866308-379a8409-dc8f-4e7f-b684-5977081b5d00.png" width="250" height="520"/>
+![image](https://user-images.githubusercontent.com/63263301/202866308-379a8409-dc8f-4e7f-b684-5977081b5d00.png)
 
 
 
