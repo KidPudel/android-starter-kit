@@ -3,7 +3,7 @@
 
 
 If you click the "Recently opened" button on your phone, you will see a list of tasks:
-![image](https://user-images.githubusercontent.com/63263301/202866300-ef464a14-e9c6-4e22-9901-3fc871d9f7ad.png)
+<img src="https://user-images.githubusercontent.com/63263301/202866300-ef464a14-e9c6-4e22-9901-3fc871d9f7ad.png" width="250" height="520"/>
 
 
 
