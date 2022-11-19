@@ -8,7 +8,7 @@ If you click the "Recently opened" button on your phone, you will see a list of 
 
 
 The activities in a task are arranged in a stack (known as the back stack). You can see a visualization of this below:
-![image](https://user-images.githubusercontent.com/63263301/202866302-d192f0da-5fd3-4525-a5aa-c9729e2946a0.png)
+<div style = "text-align: left;"><img src="https://user-images.githubusercontent.com/63263301/202866302-d192f0da-5fd3-4525-a5aa-c9729e2946a0.png" width="250" height="420"/></div>
 
 
 
