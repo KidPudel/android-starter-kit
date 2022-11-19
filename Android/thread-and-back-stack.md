@@ -67,5 +67,52 @@ Instead of creating it again, the **system routes an Intent to the existing inst
 ```diff
 - Be careful with this launch mode because its behavior seems strange to most users. 
 ```
-Only one instance of an activity with this launch mode can exist at a time.
+**Only one instance of an activity with this launch mode can exist at a time.**  
+if this activity doesn't exist in the task, it will be created and pushed to the top of the stack (in the same way as with `standard` mode)  
+**But** if it does exist, **all activities placed higher in the stack will be immediately destroyed**, revealing the one that has been called and firing an `onNewIntent()` method.
+![image](https://user-images.githubusercontent.com/63263301/202867007-90f35362-9a1d-4ff9-a465-a46beb4c395f.png)
+The _official documentation_ for Android developers describes this mode's behavior differently:  
+"The _system creates a new **task**_ and _instantiates the activity at the root  of the new task_." **"Root" here is a first item (activity) in the task**. The taskAffinity attribute is used to specify which task an activity prefers to belong to, and  its default value is essentially just the package name of your app. You can change the taskAffinity in the relevant `<activity />` tag, which is located in the  AndroidManifest.xml file. However, the **behavior described in the documentation only applies when the taskAffinity attribute is not set to the default value**. And, after  changing taskAffinity, singleTask will behave exactly as the official documentation describes.  
 
+`singleInstance`
+This mode is the same as `singleTask`, **except** that an **activity with this launch mode** will always be** the only member of the task**.  
+If a singleInstance activity launches another activity, it **ill be launched in a different task**.
+![image](https://user-images.githubusercontent.com/63263301/202867172-86479f35-c6f4-47c3-b5bb-d12db1467fa5.png)
+
+## Intent flags
+_Making launch mode changes in the manifest file works well when you always need the same behavior, but they can't be made during runtime. Fortunately, Intent flags provide more flexibility._
+
+For example, apps usually send interactive notifications: you click on them, and an activity pops up. If these notifications constantly repeat, it becomes really annoying to press the "Back" button a million times to close all the created activities. Intent flags can help us solve problems like this, so let's learn about some of them:
+- `FLAG_ACTIVITY_SINGLE_TOP` has the same behavior as the `singleTop` launch mode.
+- `FLAG_ACTIVITY_NEW_TASK` creates a new instance of the activity in the task. The documentation says that this flag acts like `singleTask`, but it actually doesn't.
+- `FLAG_ACTIVITY_CLEAR_TOP` **looks at whether the activity already exists in the stack**. **If it does, it destroys every activity above**, which results in the activity being at the top of the stack. **If it doesn't already exist, it creates the activity in the usual way**. Using this flag _with `FLAG_ACTIVITY_NEW_TASK` will result in similar behavior to the `singleTask` launch mode, **but the activity will be restarted**_. **To avoid restarting and losing the activity state, use the `singleTask` launch mode in the manifest file**.
+- `FLAG_ACTIVITY_CLEAR_TASK` **clears the stack** and **places the freshly opened activity at the root of the stack**. It's used with `FLAG_ACTIVITY_NEW_TASK`.
+- `FLAG_ACTIVITY_REORDER_TO_FRONT` **reorders the opened activity to the front**. For example, if the initial stack order was **A-B-C-D** and activity A was called with this flag, the new order of the stack would be **B-C-D-A**.
+- `FLAG_ACTIVITY_NO_HISTORY` prevents the activity from being kept in the stack.
+
+Once you've decided which flags you want to use, you need to add them to your existing Intent. This can be done in the following way:
+```kotlin
+val intent = Intent(this, MainActivity::class.java)
+intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+startActivity(intent)
+
+//in case you want to replace previous flags (if there are any) instead of adding them:
+
+val intent = Intent(this, SecondActivity::class.java)
+intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+startActivity(intent)
+```
+
+Or, when you need more than one flag:
+
+```kotlin
+val intent = Intent(this, SecondActivity::class.java)
+intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP)
+startActivity(intent)
+
+//in case you want to replace previous flags (if there are any) instead of adding them:
+
+val intent = Intent(this, SecondActivity::class.java)
+intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+startActivity(intent)
+```
