@@ -47,4 +47,7 @@ Thank you [JetBrains Academy - First Glance at Android](https://hyperskill.org/t
 
 # nob*tches
 ![download](https://user-images.githubusercontent.com/63263301/202911433-9ef2ceb6-db98-4340-9e36-b98bee1c6be2.jpg)
+![3990ww](https://user-images.githubusercontent.com/63263301/202911615-a6c8530e-3335-4c23-a651-09b3948a6e13.jpg)
+![Mike](https://user-images.githubusercontent.com/63263301/202911624-eb690379-8ef0-43fe-8611-7cb7d5023c85.png)
+![ShrekPlusMike](https://user-images.githubusercontent.com/63263301/202911635-9b2413df-4d21-4d30-91ad-c655a8c77c6b.png)
 
