@@ -91,6 +91,7 @@ it's **important** to remember that **you must call the `commit()`** method **at
            .commit()
    }
    ```
+   `beginTransaction` - starts series of edit operations on the Fragments associated with this `FragmentManager`
    You should also **create a default Fragment in this block** of code to **avoid the possibility of entering a blank screen**. 
    A `savedInstanceState` check is **needed**, too. This allows us to avoid a situation where our Activity gets recreated, and Fragments are restored, **but we forcibly add our Fragment.**
 5. Once the default Fragment has been added, any other Fragments must be added using the replace() method and placed in the back stack via addToBackStack(). [what is back stack?](https://github.com/KidPudel/android-starter-kit/blob/main/Android/task-and-back-stack.md)
