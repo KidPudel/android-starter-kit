@@ -32,4 +32,29 @@ The fragment should not add the view itself, but this can be used to generate th
 
 # Fragment lifecycle
 
+Since Fragments are closely **intertwined** with Activities, their lifecycles are also **intertwined**.  
+The lifecycle methods that either aren't present in Activities or that have the same name but perform a different role are detailed below:
+
+- `onAttach()` is called when a **Fragment is first attached to its Activity**.
+- `onCreate()` is very **similar to the onCreate() Activity** method, but it **doesn't have access to the UI in Fragments**.
+- `onCreateView()` **creates the Fragment View**. Its only recommended use is **to inflate the layout**.
+- `onViewCreated()` is called immediately after onCreateView(). It is recommended to use it **for logic that works with the View that is returned**.
+- `onDestroyView()` is a **method that reports** that the **View** created in onCreateView() is **no longer available**.
+- `onDetach()` detaches a Fragment from its associated Activity.
+
+The onStart(), onStop(), onResume(), and onPause() lifecycle callbacks are all identical to the ones inside Activity.
+
 -> [activity lifecycle](https://github.com/KidPudel/android-starter-kit/blob/main/Android/activity.md) <-
+
+# Fragment manager
+Fragments inherit from the `androidx.fragment.app.Fragment`.  
+There are two methods in `FragmentManager` that can be used to find Fragments associated with an Activity.
+These are `findFragmentById(int id)` and `findFragmentByTag(String tag)`.
+_If you want to perform any operations on Fragments, be it replacing, deleting, or hiding them, **you need to use the special `androidx.app.FragmentTransaction class`**._
+
+The main methods of the `FragmentTransaction` class are below:
+- `add()` adds the Fragment to the Activity.
+- `remove()` remove the Fragment from the Activity.
+- `replace()` replaces one Fragment with another.
+- `hide()` hide the Fragment on the screen.
+- `show()` shows the Fragment on the screen.
