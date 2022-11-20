@@ -12,7 +12,7 @@ Once enabled in gradle it generates a binding class for each XML layout file pre
 
 **_Steps:_**
 - create an instance of the view binding class
-- call the static method ```inflate()``` included in the _automatically_ generated binding class. This creates an **object** of the binding class for the activity to use
+- call the static method [inflate](https://github.com/KidPudel/android-starter-kit/blob/main/Android/inflate.md)() included in the _automatically_ generated binding class. This creates an **object** of the binding class for the activity to use
 - get a reference to the root view by ```root```
 - Pass the root to the ```setContentView```to make the active view on the screen
 
