@@ -91,4 +91,4 @@ if (savedInstanceState == null) {
         .commit()
 }
 ```
-- You should also create a default Fragment in this block of code to avoid the possibility of entering a blank screen. 
+You should also create a default Fragment in this block of code to avoid the possibility of entering a blank screen. 
