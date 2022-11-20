@@ -92,3 +92,4 @@ it's **important** to remember that **you must call the `commit()`** method **at
    }
    ```
 You should also **create a default Fragment in this block** of code to **avoid the possibility of entering a blank screen**. 
+A `savedInstanceState` check is **needed**, too. This allows us to avoid a situation where our Activity gets recreated, and Fragments are restored, **but we forcibly add our Fragment.**
