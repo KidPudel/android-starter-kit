@@ -42,5 +42,6 @@ lookup notes for android development
 ### [Fragments](https://github.com/KidPudel/android-starter-kit/blob/main/Android/fragments.md)
 
 
+# THX
 ![download](https://user-images.githubusercontent.com/63263301/202911433-9ef2ceb6-db98-4340-9e36-b98bee1c6be2.jpg)
 
