@@ -60,3 +60,10 @@ The main methods of the `FragmentTransaction` class are below:
 - `show()` shows the Fragment on the screen.
 
 it's **important** to remember that **you must call the `commit()`** method **at the end of every transaction**!
+
+# How to use Fragments?
+
+1. Start by creating a **.xml file to _contain_ the markup for our Fragment**
+2. Import and inherit from Fragment class
+   - `import androidx.fragment.app.Fragment`
+   - `class YourFragment : Fragment() {}`
