@@ -59,6 +59,4 @@ The main methods of the `FragmentTransaction` class are below:
 - `hide()` hide the Fragment on the screen.
 - `show()` shows the Fragment on the screen.
 
-```diff
-+ Lastly, it's important to remember that you must call the commit() method at the end of every transaction!
-```
+it's **important** to remember that **you must call the `commit()`** method **at the end of every transaction**!
