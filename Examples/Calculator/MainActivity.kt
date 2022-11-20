@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // create an instance/object of the binding class with inflate
+        // create an instance/object of the binding class with inflate https://github.com/KidPudel/android-starter-kit/blob/main/Android/inflate.md
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         // make the view active on the screen
