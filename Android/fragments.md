@@ -26,9 +26,6 @@ They can also **control how information is displayed** on a device based on its 
 The fragment should not add the view itself, but this can be used to generate the LayoutParams of the view.
 
 
-**LayoutInflater** - **Instantiates a layout XML** file **into** its corresponding **View objects**
-
-
 
 # Fragment lifecycle
 
@@ -37,7 +34,7 @@ The lifecycle methods that either aren't present in Activities or that have the 
 
 - `onAttach()` is called when a **Fragment is first attached to its Activity**.
 - `onCreate()` is very **similar to the onCreate() Activity** method, but it **doesn't have access to the UI in Fragments**.
-- `onCreateView()` **creates the Fragment View**. Its only recommended use is **to inflate the layout**.
+- `onCreateView()` **creates the Fragment View**. Its only recommended use is **to [inflate](https://github.com/KidPudel/android-starter-kit/blob/main/Android/inflate.md) the layout**.
 - `onViewCreated()` is called immediately after onCreateView(). It is recommended to use it **for logic that works with the View that is returned**.
 - `onDestroyView()` is a **method that reports** that the **View** created in onCreateView() is **no longer available**.
 - `onDetach()` detaches a Fragment from its associated Activity.
@@ -72,3 +69,4 @@ it's **important** to remember that **you must call the `commit()`** method **at
      class YourFragment : Fragment() {
      }
      ```
+3. [inflate](https://github.com/KidPudel/android-starter-kit/blob/main/Android/inflate.md) some .xml markup within the Fragment
