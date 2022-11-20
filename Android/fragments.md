@@ -12,8 +12,8 @@ They can also **control how information is displayed** on a device based on its 
 **This type of template is called Primary/Detail Flow** (renamed from Master/Detail Flow), and you can see it in use by looking at the version of Telegram messenger designed for tablets.
 
 tablet:  
-<div style= "text-align: left;"><img src="https://user-images.githubusercontent.com/63263301/202905488-14173b95-98a5-4b8c-91c2-b117da2f81ab.png" width="250" height="520"/></div>
-<div style= "text-align: left;"><img src="https://user-images.githubusercontent.com/63263301/202905585-b7c45793-c114-4707-95ed-5a8f48a8e07a.png" width="250" height="520"/></div>
+<div style= "text-align: left;"><img src="https://user-images.githubusercontent.com/63263301/202905488-14173b95-98a5-4b8c-91c2-b117da2f81ab.png" width="520" height="520"/></div>
+<div style= "text-align: left;"><img src="https://user-images.githubusercontent.com/63263301/202905585-b7c45793-c114-4707-95ed-5a8f48a8e07a.png" width="520" height="520"/></div>
 
 in project it wold look like:  
 ![image](https://user-images.githubusercontent.com/63263301/202905882-d025aaf3-e6d4-4e87-9eb1-64abb631a6cc.png)
