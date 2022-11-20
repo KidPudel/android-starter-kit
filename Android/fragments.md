@@ -95,3 +95,9 @@ it's **important** to remember that **you must call the `commit()`** method **at
    A `savedInstanceState` check is **needed**, too. This allows us to avoid a situation where our Activity gets recreated, and Fragments are restored, **but we forcibly add our Fragment.**
 5. Once the default Fragment has been added, any other Fragments must be added using the replace() method and placed in the back stack via addToBackStack(). [what is back stack?](https://github.com/KidPudel/android-starter-kit/blob/main/Android/task-and-back-stack.md)
    **This will make it possible** to go back either by pressing "back" button or by calling `popBackStack()` on `FragmentManager`.
+   ```kotlin
+   supportFragmentManager.beginTransaction()
+    .replace(R.id.your_container_id, YourFragment())
+    .addToBackStack(null)
+    .commit()
+    ```
