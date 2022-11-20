@@ -78,6 +78,6 @@ it's **important** to remember that **you must call the `commit()`** method **at
     inflater: LayoutInflater,
     container: ViewGroup?,
     savedInstanceState: Bundle?
-): View? =
+   ): View? =
     inflater.inflate(R.layout.xml_document_name, container, false)
     ```
