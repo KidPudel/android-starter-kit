@@ -72,8 +72,7 @@ it's **important** to remember that **you must call the `commit()`** method **at
 3. [inflate](https://github.com/KidPudel/android-starter-kit/blob/main/Android/inflate.md) some .xml markup within the Fragment.
  With an Activity, this is done via the `setContentView()`, but with Fragments, **we need to return our View from `onCreateView()` instead**.
  **Here we receive a `LayoutInflater`** that can turn an XML layout resource into a View hierarchy, a parent container, and a saved state.
- - We invoke the `LayoutInflater.inflate` method, passing our **layout resource ID (fragment layout)**, **parent container (main layout that it will be attached)**, and **false**, meaning "no, I don't want you to attach a newly created hierarchy to the container." `FragmentManager` will do this **on its own**. 
-```kotlin
+ - We invoke the `LayoutInflater.inflate` method, passing our **layout resource ID (fragment layout)**, **parent container (main layout that it will be attached)**, and **false**, meaning "no, I don't want you to attach a newly created hierarchy to the container." `FragmentManager` will do this **on its own**. ```kotlin
 override fun onCreateView(
     inflater: LayoutInflater,
     container: ViewGroup?,
