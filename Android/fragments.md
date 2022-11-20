@@ -31,3 +31,5 @@ The fragment should not add the view itself, but this can be used to generate th
 
 
 # Fragment lifecycle
+
+-> [activity lifecycle](https://github.com/KidPudel/android-starter-kit/blob/main/Android/activity.md) <-
