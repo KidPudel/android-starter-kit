@@ -101,3 +101,4 @@ it's **important** to remember that **you must call the `commit()`** method **at
     .addToBackStack(null)
     .commit()
     ```
+    _You can utilize other methods from the `FragmentManager` in the same way._
