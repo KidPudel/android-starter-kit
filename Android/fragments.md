@@ -26,7 +26,7 @@ They can also **control how information is displayed** on a device based on its 
 The fragment should not add the view itself, but this can be used to generate the LayoutParams of the view.
 
 
-**LayoutInflater** - **Instantiates a layout XML **file **into** its corresponding **View objects**
+**LayoutInflater** - **Instantiates a layout XML** file **into** its corresponding **View objects**
 
 
 
