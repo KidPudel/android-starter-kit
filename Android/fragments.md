@@ -1,3 +1,4 @@
+# Quik theory
 Using **Fragments** is one of several options for making an application that **will work on phones in a vertical or horizontal orientation,  
 as well as tablets with larger displays**.
 
@@ -21,10 +22,12 @@ They can also **control how information is displayed** on a device based on its 
 ![image](https://user-images.githubusercontent.com/63263301/202905882-d025aaf3-e6d4-4e87-9eb1-64abb631a6cc.png)
 
 
-
-
 **what is container?** - This is the **parent view** that the **fragment's UI should be attached to**.  
 The fragment should not add the view itself, but this can be used to generate the LayoutParams of the view.
 
 
 **LayoutInflater** - **Instantiates a layout XML **file **into** its corresponding **View objects**
+
+
+
+# Fragment lifecycle
