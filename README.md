@@ -39,3 +39,4 @@ lookup notes for android development
 ### [Activity](https://github.com/KidPudel/android-starter-kit/blob/main/Android/activity.md)
 ### [Handlers](https://github.com/KidPudel/android-starter-kit/blob/main/Android/handlers.md)
 ### [Task and back stack](https://github.com/KidPudel/android-starter-kit/blob/main/Android/task-and-back-stack.md)
+### [Fragments](https://github.com/KidPudel/android-starter-kit/blob/main/Android/fragments.md)
