@@ -1,3 +1,5 @@
+# Basic examples
+
 ```kotlin
 fun main() {
     val grade = getGrade(true) // grade here has a type of (Int) -> Int
