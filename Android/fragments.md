@@ -16,7 +16,7 @@ tablet:
 phone:
 ![image](https://user-images.githubusercontent.com/63263301/202905585-b7c45793-c114-4707-95ed-5a8f48a8e07a.png)
 
-in project it wold look like:
+in project it wold look like:  
 ![image](https://user-images.githubusercontent.com/63263301/202905882-d025aaf3-e6d4-4e87-9eb1-64abb631a6cc.png)
 
 
