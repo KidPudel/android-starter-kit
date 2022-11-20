@@ -68,4 +68,7 @@ it's **important** to remember that **you must call the `commit()`** method **at
    - ```kotlin 
      import androidx.fragment.app.Fragment
      ```
-   - ```kotlin class YourFragment : Fragment() {}```
+   - ```kotlin 
+     class YourFragment : Fragment() {
+     }
+     ```
