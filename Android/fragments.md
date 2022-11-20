@@ -82,3 +82,13 @@ it's **important** to remember that **you must call the `commit()`** method **at
       inflater.inflate(R.layout.xml_document_name, container, false)
       ```
 4. in the .xml layout for MainActivity, we add a `FrameLayout` **that will be a container (main layout) for Fragments**. After this, in the onCreate()method, you need to add the following check:
+```kotlin
+setContentView(R.layout.activity_main)
+
+if (savedInstanceState == null) {
+    supportFragmentManager.beginTransaction()
+        .add(R.id.your_container_id, DefaultFragment())
+        .commit()
+}
+```
+- You should also create a default Fragment in this block of code to avoid the possibility of entering a blank screen. 
