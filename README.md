@@ -23,6 +23,7 @@ lookup notes for android development
 ### [Polymorphism](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/polymorphism.md)
 ### [Overriding](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/overriding.md)
 ### [Try catch](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/try-catch.md)
+### [Data class](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/data-class.md)
 
 
 # XML
