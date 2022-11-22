@@ -30,4 +30,21 @@ it already has: `equals()` and `hashCode()` for comparison, `copy()` for copying
 
 3. The primary constructor of a data class must have **at least one parameter** and all of those parameters must be `val` or `var`.
 
+# Copy
+
+```kotlin
+fun main() {
+    val bob = Client("Bob", 29, "Male")
+    val john = bob.copy(name = "John")
+    println(bob)
+    println(john)
+}
+```
+As you may see, we just used our `copy()` function, which will be provided automatically with the `data` keyword. And the output will be the following:
+
+```kotlin
+Client(name='Bob', age=29, gender='Male', balance=0)
+Client(name='John', age=29, gender='Male', balance=0)
+```
+
 ![skeleton-meme](https://user-images.githubusercontent.com/63263301/203328709-ffeb76b4-cf17-4c0a-ab62-ca52d4fdce9a.gif)
