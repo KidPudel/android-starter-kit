@@ -40,7 +40,7 @@ fun main() {
     println(john)
 }
 ```
-As you may see, we just used our `copy()` function, which will be provided automatically with the `data` keyword. 
+As you may see, we just used our `copy()` function, which will be provided automatically with the `data` keyword.  
 And the output will be the following:
 
 ```kotlin
