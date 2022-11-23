@@ -26,7 +26,7 @@ override fun OnCreate(savedInstanceState: Bundle?) {
     super.OnCreate(savedInstanceState)
     
     window.decorView.setBackgroundColor(color)
-    handler.postDelayed(this, 1000)
+    handler.postDelayed(updateLight, 1000)
 }
 ```
 
