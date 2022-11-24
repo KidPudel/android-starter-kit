@@ -98,3 +98,18 @@ class Client {
 
 If you want to add a getter and/or a setter to a property **in a constructor, just "move" the property out**.  
 Remember that in this case, you need to **use another variable, not the property from the constructor**:
+
+```kotlin
+class Client(name: String, age: Int) {
+    var fullName: String = name
+        set(value) {
+            println("The name is changing. Old value is $field. New value is $value.")
+            field = value
+        }
+    var age: Int = age   // this is a new property, not a property from the constructor
+        set(value) {
+            println("The age is changing. Old value is $field. New value is $value.")
+            field = value
+        }
+}
+```
