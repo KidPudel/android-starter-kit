@@ -17,20 +17,25 @@ to associate Our handler object with Mainthread
 
 
 ```kotlin
-private val updateLight: Runnable = object : Runnable {
-    override fun run() {
-        color = colors[(colors.indexOf(color) + 1) % colors.size]
-        handler.postDelayed(this, 1000)
-        
-    }
-}
 
 override fun OnCreate(savedInstanceState: Bundle?) {
     super.OnCreate(savedInstanceState)
     
     window.decorView.setBackgroundColor(color)
+    
+    // call it here
     handler.postDelayed(updateLight, 1000)
 }
+
+private val updateLight: Runnable = object : Runnable {
+    override fun run() {
+        color = colors[(colors.indexOf(color) + 1) % colors.size]
+        // and call it each time again
+        handler.postDelayed(this, 1000)
+        
+    }
+}
+
 ```
 
 If we had tried to use Thread.sleep to create this effect, our application would have frozen forever,  
