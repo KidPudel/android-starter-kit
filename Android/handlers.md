@@ -13,6 +13,8 @@ to associate Our handler object with Mainthread
 
 `Runnable` - interface to use for any class whose instances is going to be executed by thread
 
+![image](https://user-images.githubusercontent.com/63263301/203981052-43b57db0-23be-4333-9345-b00e0d697097.png)
+
 
 ```kotlin
 private val updateLight: Runnable = object : Runnable {
