@@ -18,6 +18,7 @@ to associate Our handler object with Mainthread
 private val updateLight: Runnable = object : Runnable {
     override fun run() {
         color = colors[(colors.indexOf(color) + 1) % colors.size]
+        handler.postDelayed(this, 1000)
         
     }
 }
