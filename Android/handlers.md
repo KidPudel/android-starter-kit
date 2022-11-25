@@ -1,5 +1,7 @@
 **A Handler** operates with a queue of messages. It allows us to **schedule code execution** at a certain point in the future, with or without a specified **delay**.  
-Handlers also enable us to execute code **outside of our thread**.
+Handlers also enable us to execute code **outside of our thread**.  
+1. put a work into a queue  
+2. execute it
 
 
 ```kotlin
@@ -9,12 +11,14 @@ to associate Our handler object with Mainthread
 
 `Looper` - class is used to run a message loop for a thread
 
-`post()` - causes `Runnable` to be added to message queue
+`post()` - causes `Runnable` to be added to message queue with a specific time spand, _in this case it's now_
 
 `Runnable` - interface to use for any class whose instances is going to be executed by thread
 
 ![image](https://user-images.githubusercontent.com/63263301/203981052-43b57db0-23be-4333-9345-b00e0d697097.png)
 
+Thread is looping through a message queue, and looking for a message that has a that has time stand for now, and it despatches it to handler to execute  
+If there's no message in a queue that is to be executed right now, then this thread is blocks and waits untill another message hits "now"
 
 ```kotlin
 
@@ -37,6 +41,8 @@ private val updateLight: Runnable = object : Runnable {
 }
 
 ```
+
+`RemoveCallback` - Then we need to delete a post from our que to avoid ANR
 
 If we had tried to use Thread.sleep to create this effect, our application would have frozen forever,  
 making it impossible to draw the next frame or receive any input. Using a Handler allowed us to avoid this situation.
