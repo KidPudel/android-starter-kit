@@ -24,6 +24,7 @@ lookup notes for android development
 ### [Overriding](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/overriding.md)
 ### [Try catch](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/try-catch.md)
 ### [Data class](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/data-class.md)
+### [Property accessors](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/property-accessors.md)
 
 
 # XML
