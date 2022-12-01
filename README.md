@@ -45,6 +45,10 @@ lookup notes for android development
 ### [Task and back stack](https://github.com/KidPudel/android-starter-kit/blob/main/Android/task-and-back-stack.md)
 ### [Fragments](https://github.com/KidPudel/android-starter-kit/blob/main/Android/fragments.md)
 
+# Architecture
+
+### [MVVM](https://github.com/KidPudel/android-starter-kit/blob/main/Architecture/MVVM.md)
+
 
 # Thanks
 Thank you [JetBrains Academy - First Glance at Android](https://hyperskill.org/tracks/16), i've taken **A LOT** (about 90% from there)
