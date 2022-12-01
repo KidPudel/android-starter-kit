@@ -36,14 +36,15 @@ lookup notes for android development
 # Android
 
 ### [View binding](https://github.com/KidPudel/android-starter-kit/blob/main/Android/view-binding.md)
-### [LiveData](https://github.com/KidPudel/android-starter-kit/blob/main/Android/live-data.md)
 ### [Inflate](https://github.com/KidPudel/android-starter-kit/blob/main/Android/inflate.md)
+### [LiveData](https://github.com/KidPudel/android-starter-kit/blob/main/Android/live-data.md)
 ### [Gradle](https://github.com/KidPudel/android-starter-kit/blob/main/Android/gradle.md)
 ### [Intent](https://github.com/KidPudel/android-starter-kit/blob/main/Android/intent.md)
 ### [Activity](https://github.com/KidPudel/android-starter-kit/blob/main/Android/activity.md)
 ### [Handlers](https://github.com/KidPudel/android-starter-kit/blob/main/Android/handlers.md)
 ### [Task and back stack](https://github.com/KidPudel/android-starter-kit/blob/main/Android/task-and-back-stack.md)
 ### [Fragments](https://github.com/KidPudel/android-starter-kit/blob/main/Android/fragments.md)
+### [AlertDialog](https://github.com/KidPudel/android-starter-kit/blob/main/Android/alert-dialog.md)
 
 # Architecture
 
