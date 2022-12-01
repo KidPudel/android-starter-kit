@@ -3,10 +3,7 @@ lookup notes for android development
 
 # Kotlin
 
-
-| # Number |                                                                       Topics                                                                     |
-| ----- | :-------------------------------------------------------------------------------------------------------------------------------------------------: |
-| 01    | [Functional programming](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/Functional-Programming.md)                                |
+### [Functional programming](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/Functional-Programming.md)
 ### [Lambda](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/Lambda.md)
 ### [Callback](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/Callback.md)
 ### [When](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/When.md)
