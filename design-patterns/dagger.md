@@ -36,4 +36,9 @@ class UserManager @Inject constructor(private val storage: Storage) {
 }
 ```
 
-**Now, Dagger knows how to provide instances** of `RegistrationViewModel` and `UserManager`
+**Now, Dagger knows how to provide instances** of `RegistrationViewModel` and `UserManager`  
+
+Since UserManager's dependency (i.e. Storage) is an interface, we need to tell Dagger how to create an instance of that in a **different way,** we'll cover that later.
+
+# Views require objects from the graph
+For **Activities** specifically, any initialization code **needs to go to the `onCreate` method**. **Because of that, we cannot use the `@Inject` annotation in the constructor of a View class as we did before** (that is what is called constructor injection). Instead, **we have to use field injection**.
