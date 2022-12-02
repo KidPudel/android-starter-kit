@@ -2,6 +2,8 @@ We'll use Dagger as the **dependency injection tool to manage dependencies.**
 
 ## Registration flow to use dagger
 
+In order to build the application graph automatically for us,  
+Dagger needs to know **how to create instances for the classes in the graph.**
 
 RegistrationViewModel.kt
 
