@@ -1,4 +1,4 @@
-# Dependency injection - what is ?
+# Dependency injection - what is it?
 
 Dependency injection (DI) is a **technique** widely used in programming and well suited to Android development.  
 By following the principles of DI, you lay the groundwork for a good app architecture.  
@@ -23,3 +23,8 @@ Dependencies can be injected into objects by many means (such **as constructor i
 One can even **use specialized dependency injection frameworks** (e.g. Spring) to do that, but they certainly **aren't required**.   
 You don't need those frameworks to have dependency injection.   
 **Instantiating and passing objects (dependencies) explicitly is just as good an injection as injection by framework.**
+
+
+# Tools
+
+[Dagger](https://github.com/KidPudel/android-starter-kit/edit/main/design-patterns/dagger.md)
