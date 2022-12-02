@@ -72,4 +72,4 @@ class RegistrationActivity : AppCompatActivity() {
 - When it's annotated **on a class field**, it's telling Dagger **that it needs to populate the field with an instance of that type.**
 
 
-How can we tell Dagger **which** objects need to be injected into `RegistrationActivity`? We **need to create the Dagger graph (or [application graph](application graph))** and use it to inject objects into the Activity.
+How can we tell Dagger **which** objects need to be injected into `RegistrationActivity`? We **need to create the Dagger graph (or [application graph](### application graph))** and use it to inject objects into the Activity.
