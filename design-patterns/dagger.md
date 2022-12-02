@@ -77,7 +77,7 @@ How can we tell Dagger **which** objects need to be injected into `RegistrationA
 # Graph
 We want Dagger to **create the graph of dependencies** of our project, **manage them for us** and be able to **get dependencies from the graph**.  
 
-####To make Dagger do it
+#### To make Dagger do it
 We need to create an **interface** and annotate it with `@Component`.  
 **Dagger will create a Container** as we would have done with manual dependency injection.  
 
