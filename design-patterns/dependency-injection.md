@@ -106,6 +106,21 @@ fun main(args: Array) {
     car.start()
 }
 ```
+![1-car-engine-di](https://user-images.githubusercontent.com/63263301/205339429-dd8990c5-bd62-4cc1-8bfc-b1f4a28b881d.png)
+
+# Automated dependency injection
+
+In the previous example, you created, provided, and managed the dependencies of the different classes yourself, without relying on a library. This is called **dependency injection by hand, or manual dependency injection**. In the Car example, there was only one dependency, **but more dependencies and classes can make manual injection of dependencies more tedious**. Manual dependency injection also presents several problems:
+- For big apps, taking all the dependencies and connecting them correctly can require a large amount of **boilerplate code**. In a multi-layered architecture, in order to create an object for a top layer, you have to provide all the dependencies of the layers below it. As a concrete example, to build a real car you might need an engine, a transmission, a chassis, and other parts; and an engine in turn needs cylinders and spark plugs.
+- **When you're not able to construct dependencies before passing them in — for example when using lazy initializations** or scoping objects to flows of your app — you need to write and maintain a custom container (or graph of dependencies) that manages the lifetimes of your dependencies in memory.
+
+There are libraries that solve this problem by automating the process of creating and providing dependencies. They fit into two categories: 
+
+- Reflection-based solutions that connect dependencies at runtime.
+- Static solutions that generate the code to connect dependencies at compile time.
+
+**Dagger** is a popular dependency injection library for Java, Kotlin, and Android that is maintained by Google.  
+**Dagger facilitates using DI in your app by creating and managing the graph of dependencies for you**. **It provides fully static and compile-time dependencies** addressing many of the development and performance issues of reflection-based solutions such as **Guice**.
 
 # Tools
 
