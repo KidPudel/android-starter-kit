@@ -53,7 +53,7 @@ lookup notes for android development
 # Design patterns
 
 ### [Dependency injection](https://github.com/KidPudel/android-starter-kit/blob/main/design-patterns/dependency-injection.md)
-
+### [Dagger](https://github.com/KidPudel/android-starter-kit/blob/main/design-patterns/dagger.md)
 
 # Thanks
 Thank you [JetBrains Academy - First Glance at Android](https://hyperskill.org/tracks/16), i've taken **A LOT** (about 90% from there)
