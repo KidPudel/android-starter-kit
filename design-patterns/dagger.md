@@ -2,6 +2,7 @@ We'll use Dagger as the **dependency injection tool to manage dependencies.**
 
 ## Registration flow to use dagger
 
+### application graph
 In order to build the **application graph automatically** for us,  
 Dagger needs to know **how to create instances for the classes in the graph.**
 
@@ -69,3 +70,6 @@ class RegistrationActivity : AppCompatActivity() {
 ```
 - When `@Inject` is annotated **on a class constructor**, it's telling Dagger **how to provide instances of that class.**   
 - When it's annotated **on a class field**, it's telling Dagger **that it needs to populate the field with an instance of that type.**
+
+
+How can we tell Dagger **which** objects need to be injected into `RegistrationActivity`? We **need to create the Dagger graph (or [application graph](application graph))** and use it to inject objects into the Activity.
