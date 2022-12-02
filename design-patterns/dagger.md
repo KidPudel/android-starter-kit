@@ -73,3 +73,43 @@ class RegistrationActivity : AppCompatActivity() {
 
 
 How can we tell Dagger **which** objects need to be injected into `RegistrationActivity`? We **need to create the Dagger graph (or [application graph](#application-graph))** and use it to inject objects into the Activity.
+
+# Graph
+We want Dagger to **create the graph of dependencies** of our project, **manage them for us** and be able to **get dependencies from the graph**.  
+
+####To make Dagger do it
+We need to create an **interface** and annotate it with `@Component`.  
+**Dagger will create a Container** as we would have done with manual dependency injection.  
+
+An interface annotated with `@Component` will make **Dagger generate code with all the dependencies required to satisfy the parameters of the methods it exposes**.  
+> Inside that interface, we can tell Dagger **that `RegistrationActivity` requests injection**.
+
+1. **Create a new package called `di`** under `com.example.android.dagger` (same level as other packages such as registration).
+2. Inside that package, create a new Kotlin file called `AppComponent.kt` and **define the interface** as we described above:  
+   ```kotlin
+   package com.example.android.dagger.di
+   import com.example.android.dagger.registration.RegistrationActivity
+   import dagger.Component
+   
+   // Definition of a Dagger component
+   @Component
+   interface AppComponent {
+       // Classes that can be injected by this Component
+       fun inject(activity: RegistrationActivity)
+       fun getCar(): Car
+   }
+   ```
+With the `inject(activity: RegistrationActivity)` method in the `@Component` interface, we're telling Dagger that `RegistrationActivity` **requests injection** and that **it has to provide the dependencies which are annotated with `@Inject`** (i.e. `RegistrationViewModel` as we defined in the previous step).  
+
+#### internal process
+> Since Dagger has to create an instance of `RegistrationViewModel`, internally, it also needs to satisfy `RegistrationViewModel`'s dependencies (i.e. `UserManager`). If during this recursive process of finding dependencies Dagger doesn't know how to provide a particular dependency, **it will fail at compile time** _saying there's a dependency that it cannot satisfy_.
+
+> A `@Component` **interface gives the information Dagger needs to generate the graph at compile-time**. The **parameter** _of the interface methods_ define **what classes request injection**.  
+
+
+error because...  
+The way we tell Dagger how to provide `Storage` is different because `Storage` is an **interface** and as such cannot be instantiated directly. We need to tell Dagger what implementation of `Storage` we want to use. In this case it's `SharedPreferencesStorage`.  
+To do this we will use a Dagger Module. A Dagger Module is a class that is annotated with `@Module`.  
+
+Similar to Components, Dagger Modules tell Dagger how to provide instances of a **certain type**.   
+Dependencies are defined using the `@Provides` and `@Binds` annotations.
