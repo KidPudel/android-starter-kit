@@ -81,7 +81,7 @@ We want Dagger to **create the graph of dependencies** of our project, **manage 
 We need to create an **interface** and annotate it with `@Component`.  
 **Dagger will create a Container** as we would have done with manual dependency injection.  
 
-An interface annotated with `@Component` will make **Dagger generate code with all the dependencies required to satisfy the parameters of the methods it exposes**.  
+An interface annotated with `@Component` will make **Dagger generate code with all the dependencies required to satisfy the parameters of the methods it exposes**. `fun getCar(): Car`, and generated file will be called class will be called `DaggerAppComponent`
 > Inside that interface, we can tell Dagger **that `RegistrationActivity` requests injection**.
 
 1. **Create a new package called `di`** under `com.example.android.dagger` (same level as other packages such as registration).
@@ -101,10 +101,20 @@ An interface annotated with `@Component` will make **Dagger generate code with a
    ```
 With the `inject(activity: RegistrationActivity)` method in the `@Component` interface, we're telling Dagger that `RegistrationActivity` **requests injection** and that **it has to provide the dependencies which are annotated with `@Inject`** (i.e. `RegistrationViewModel` as we defined in the previous step).  
 
+and now we can use it in `MainActivity`
+```kotlin
+// graph
+val appComponent = DaggerAppComponent.create()
+val car = appComponent.getCar()
+```
+
 #### internal process
 > Since Dagger has to create an instance of `RegistrationViewModel`, internally, it also needs to satisfy `RegistrationViewModel`'s dependencies (i.e. `UserManager`). If during this recursive process of finding dependencies Dagger doesn't know how to provide a particular dependency, **it will fail at compile time** _saying there's a dependency that it cannot satisfy_.
 
 > A `@Component` **interface gives the information Dagger needs to generate the graph at compile-time**. The **parameter** _of the interface methods_ define **what classes request injection**.  
+
+
+
 
 
 error because...  
