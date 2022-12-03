@@ -27,6 +27,7 @@ class MyViewModel @Inject constructor(val repository: IMyRepository): ViewModel(
 }
 ```
 
+> As long as dagger knows how to implement dependencies, it knows how to implement our class where we put `@Inject`
 
 In Kotlin, **to apply an annotation to the constructor**, you need to **_specifically_ add the keyword `constructor`** and **introduce the annotation just _before_ it as shown in the code snippet above**.
 
@@ -122,7 +123,9 @@ abstract class RepositoryModule {
 }
 ```
 
-
+Now we need to change 
+```kotlin
+```
 ------------------------
 
 > You can use constructor injection and field injection
