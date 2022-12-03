@@ -9,8 +9,8 @@ We'll use Dagger (Dagger-Hilt) as the **[dependency injection](https://github.co
 ## How to use it?
 
 We **inject** our dependencies, in other words: 
-1.🔸 tell that some class has dependency of another class.
-2.🔹 tell dagger to look up in module how to create it, application graph.
+1. 🔸tell that some class has dependency of another class.
+2. 🔹tell dagger to look up in module how to create it, application graph.
 
 🔸
 `RegistrationViewModel.kt`
