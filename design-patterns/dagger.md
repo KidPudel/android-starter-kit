@@ -36,6 +36,27 @@ With the `@Inject` annotation:
 With the `@Module` annotation:
 - Dagger knows how to create instances of type `RegistrationViewModel`.
 
+```kotlin
+@Module
+@IntallIn(SingletonComponent::class) // decides lifetime of dependencies provided in this module
+object AppModule {
+      @Provides
+      @Singleton
+      fun getMyApi(): MyApi {
+            return Retrofit.Builder()
+                  .BaseUrl("https://example_url.com")
+                  .build()
+                  .create(MyApi::class.java)
+      }
+
+      // now dagger will know how to create MyRepository type of class
+      @Provides // annotate that this function provides dependency
+      @Singleton
+      fun getRepository(): IMyRepository {
+            return MyRepository()
+      }
+}
+```
 
 Dagger doesn't know how to create types of UserManager **yet**.   
 **Follow the same process**, and **add the `@Inject` annotation to UserManager's constructor.**
@@ -131,7 +152,7 @@ val car = appComponent.getCar()
 > A `@Component` **interface gives the information Dagger needs to generate the graph at compile-time**. The **parameter** _of the interface methods_ define **what classes request injection**.  
 
 
-`@InstallIn(SingletonComponent::class)` <- decides about **lifetime** of our dependencies in module  
+`@InstallIn(SingletonComponent::class)` <- decides about **lifetime** of our dependencies provided in this module  
 `@Singleton` - scope, **how many instances**, here we'll have obly a single instance, if we wouldn't have it, when we inject couple of times, we would create two instances, that would live as long as app does
 
 
