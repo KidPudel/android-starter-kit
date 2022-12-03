@@ -16,6 +16,7 @@ Dagger needs to know **how to create instances for the classes in the graph.** `
 ```kotlin
 // @Inject tells Dagger how to provide instances of this type
 // Dagger also knows that UserManager is a dependency
+@HiltViewModel
 class RegistrationViewModel @Inject constructor(val userManager: UserManager) {
       ...
 }
