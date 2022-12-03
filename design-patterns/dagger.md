@@ -27,8 +27,6 @@ class MyViewModel @Inject constructor(val repository: IMyRepository): ViewModel(
 }
 ```
 
-> As long as dagger knows how to implement dependencies, it knows how to implement our class where we put `@Inject`
-
 In Kotlin, **to apply an annotation to the constructor**, you need to **_specifically_ add the keyword `constructor`** and **introduce the annotation just _before_ it as shown in the code snippet above**.
 
 With the `@Inject` annotation: 
@@ -67,6 +65,8 @@ object AppModule {
 `@Singleton` - scope, **how many instances**, here we'll have obly a single instance, if we wouldn't have it, when we inject couple of times, we would create two instances, that would live as long as app does.  
 
 If there is some other class that needs to be injected in, **follow the same process**, and **add the `@Inject` annotation to constructor.**
+
+> As long as dagger knows how to implement dependencies, it knows how to implement our class where we put `@Inject`
 
 ------------------------------------------------------------
 
