@@ -139,9 +139,46 @@ class MyReposiotory @Inject constructor(
       private val appContext: Application
       ): IMyReposiotory
 ```
+> About Application
+
+In Application class we need to use @HildAndroidApp, then we can use:  
+```kotlin
+@Provides // annotate that this function provides dependency
+@Singleton
+fun getRepository(myApi: MyApi, app: Application): IMyRepository {
+      return MyRepository(myApi, app) // in example we need an instance of MyApi
+}
+```
+
 ------------------------
 
 > You can use constructor injection and field injection
+
+# Field injection
+
+```kotlin
+@AndroidEntryPoint
+class MyService: Service { // runs on the background
+      @Injection
+      lateinit var repository: IMyRepository
+      
+      override fun onCreate() {
+            super.onCreate()
+            repository.doNetworkCall()
+      }           
+}
+```
+
+# Lazy
+
+```kotlin
+@HiltViewModel // simplify the process of viewmodel DI
+class MyViewModel @Inject constructor(
+      val repository: Lazy<IMyRepository> // after injection everything created only on first use
+      ): ViewModel() {
+}
+```
+
 
 How can we tell Dagger **which** objects need to be injected into `RegistrationActivity`? We **need to create the Dagger graph (or [application graph](#application-graph))** and use it to inject objects into the Activity.
 
