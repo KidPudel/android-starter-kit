@@ -48,6 +48,7 @@ lookup notes for android development
 
 # Architecture
 
+### [Clean architecture](https://github.com/KidPudel/android-starter-kit/blob/main/Architecture/clean-architecture.md)
 ### [MVVM](https://github.com/KidPudel/android-starter-kit/blob/main/Architecture/MVVM.md)
 
 # Design patterns
