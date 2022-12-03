@@ -10,7 +10,7 @@ We'll use Dagger as the **dependency injection tool to manage dependencies.**
 
 ### application graph
 In order to build the **application graph automatically** for us,  
-Dagger needs to know **how to create instances for the classes in the graph.**
+Dagger needs to know **how to create instances for the classes in the graph.** `@Inject` tells
 
 RegistrationViewModel.kt
 
