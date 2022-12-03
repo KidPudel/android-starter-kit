@@ -1,4 +1,4 @@
-We'll use Dagger (Dagger-Hilt) as the **[dependency injection](https://github.com/KidPudel/android-starter-kit/edit/main/design-patterns/dependency-injection.md) tool to manage dependencies.**
+We'll use Dagger (Dagger-Hilt) as the **[dependency injection](https://github.com/KidPudel/android-starter-kit/blob/main/design-patterns/dependency-injection.md) tool to manage dependencies.**
 
 ## Why to use it?  
 
