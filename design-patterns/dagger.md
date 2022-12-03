@@ -66,7 +66,7 @@ object AppModule {
 
 If there is some other class that needs to be injected in, **follow the same process**, and **add the `@Inject` annotation to constructor.**
 
-> As long as dagger knows how to implement dependencies, it knows how to implement our class where we put `@Inject`
+> **As long as dagger knows how to implement dependencies, it knows how to implement our class where we put `@Inject`**
 
 ------------------------------------------------------------
 
