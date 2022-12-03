@@ -66,7 +66,8 @@ object AppModule {
 
 ⬇⬇⬇
 > **As long as dagger knows how to implement all for the class dependencies, it knows how to implement our class**, so we don't need a function in module for that.  
-But you still can use it to bind, to make sure that the specifoc implementation of interface is choisen [example](#binding-abstraction)
+But you still can use it to bind, to make sure that the specifoc implementation of interface is choisen [example](#binding-abstractions)
+
 ⬆⬆⬆
 
 ------------------------------------------------------------
