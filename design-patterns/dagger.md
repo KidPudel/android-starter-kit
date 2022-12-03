@@ -66,6 +66,7 @@ object AppModule {
 
 ⬇⬇⬇
 > **As long as dagger knows how to implement all for the class dependencies, it knows how to implement our class**, so we dont need a function in module for that.  
+
 ⬆⬆⬆
 ------------------------------------------------------------
 
