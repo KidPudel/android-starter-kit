@@ -1,7 +1,8 @@
 We'll use Dagger (Dagger-Hilt) as the **[dependency injection](https://github.com/KidPudel/android-starter-kit/blob/main/design-patterns/dependency-injection.md) tool to manage dependencies.**
-```html
+
+
 <span style="color:blue">some *blue* text</span>.
-```
+
 ## Why to use it?  
 
 - Helps easily inject our dependencies. (using annotations e.g. `@Iject`) to define which dependencies should go where
