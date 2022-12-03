@@ -65,7 +65,7 @@ object AppModule {
 `@Singleton` - scope, **how many instances**, here we'll have obly a single instance, if we wouldn't have it, when we inject couple of times, we would create two instances, that would live as long as app does.  
 
 ⬇⬇⬇
-> **As long as dagger knows how to implement all for the class dependencies, it knows how to implement our class**, so we dont need a function in module for that
+> **As long as dagger knows how to implement all for the class dependencies, it knows how to implement our class**, so we dont need a function in module for that.
 ⬆⬆⬆
 ------------------------------------------------------------
 
