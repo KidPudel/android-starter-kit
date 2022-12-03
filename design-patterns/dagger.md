@@ -10,10 +10,9 @@ We'll use Dagger as the **dependency injection tool to manage dependencies.**
 
 ### application graph
 In order to build the **application graph automatically** for us,  
-Dagger needs to know **how to create instances for the classes in the graph.** `@Inject` tells, but if we can't construct inject, then use `@Module`
+Dagger needs to know **how to create instances for the classes in the graph.** `@Inject` tells "please inject all dependencies that we have in our `constructor` and look in modules.  
 
-RegistrationViewModel.kt
-
+`RegistrationViewModel.kt`
 ```kotlin
 // @Inject tells Dagger how to provide instances of this type
 // Dagger also knows that UserManager is a dependency
