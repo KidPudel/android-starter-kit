@@ -52,8 +52,8 @@ object AppModule {
       // now dagger will know how to create MyRepository type of class
       @Provides // annotate that this function provides dependency
       @Singleton
-      fun getRepository(): IMyRepository {
-            return MyRepository()
+      fun getRepository(myApi: MyApi): IMyRepository {
+            return MyRepository(myApi) // in example we need an instance of MyApi
       }
 }
 ```
