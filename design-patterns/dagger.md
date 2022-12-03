@@ -120,6 +120,8 @@ val car = appComponent.getCar()
 > A `@Component` **interface gives the information Dagger needs to generate the graph at compile-time**. The **parameter** _of the interface methods_ define **what classes request injection**.  
 
 
+`@InstallIn(SingletonComponent::class)` <- decides about **lifetime** of our dependencies in module
+`@Singleton` - scope, **how many instances**, here we'll have obly a single instance
 
 
 
