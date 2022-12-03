@@ -121,7 +121,7 @@ val car = appComponent.getCar()
 
 
 `@InstallIn(SingletonComponent::class)` <- decides about **lifetime** of our dependencies in module  
-`@Singleton` - scope, **how many instances**, here we'll have obly a single instance
+`@Singleton` - scope, **how many instances**, here we'll have obly a single instance, if we wouldn't have it, when we inject couple of times, we would create two instances, that would live as long as app does
 
 
 
