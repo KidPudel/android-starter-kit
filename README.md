@@ -57,7 +57,10 @@ lookup notes for android development
 ### [Dagger](https://github.com/KidPudel/android-starter-kit/blob/main/design-patterns/dagger.md)
 
 # Thanks
-Thank you [JetBrains Academy - First Glance at Android](https://hyperskill.org/tracks/16), i've taken **A LOT** (about 90% from there)
+A lot of info taken from:
+- [JetBrains Academy](https://hyperskill.org/tracks/16)
+- [Android developers](https://developer.android.com/)
+- [Philipp Lackner](https://www.youtube.com/@PhilippLackner)
 
 # nob*tches
 ![download](https://user-images.githubusercontent.com/63263301/202911433-9ef2ceb6-db98-4340-9e36-b98bee1c6be2.jpg)
