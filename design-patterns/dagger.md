@@ -19,7 +19,7 @@ _but before, we need to include some dependencies in gradle -> [include](#what-w
 ```kotlin
 // @Inject tells Dagger what depependencies ViewModel has, inject it
 // And that it should look in modules how to create such a dependency 
-@HiltViewModel
+@HiltViewModel // simplify the process of viewmodel DI
 class RegistrationViewModel @Inject constructor(val userManager: UserManager): ViewModel() {
       ...
 }
