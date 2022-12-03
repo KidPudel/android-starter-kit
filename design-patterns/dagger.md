@@ -14,7 +14,8 @@ Dagger needs to know **how to create instances for the classes in the graph.**
 
 `RegistrationViewModel.kt`
 ```kotlin
-// @Inject tells Dagger what depependencies ViewModel has, inject it and that it should look in modules how to create such a repository 
+// @Inject tells Dagger what depependencies ViewModel has, inject it
+// And that it should look in modules how to create such a repository 
 @HiltViewModel
 class RegistrationViewModel @Inject constructor(val userManager: UserManager) {
       ...
