@@ -129,3 +129,34 @@ To do this we will use a Dagger Module. A Dagger Module is a class that is annot
 
 Similar to Components, Dagger Modules tell Dagger how to provide instances of a **certain type**.   
 Dependencies are defined using the `@Provides` and `@Binds` annotations.
+
+
+# What we need to use it
+`build.gradle`
+```kotlin
+dependencies {
+    //Dagger - Hilt
+    implementation "com.google.dagger:hilt-android:2.40.5"
+    kapt "com.google.dagger:hilt-android-compiler:2.40.5"
+    implementation "androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03"
+    kapt "androidx.hilt:hilt-compiler:1.0.0"
+    implementation 'androidx.hilt:hilt-navigation-compose:1.0.0'
+
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation "com.squareup.okhttp3:okhttp:5.0.0-alpha.3"
+}
+
+plugins {
+      id 'com.android.application'
+      id 'org.jetbrains.kotlin.android'
+      id 'kotlin-kapt'
+      id 'dagger.hilt.android.plugin'
+}
+```
+`build.gradle project file`
+```kotlin
+dependencies {
+      classpath "com.google.dagger:hilt-android-gradle-plugin:2.40.5"
+}
+```
