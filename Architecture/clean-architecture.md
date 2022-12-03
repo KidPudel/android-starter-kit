@@ -13,7 +13,3 @@ We have tree _layers_:
 `ViewModel` is binding _data_ with _view_.  
 
 `UseCases` handle _buisnes logic_ (some part handle `ViewModel` and some specific to _data_ - `Repositories`  
-
-```htlm
-<span style="color: red;">text</span>
-```
