@@ -66,6 +66,10 @@ If there is some other class that needs to be injected in, **follow the same pro
 
 # Views require objects from the graph
 
+Scope the viewmodel to the current graph
+
+we injected dependency, in activity (`AndroidComponent` class -> `Activity`, `Fragment`, `Service`), we need to add annotation `@AndroidEntryPoint`
+
 For **Activities** specifically, any initialization code **needs to go to the `onCreate` method**. **Because of that, we cannot use the `@Inject` annotation in the constructor of a View class as we did before** (that is what is called constructor injection). Instead, **we have to use field injection**.
 
 Instead of creating the dependencies an Activity requires in the onCreate method as we do with manual dependency injection, we want **Dagger to populate those dependencies for us.**  
@@ -189,6 +193,7 @@ dependencies {
 # References
 ## [dependency injection](https://github.com/KidPudel/android-starter-kit/blob/main/design-patterns/dependency-injection.md)
 ## [Clean architecture](https://github.com/KidPudel/android-starter-kit/blob/main/Architecture/dependency-injection.md)
+## [Dagger-hilt guide](https://www.youtube.com/watch?v=bbMsuI2p1DQ&t=573s&ab_channel=PhilippLackner)
 
 # From google: 
 
