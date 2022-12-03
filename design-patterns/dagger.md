@@ -33,7 +33,7 @@ With the `@Inject` annotation:
 - Dagger knows that `RegistrationViewModel` has `UserManager` as dependency since the constructor takes an instance of `UserManager` as an argument.
 - `@Inject` tells "please inject all dependencies that we have in our `constructor` and look in modules `@Modules`.  
 
-
+----------------------------------------------------------------------
 🔹
 With the `@Module` annotation:
 - Dagger knows how to create instances of type `RegistrationViewModel`.
