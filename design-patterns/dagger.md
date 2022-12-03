@@ -1,4 +1,4 @@
-We'll use Dagger as the **dependency injection tool to manage dependencies.**
+We'll use Dagger (Dagger-Hilt) as the **[dependency injection](https://github.com/KidPudel/android-starter-kit/edit/main/design-patterns/dependency-injection.md) tool to manage dependencies.**
 
 ## Why to use it?  
 
@@ -6,11 +6,11 @@ We'll use Dagger as the **dependency injection tool to manage dependencies.**
 - Have central place where we manage our dependencies ("Hey, this is how you can create _API interface_"
 - Control lifetime of specific dependencies (singleton, scoped)
 
-## Registration flow to use dagger
+## How to use it?
 
 ### application graph
 In order to build the **application graph automatically** for us,  
-Dagger needs to know **how to create instances for the classes in the graph.** `@Inject` tells "please inject all dependencies that we have in our `constructor` and look in modules.  
+Dagger needs to know **how to create instances for the classes in the graph.**
 
 `RegistrationViewModel.kt`
 ```kotlin
@@ -25,10 +25,13 @@ class RegistrationViewModel @Inject constructor(val userManager: UserManager) {
 
 In Kotlin, **to apply an annotation to the constructor**, you need to **_specifically_ add the keyword `constructor`** and **introduce the annotation just _before_ it as shown in the code snippet above**.
 
-With the `@Inject` annotation, Dagger knows:
+With the `@Inject` annotation: 
+
+- Dagger knows that `RegistrationViewModel` has `UserManager` as dependency since the constructor takes an instance of `UserManager` as an argument.
+- `@Inject` tells "please inject all dependencies that we have in our `constructor` and look in modules `@Modules`.  
+
 
 - How to create instances of type `RegistrationViewModel`.
-- `RegistrationViewModel` has `UserManager` as dependency since the constructor takes an instance of UserManager as an argument.
 
 
 Dagger doesn't know how to create types of UserManager **yet**.   
