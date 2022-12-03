@@ -16,7 +16,7 @@ and tell dagger to look up in module how to create it, application gra
 // @Inject tells Dagger what depependencies ViewModel has, inject it
 // And that it should look in modules how to create such a dependency 
 @HiltViewModel
-class RegistrationViewModel @Inject constructor(val userManager: UserManager) {
+class RegistrationViewModel @Inject constructor(val userManager: UserManager): ViewModel() {
       ...
 }
 ```
