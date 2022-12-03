@@ -8,6 +8,9 @@ We'll use Dagger (Dagger-Hilt) as the **[dependency injection](https://github.co
 
 ## How to use it?
 
+We inject our dependencies, in other words tell that some class has dependency of another class,   
+and tell dagger to look up in module how to create it, application gra
+
 `RegistrationViewModel.kt`
 ```kotlin
 // @Inject tells Dagger what depependencies ViewModel has, inject it
