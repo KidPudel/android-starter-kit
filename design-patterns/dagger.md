@@ -22,7 +22,7 @@ _but before, we need to include some dependencies in gradle -> [include](#what-w
 // @Inject tells Dagger what depependencies ViewModel has, inject it
 // And that it should look in modules how to create such a dependency 
 @HiltViewModel // simplify the process of viewmodel DI
-class RegistrationViewModel @Inject constructor(val userManager: UserManager): ViewModel() {
+class MyViewModel @Inject constructor(val repository: IMyRepository): ViewModel() {
       ...
 }
 ```
@@ -32,13 +32,13 @@ In Kotlin, **to apply an annotation to the constructor**, you need to **_specifi
 
 With the `@Inject` annotation: 
 
-- Dagger knows that `RegistrationViewModel` has `UserManager` as dependency since the constructor takes an instance of `UserManager` as an argument.
+- Dagger knows that `MyViewModel` has `IMyRepository` as dependency since the constructor takes an instance of `IMyRepository` as an argument.
 - `@Inject` tells "please inject all dependencies that we have in our `constructor` and look in modules `@Modules`.  
 
 ----------------------------------------------------------------------
 🔹
 With the `@Module` annotation:
-- Dagger knows how to create instances of type `RegistrationViewModel`.
+- Dagger knows how to create instances of type `MyViewModel`.
 
 ```kotlin
 @Module
@@ -69,6 +69,18 @@ If there is some other class that needs to be injected in, **follow the same pro
 # Views require objects from the graph
 
 ```kotlin
+@AndroidEntryPoint
+class MainActivity: AppCompatActicity() {
+      override fun onCreate(savedInstanceState: Bandle?) {
+            super.onCreate(savedInstanceState)
+            setContentView(R.layout.activity_main)
+            
+            // it will scope viewmodel to the current novigation praph (here we don't have this graph, scope to the Activity)
+            // create an instance of MyViewModel
+            // it will inject repository, and api
+            val myViewModel = hiltViewModel<MyViewModel>()
+      }
+}
 ```
 Scope the viewmodel to the current graph
 
