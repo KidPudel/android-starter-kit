@@ -65,8 +65,8 @@ object AppModule {
 `@Singleton` - scope, **how many instances**, here we'll have obly a single instance, if we wouldn't have it, when we inject couple of times, we would create two instances, that would live as long as app does.  
 
 ⬇⬇⬇
-> **As long as dagger knows how to implement all for the class dependencies, it knows how to implement our class**, so we dont need a function in module for that.  
-
+> **As long as dagger knows how to implement all for the class dependencies, it knows how to implement our class**, so we don't need a function in module for that.  
+But you still can use it to bind, to make sure that the specifoc implementation of interface is choisen [example](#binding-abstraction)
 ⬆⬆⬆
 
 ------------------------------------------------------------
@@ -124,8 +124,19 @@ abstract class RepositoryModule {
 }
 ```
 
-Now we need to change 
+Now we need to change:
 ```kotlin
+class MyReposiotory(
+      private val myApi: MyApi,
+      private val appContext: Application
+      ): IMyReposiotory
+
+To that ⬇
+
+class MyReposiotory @Inject constructor(
+      private val myApi: MyApi,
+      private val appContext: Application
+      ): IMyReposiotory
 ```
 ------------------------
 
