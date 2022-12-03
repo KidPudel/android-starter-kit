@@ -14,6 +14,8 @@ We **inject** our dependencies, in other words:
 
 _but before, we need to include some dependencies in gradle -> [include](#what-we-need-to-use-it)_
 
+--------------------------------------------------------------
+
 🔸
 `RegistrationViewModel.kt`
 ```kotlin
@@ -61,6 +63,8 @@ object AppModule {
 ```
 
 If there is some other class that needs to be injected in, **follow the same process**, and **add the `@Inject` annotation to constructor.**
+
+------------------------------------------------------------
 
 # Views require objects from the graph
 
