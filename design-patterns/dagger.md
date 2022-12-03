@@ -58,21 +58,9 @@ object AppModule {
 }
 ```
 
-Dagger doesn't know how to create types of UserManager **yet**.   
-**Follow the same process**, and **add the `@Inject` annotation to UserManager's constructor.**
-
-Open the `UserManager.kt` file and replace the class definition with this one:  
-
-
-```kotlin
-class UserManager @Inject constructor(private val storage: Storage) {
-    ...
-}
-```
+If there is some other class that needs to be injected in, **follow the same process**, and **add the `@Inject` annotation to constructor.**
 
 **Now, Dagger knows how to provide instances** of `RegistrationViewModel` and `UserManager`  
-
-!!!!! Since UserManager's dependency (i.e. Storage) is an interface, we need to tell Dagger how to create an instance of that in a **different way,** we'll cover that later. !!!!!
 
 # Views require objects from the graph
 
