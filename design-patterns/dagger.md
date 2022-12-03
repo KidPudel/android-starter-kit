@@ -64,10 +64,9 @@ object AppModule {
 `@InstallIn(SingletonComponent::class)` <- decides about **lifetime** of our dependencies provided in this module.  
 `@Singleton` - scope, **how many instances**, here we'll have obly a single instance, if we wouldn't have it, when we inject couple of times, we would create two instances, that would live as long as app does.  
 
-If there is some other class that needs to be injected in, **follow the same process**, and **add the `@Inject` annotation to constructor.**
-
-> **As long as dagger knows how to implement dependencies, it knows how to implement our class where we put `@Inject`**
-
+⬇⬇⬇
+> **As long as dagger knows how to implement all for the class dependencies, it knows how to implement our class**, so we dont need a function in module for that
+⬆⬆⬆
 ------------------------------------------------------------
 
 # Views require objects from the graph
