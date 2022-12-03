@@ -2,3 +2,17 @@
 
 It for example consists of [MVVM](https://github.com/KidPudel/android-starter-kit/new/main/Architecture.MVVM.md)
 
+## Inside
+
+We have tree _layers_:
+1. Presentation (UI <-> `ViewModel`)
+2. Domain (`UseCases` <- `Entities`)
+3. Data (`Repositories` <-> (DataBase, Web))
+
+
+`ViewModel` is binding _data_ with _view_.  
+
+`UseCases` handle _buisnes logic_ (some part handle `ViewModel` and some specific to _data_ - `Repositories`  
+
+
+<span style="color: red;">text</span>
