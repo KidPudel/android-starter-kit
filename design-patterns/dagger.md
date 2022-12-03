@@ -9,9 +9,10 @@ We'll use Dagger (Dagger-Hilt) as the **[dependency injection](https://github.co
 ## How to use it?
 
 We **inject** our dependencies, in other words: 
-1. secondtell that some class has dependency of another class,   
-2. tell dagger to look up in module how to create it, application graph
+1.🔸 tell that some class has dependency of another class.
+2.🔹 tell dagger to look up in module how to create it, application graph.
 
+🔸
 `RegistrationViewModel.kt`
 ```kotlin
 // @Inject tells Dagger what depependencies ViewModel has, inject it
@@ -30,6 +31,8 @@ With the `@Inject` annotation:
 - Dagger knows that `RegistrationViewModel` has `UserManager` as dependency since the constructor takes an instance of `UserManager` as an argument.
 - `@Inject` tells "please inject all dependencies that we have in our `constructor` and look in modules `@Modules`.  
 
+
+🔹
 With the `@Module` annotation:
 - Dagger knows how to create instances of type `RegistrationViewModel`.
 
