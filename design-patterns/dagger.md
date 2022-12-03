@@ -8,10 +8,6 @@ We'll use Dagger (Dagger-Hilt) as the **[dependency injection](https://github.co
 
 ## How to use it?
 
-### application graph
-In order to build the **application graph automatically** for us,  
-Dagger needs to know **how to create instances for the classes in the graph.**
-
 `RegistrationViewModel.kt`
 ```kotlin
 // @Inject tells Dagger what depependencies ViewModel has, inject it
@@ -84,6 +80,11 @@ class RegistrationActivity : AppCompatActivity() {
 How can we tell Dagger **which** objects need to be injected into `RegistrationActivity`? We **need to create the Dagger graph (or [application graph](#application-graph))** and use it to inject objects into the Activity.
 
 # Graph
+
+### application graph
+In order to build the **application graph automatically** for us,  
+Dagger needs to know **how to create instances for the classes in the graph.**  
+
 We want Dagger to **create the graph of dependencies** of our project, **manage them for us** and be able to **get dependencies from the graph**.  
 
 #### To make Dagger do it
