@@ -170,10 +170,13 @@ dependencies {
 }
 ```
 
-![image](https://user-images.githubusercontent.com/63263301/205438733-69911a87-fa2f-4613-afef-0752d253e5fd.png)
-![image](https://user-images.githubusercontent.com/63263301/205438748-92f6a1e4-88b7-4733-a13b-17c6331fc2b7.png)
-![image](https://user-images.githubusercontent.com/63263301/205438758-342778b7-eb7b-4f56-82ab-00909b297723.png)
 
 # References
 ## [dependency injection](https://github.com/KidPudel/android-starter-kit/blob/main/design-patterns/dependency-injection.md)
 ## [Clean architecture](https://github.com/KidPudel/android-starter-kit/blob/main/Architecture/dependency-injection.md)
+
+# From google: 
+
+![image](https://user-images.githubusercontent.com/63263301/205438733-69911a87-fa2f-4613-afef-0752d253e5fd.png)
+![image](https://user-images.githubusercontent.com/63263301/205438748-92f6a1e4-88b7-4733-a13b-17c6331fc2b7.png)
+![image](https://user-images.githubusercontent.com/63263301/205438758-342778b7-eb7b-4f56-82ab-00909b297723.png)
