@@ -3,7 +3,7 @@ We'll use Dagger (Dagger-Hilt) as the **[dependency injection](https://github.co
 ## Why to use it?  
 
 - Helps easily inject our dependencies. (using annotations e.g. `@Iject`) to define which dependencies should go where
-- Have central place where we manage our dependencies ("Hey, this is how you can create _API interface_"
+- Have central place where we manage our dependencies ("Hey, this is how you can create _API interface_")
 - Control lifetime of specific dependencies (singleton, scoped)
 
 ## How to use it?
