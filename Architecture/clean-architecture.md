@@ -14,5 +14,6 @@ We have tree _layers_:
 
 `UseCases` handle _buisnes logic_ (some part handle `ViewModel` and some specific to _data_ - `Repositories`  
 
-
+```htlm
 <span style="color: red;">text</span>
+```
