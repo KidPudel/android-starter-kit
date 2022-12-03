@@ -124,4 +124,4 @@ There are libraries that solve this problem by automating the process of creatin
 
 # Tools
 
-[Dagger](https://github.com/KidPudel/android-starter-kit/edit/main/design-patterns/dagger.md)
+[Dagger](https://github.com/KidPudel/android-starter-kit/blob/main/design-patterns/dagger.md)
