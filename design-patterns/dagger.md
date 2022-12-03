@@ -10,7 +10,9 @@ We'll use Dagger (Dagger-Hilt) as the **[dependency injection](https://github.co
 
 We **inject** our dependencies, in other words: 
 1. 🔸tell that some class has dependency of another class.
-2. 🔹tell dagger to look up in module how to create it, application graph.
+2. 🔹tell dagger to look up in module how to create it, application graph.  
+
+but before, we need to include some dependencies in gradle -> [include](#what_we_need_to_use_it)
 
 🔸
 `RegistrationViewModel.kt`
