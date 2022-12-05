@@ -7,6 +7,10 @@ However, it is important to understand that **they are not the same**. This mean
 
 ![image](https://user-images.githubusercontent.com/63263301/202905098-978e397d-2381-4050-9f59-9c049ca243f4.png)
 
+> Fragments - Modular section of an activity.  
+
+You can think of them as a UI components, that you can easily reuse.
+
 
 Fragments are used in **Single Activity Architecture** to create Navigation and save state. 
 They can also **control how information is displayed** on a device based on its screen size. _This means that information can be placed on a single tablet screen that would need to be split across several screens on a phone_.  
