@@ -85,6 +85,9 @@ class MainActivity: AppCompatActicity() {
             // create an instance of MyViewModel
             // it will inject repository, and api
             val myViewModel = hiltViewModel<MyViewModel>()
+            
+            // or just
+            val myViewModel: MyViewModel by viewModels()
       }
 }
 ```
@@ -92,6 +95,28 @@ Scope the viewmodel to the current graph
 
 we injected dependency, in activity (`AndroidComponent` class -> `Activity`, `Fragment`, `Service`), we need to add annotation `@AndroidEntryPoint`
 
+
+Next step is important:  
+
+You need to add Application() class for dagger
+
+```kotlin
+package com.example.romanconverter
+
+import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
+
+@HiltAndroidApp
+class MyApp: Application() {
+}
+```
+
+and then add it to manifest
+
+```xml
+<application
+        android:name=".MyApp"
+```
 
 --------------------------------------
 
@@ -201,10 +226,12 @@ We want Dagger to **create the graph of dependencies** of our project, **manage 
 `build.gradle`
 ```kotlin
 dependencies {
+    for 1.7.0 kotlin
+
     //Dagger - Hilt
-    implementation "com.google.dagger:hilt-android:2.40.5"
-    kapt "com.google.dagger:hilt-android-compiler:2.40.5"
-    implementation "androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03"
+    implementation "com.google.dagger:hilt-android:2.42"
+    kapt "com.google.dagger:hilt-android-compiler:2.42"
+    // it's not needs anymore implementation "androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03"
     kapt "androidx.hilt:hilt-compiler:1.0.0"
     implementation 'androidx.hilt:hilt-navigation-compose:1.0.0'
 
@@ -223,7 +250,7 @@ plugins {
 `build.gradle project file`
 ```kotlin
 dependencies {
-      classpath "com.google.dagger:hilt-android-gradle-plugin:2.40.5"
+      classpath "com.google.dagger:hilt-android-gradle-plugin:2.42"
 }
 ```
 
