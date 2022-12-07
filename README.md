@@ -31,6 +31,7 @@ lookup notes for android development
 
 ### [Basic calculator with basic flow of ConstraintLayout, Guideline](https://github.com/KidPudel/android-starter-kit/blob/main/XML/Basic-calculator.md)
 ### [Margin vs Padding](https://github.com/KidPudel/android-starter-kit/blob/main/XML/margin-vs-padding.md)
+### [Tips](https://github.com/KidPudel/android-starter-kit/blob/main/XML/tips.md)
 
 
 # Android
