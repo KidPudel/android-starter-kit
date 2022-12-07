@@ -46,6 +46,7 @@ lookup notes for android development
 ### [Task and back stack](https://github.com/KidPudel/android-starter-kit/blob/main/Android/task-and-back-stack.md)
 ### [Fragments](https://github.com/KidPudel/android-starter-kit/blob/main/Android/fragments.md)
 ### [AlertDialog](https://github.com/KidPudel/android-starter-kit/blob/main/Android/alert-dialog.md)
+### [RecyclerView](https://github.com/KidPudel/android-starter-kit/blob/main/Android/recycler-view.md)
 
 # Architecture
 
