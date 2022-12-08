@@ -60,3 +60,20 @@ so it has tree functions:
 - `getItemCount` - how many items is displayed
 
 > Use view binding, it's more performant
+
+
+### connect adapter
+
+create a list of content
+
+```kotlin
+val todos = mutableListOf(
+            TodoModel("______", false),
+            TodoModel("______", false),
+            TodoModel("______", true)
+        )
+```
+
+instantialte an adapter, and set it to recycler view
+
+also we can adjust `layoutManager`
