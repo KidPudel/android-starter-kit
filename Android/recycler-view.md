@@ -59,3 +59,4 @@ so it has tree functions:
 - `OnBindViewHolder` - set content to an item view
 - `getItemCount` - how many items is displayed
 
+> Use view binding, it's more performant
