@@ -34,3 +34,9 @@ dependencies {
 2. next we need to create item layout (how item will look)
 
 ![image](https://user-images.githubusercontent.com/63263301/206417526-be7430db-e20d-4c3d-8bdf-0f71122baef8.png)
+
+3. next step is to create adapter
+
+Adapter - is used for:
+- creating view items
+- setting a content to an item
