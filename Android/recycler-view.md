@@ -18,7 +18,7 @@ dependencies {
 
 # Implement it
 
-1. To create `RecyclerView` we need to define it in our layout:
+### To create `RecyclerView` we need to define it in our layout:
 
 ```xml
 <androidx.recyclerview.widget.RecyclerView
@@ -31,11 +31,11 @@ dependencies {
         app:layout_constraintTop_toTopOf="parent"/>
 ```
 
-2. next we need to create item layout (how item will look)
+### next we need to create item layout (how item will look)
 
 ![image](https://user-images.githubusercontent.com/63263301/206417526-be7430db-e20d-4c3d-8bdf-0f71122baef8.png)
 
-3. next step is to create adapter
+### next step is to create adapter
 
 Adapter - is used for:
 - creating view items
