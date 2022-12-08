@@ -76,4 +76,13 @@ val todos = mutableListOf(
 
 instantialte an adapter, and set it to recycler view
 
+```kotlin
+val adapter = TodoAdapter(todos)
+binding.recyclerView.adapter = adapter
+```
+
 also we can adjust `layoutManager`
+
+```kotlin
+binding.recyclerView.layoutManager = LinearLayoutManager(this)
+```
