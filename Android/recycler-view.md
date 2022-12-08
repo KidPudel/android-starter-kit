@@ -35,13 +35,22 @@ dependencies {
 
 ![image](https://user-images.githubusercontent.com/63263301/206417526-be7430db-e20d-4c3d-8bdf-0f71122baef8.png)
 
+### next step is to create data model for items
+
+```kotlin
+data class TodoModel(
+    val goal: String,
+    val isDone: Boolean
+)
+```
+
 ### next step is to create adapter
 
 Adapter is used for:
 - creating view items
 - setting a content to an item
 
-> Every adapter has view holder inner class
+> Every adapter has view holder, inner class
 
 `ViewHolder` is used to _hold a view_ for particular item
 
@@ -49,3 +58,4 @@ so it has tree functions:
 - `OnCreateViewHolder` - for an item appearance
 - `OnBindViewHolder` - set content to an item view
 - `getItemCount` - how many items is displayed
+
