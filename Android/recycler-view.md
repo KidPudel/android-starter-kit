@@ -37,6 +37,15 @@ dependencies {
 
 ### next step is to create adapter
 
-Adapter - is used for:
+Adapter is used for:
 - creating view items
 - setting a content to an item
+
+> Every adapter has view holder inner class
+
+`ViewHolder` is used to _hold a view_ for particular item
+
+so it has tree functions:
+- `OnCreateViewHolder` - for an item appearance
+- `OnBindViewHolder` - set content to an item view
+- `getItemCount` - how many items is displayed
