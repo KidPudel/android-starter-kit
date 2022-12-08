@@ -7,6 +7,7 @@ But it recycles views that out of the screen, and generates it back as needed, i
 
 # Include in the project
 
+to anable `RecyclerView`, include in `build.gradle` following dependencies:
 ```kotlin
 dependencies {
     implementation("androidx.recyclerview:recyclerview:1.2.1")
@@ -14,3 +15,22 @@ dependencies {
     implementation("androidx.recyclerview:recyclerview-selection:1.1.0")
 }
 ```
+
+# Implement it
+
+1. To create `RecyclerView` we need to define it in our layout:
+
+```xml
+<androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+```
+
+2. next we need to create item layout (how item will look)
+
+![image](https://user-images.githubusercontent.com/63263301/206417526-be7430db-e20d-4c3d-8bdf-0f71122baef8.png)
