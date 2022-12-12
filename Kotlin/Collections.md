@@ -74,3 +74,15 @@ fun parseCardNumber(cardNumber: String): Long {
     return cardNumber.filter { it != ' ' }.toLongOrNull() ?: throw NumberFormatException("Wrong format")
 }
 ```
+
+## Other useful methods
+
+- `.joinToString(" ")`
+- `.withIndex()` - wraps element in (index, value)
+- `first()` - first element _that matches predictable_
+- `startsWith()`
+- `maxBy()` and `maxOf()`
+- `count()` - amount of occurances
+- `groupingBy().eachCount()` - returns a map with (Element, Number of occurances)
+- `map {}` - returns a **list** containing results of applied function to the original map
+- `forEach`
