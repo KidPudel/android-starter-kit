@@ -84,5 +84,6 @@ fun parseCardNumber(cardNumber: String): Long {
 - `maxBy()` and `maxOf()`
 - `count()` - amount of occurances
 - `groupingBy().eachCount()` - returns a map with (Element, Number of occurances)
-- `map {}` - returns a **list** containing results of applied function to the original map
+- `map {}` - returns a **list** containing results of applied function to the original map (collection)
 - `forEach`
+- `split()`
