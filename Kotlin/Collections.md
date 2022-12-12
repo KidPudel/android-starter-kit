@@ -87,3 +87,37 @@ fun parseCardNumber(cardNumber: String): Long {
 - `map {}` - returns a **list** containing results of applied function on the original map (collection)
 - `forEach`
 - `split()`
+
+
+## Think
+
+we need to find a road that leads to a TRUE Rome (from rome no ways are going)
+
+we could go with: 
+```kotlin
+    roads.forEach {
+        if (!roads.keys.contains(it.value)) {
+            rome = it.value
+        }
+    }
+```
+
+but **think**, we are here seaching for specific value (discard  others), meaning we need to **_filter_** 
+
+```kotlin
+fun main(args: Array<String>) {
+    val (citiesNumber, roadsNumber) = readLine().toString().split(" ").map { it.toInt() }
+
+    val roads = mutableMapOf<Int, Int>()
+
+    repeat(roadsNumber) {
+        val (from, to) = readLine().toString().split(" ").map {it.toInt()}
+        roads.put(from, to)
+    }
+
+    val trueRome = roads.values.filter { !roads.keys.contains(it) }
+
+    println(trueRome)
+
+}
+```
