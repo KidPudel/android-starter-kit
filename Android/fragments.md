@@ -108,3 +108,10 @@ it's **important** to remember that **you must call the `commit()`** method **at
     .commit()
     ```
     _You can utilize other methods from the `FragmentManager` in the same way._
+
+# Activity or Fragment?
+
+small difference : “ The most significant difference in lifecycle between an activity and a fragment is how one is stored in its respective back stack. An activity is placed into a back stack of activities that's managed by the system when it's stopped, by default (so that the user can navigate back to it with the Back button, as discussed in Tasks and Back Stack). However, a fragment is placed into a back stack managed by the host activity only when you explicitly request that the instance be saved by calling addToBackStack() during a transaction that removes the fragment. “
+
+- Use activity when you **need to open existing android resources** like video player or browser
+- Use fragment when **you need to manage your UI resources**, to significantly improve app response  
