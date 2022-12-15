@@ -20,8 +20,9 @@ We have tree _layers_:
 
 ## Domain
 - UseCase (**for some specific operation**, _like convert to roman, search in list, get some info from our data or api_)
-- Model
+- Model (is adjusted dto)
 - Interface for repository
 
 ## Data
 - Repository
+- dto (data transfer object, from our JSON response of API (_**use plugin to convert**_))
