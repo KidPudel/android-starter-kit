@@ -19,7 +19,7 @@ We have tree _layers_:
 - ViewModel
 
 ## Domain
-- UseCase
+- UseCase (**for some specific operation**, _like convert to roman, search in list, get some info from our data or api_)
 - Model
 - Interface for repository
 
