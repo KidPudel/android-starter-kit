@@ -26,6 +26,7 @@ lookup notes for android development
 ### [Data class](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/data-class.md)
 ### [Property accessors](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/property-accessors.md)
 
+---
 
 # Android
 
@@ -40,7 +41,8 @@ lookup notes for android development
 ### [Fragments](https://github.com/KidPudel/android-starter-kit/blob/main/Android/fragments.md)
 ### [AlertDialog](https://github.com/KidPudel/android-starter-kit/blob/main/Android/alert-dialog.md)
 ### [RecyclerView](https://github.com/KidPudel/android-starter-kit/blob/main/Android/recycler-view.md)
----
+
+
 ## XML
 
 ### [Basic calculator with basic flow of ConstraintLayout, Guideline](https://github.com/KidPudel/android-starter-kit/blob/main/XML/Basic-calculator.md)
@@ -50,6 +52,8 @@ lookup notes for android development
 ## Jetpack Compose
 
 ### [Basics](https://github.com/KidPudel/android-starter-kit/blob/main/jetpack-compose/basics.md)
+
+---
 
 # Architecture
 
