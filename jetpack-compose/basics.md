@@ -1,4 +1,4 @@
-# Why should I use Jetpack Compose?
+# Why should I use Jetpack Compose? 🤔
 
 If we look technically:
 
