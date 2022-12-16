@@ -7,3 +7,72 @@ If we look technically:
 - Compose is **_Intuitive_**. This means that you **_just need to tell_** Compose what you want to show the user.
 - Compose is **_compatible_** with all your existing code: you can call Compose code from Views and Views from Compose. Also integrated with many Jetpack Libraries.
 - Compose **_improves your build time_** and APK size.
+
+
+# What is it?
+
+> Jetpack Compose is Android’s modern toolkit for building native UI. It simplifies and accelerates UI development on Android - Google
+
+What once was **View** -> now is **Composable**
+
+# How to start using it?
+
+first add this to `build.gradle`
+```kotlin
+buildscript {
+    ext {
+        compose_ui_version = '1.1.1'
+    }
+}
+```
+
+```kotlin
+buildFeatures {
+  compose true
+}
+```
+
+```kotlin
+dependencies {
+  implementation 'androidx.activity:activity-compose:1.3.1'
+  implementation "androidx.compose.ui:ui:$compose_ui_version"
+  implementation "androidx.compose.ui:ui-tooling-preview:$compose_ui_version"
+  implementation 'androidx.compose.material:material:1.1.1'
+  
+  androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_ui_version"
+  debugImplementation "androidx.compose.ui:ui-tooling:$compose_ui_version"
+  debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_ui_version"
+}
+```
+
+# How to use it?
+
+```kotlin
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent {
+            ComposeAppTheme {
+                // A surface container using the 'background' color from the theme
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colors.background
+                ) {
+                    Greeting("Android")
+                }
+            }
+        }
+    }
+}
+```
+now we intead of SetContentView(binding.root), we have SetContent {}
+
+`Greeting("Android")` - this is composable  
+it's a function annotated with `@Composable`
+```kotlin
+@Composable
+fun Greeting(name: String) {
+  // Text is also Composable
+  Text("Hello, $name")
+}
+```
