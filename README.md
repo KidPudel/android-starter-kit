@@ -47,6 +47,10 @@ lookup notes for android development
 ### [Margin vs Padding](https://github.com/KidPudel/android-starter-kit/blob/main/XML/margin-vs-padding.md)
 ### [Tips](https://github.com/KidPudel/android-starter-kit/blob/main/XML/tips.md)
 
+## Jetpack Compose
+
+### [Basics](https://github.com/KidPudel/android-starter-kit/blob/main/jetpack-compose/basics.md)
+
 # Architecture
 
 ### [Clean architecture](https://github.com/KidPudel/android-starter-kit/blob/main/Architecture/clean-architecture.md)
