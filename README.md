@@ -60,16 +60,22 @@ lookup notes for android development
 ### [Clean architecture](https://github.com/KidPudel/android-starter-kit/blob/main/Architecture/clean-architecture.md)
 ### [MVVM](https://github.com/KidPudel/android-starter-kit/blob/main/Architecture/MVVM.md)
 
+---
+
 # Design patterns
 
 ### [Dependency injection](https://github.com/KidPudel/android-starter-kit/blob/main/design-patterns/dependency-injection.md)
 ### [Dagger](https://github.com/KidPudel/android-starter-kit/blob/main/design-patterns/dagger.md)
+
+---
 
 # Thanks
 A lot of info taken from:
 - [JetBrains Academy](https://hyperskill.org/tracks/16)
 - [Android developers](https://developer.android.com/)
 - [Philipp Lackner](https://www.youtube.com/@PhilippLackner)
+
+---
 
 # nob*tches
 ![download](https://user-images.githubusercontent.com/63263301/202911433-9ef2ceb6-db98-4340-9e36-b98bee1c6be2.jpg)
