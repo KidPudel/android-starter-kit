@@ -93,8 +93,8 @@ To prevent that instead of `.launch` use `.async` and call it with `.await`
 
 ```kotlin
 val job = GlobalScope.launch(Dispatcher.Default) {
-    val response1 = async { networkRequest1 }
-    val response2 = async { networkRequest2 }
+    val response1 = async { networkRequest1() }
+    val response2 = async { networkRequest2() }
     Log.d(TAG, "${response1.await}, ${response2.await}")
 }
 ```
