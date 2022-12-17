@@ -18,34 +18,30 @@ val thread: Thread = Thread.currentThread() // the current thread
 ```
 
 
-# Coroutines
-
-it is similar to threading, except coroutines are even more light-weight. Also, the library (kotlinx.coroutines) is specially designed to make the code similar on different platforms.
-
-Let's go back to the analogy with a firm. We can compare a coroutine with a usual task that can be done by an employee. First, the task is created, and then assigned to a person. When the person is ready, they decide what to do: start handling the task or transfer it to another person. When someone starts working on the task, there's no guarantee it will be done right away. For example, say the task was to call another department, and the person called but nobody answered. Then that person can "suspend" the task, that is, postpone it for a while. During this gap, the person can take another task and start working on it, or, if there are no more assigned tasks, they can take a break.
-
-```kotlin
-import kotlinx.coroutines.delay
-
-suspend fun main() {
-    println("Hello")
-    delay(500)
-    println("World!")
-}
-```
-
 - A thread is a sequence of instructions that can be performed in parallel.
 - The class ```Thread``` allows working with a thread as an object.
 - You can obtain a reference to the currently executing thread using the static method ```Thread.currentThread()```.
 - Any thread has a name, an identifier, a priority, as well as isAlive and isDaemon characteristics, which you can change.
 
 
+# Coroutines
+
+it is similar to threading, except coroutines are even more light-weight. Also, the library (kotlinx.coroutines) is specially designed to make the code similar on different platforms.
+
+> Let's go back to the analogy with a firm. We can compare a coroutine with a usual task that can be done by an employee. First, the task is created, and then assigned to a person. When the person is ready, they decide what to do: start handling the task or transfer it to another person. When someone starts working on the task, there's no guarantee it will be done right away. For example, say the task was to call another department, and the person called but nobody answered. Then that person can "suspend" the task, that is, postpone it for a while. During this gap, the person can take another task and start working on it, or, if there are no more assigned tasks, they can take a break.
+
+`coroutine` - is an instance of suspendable computation, that is not dependet on any thread, and can switch it as needed, takes a code that run concurrently
+`suspend function` - function that can be paused and resumed
+
+
+
 # Create coroutines 
 
 1. Create corutines scope
 2. Call coroutine builder `launch`, this will launch coroutine
+3. Set a context*
 ```kotlin
-GlobalScope.launh {
+GlobalScope.launch(context) {
 }
 ```
 
@@ -70,3 +66,12 @@ GlobalScope.launch(Dispatcher.IO) {
      }
 }
 ```
+
+## Suspend functions without coroutine
+
+```kotlin
+runBlocking {}
+```
+
+
+
