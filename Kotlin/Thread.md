@@ -46,7 +46,8 @@ suspend fun main() {
 2. Call coroutine builder `launch`, this will launch coroutine
 ```kotlin
 GlobalScope.launh {
-}```
+}
+```
 
 # Context
 
