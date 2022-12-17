@@ -88,5 +88,26 @@ end of runBlocking
 after runBlocking
 ```
 
+## Wait, corputine returns something? 
 
+Yes, it returns `Job`
 
+```kotlin
+val job = GlobalScope.launch(Dispatcher.Default) {
+    repeat(5) {
+        Log.d(TAG, "Doing something..")
+    }    
+}
+```
+job has some suspend function
+- `join` block thread, until coroutine is finished
+- `cancel` cancel job, but sometimes you need to check it in coroute with `isActive`, because it can be to busy to check that it's cancled
+
+# Timeout
+
+coroutine has function `withTimeout(timeMills)`, to cancel at some time
+
+# Await Async
+
+if we put 2 suspend function to into coroutine, they will excute **sequentially**..  
+To prevent that instead of `.launch` ff
