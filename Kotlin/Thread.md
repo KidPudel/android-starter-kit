@@ -47,3 +47,25 @@ suspend fun main() {
 ```kotlin
 GlobalScope.launh {
 }```
+
+# Context
+
+Context will describe in which thread coroutine will be started
+
+Dispatcher.Main - in a main thread for ui operation in coroutine 
+.IO - data operation, networking
+.Default - doing complex and doing long operation (operating through list)
+.Unconfined - not confined (ограничен) to a specific thread 🧵 
+newSingleThreadContext(“myThread”)
+
+Switch context
+
+
+GlobalScope.launch(Dispatcher.IO) {
+    val response = networkRequest()
+    Changed context to Main ⬇️
+    withContext(Dispatcher.Main) {
+         Text.text = response
+     } 
+   
+}
