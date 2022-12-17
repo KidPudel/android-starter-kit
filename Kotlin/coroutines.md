@@ -17,7 +17,7 @@ it is similar to threading, except coroutines are even more light-weight. Also, 
    - `viewModelScope` the same as `lyfecycleScope`, but for ViewModel
 3. Call coroutine builder
    - `launch`, this will launch coroutine
-   - `async` this will launch coroutine, but it's more
+   - `async` this will launch coroutine, but it will return results of calculation
 5. Set a context*
 ```kotlin
 GlobalScope.launch(context) {
