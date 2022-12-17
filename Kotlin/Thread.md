@@ -30,8 +30,8 @@ it is similar to threading, except coroutines are even more light-weight. Also, 
 
 > Let's go back to the analogy with a firm. We can compare a coroutine with a usual task that can be done by an employee. First, the task is created, and then assigned to a person. When the person is ready, they decide what to do: start handling the task or transfer it to another person. When someone starts working on the task, there's no guarantee it will be done right away. For example, say the task was to call another department, and the person called but nobody answered. Then that person can "suspend" the task, that is, postpone it for a while. During this gap, the person can take another task and start working on it, or, if there are no more assigned tasks, they can take a break.
 
-`coroutine` - is an instance of suspendable computation, that is not dependet on any thread, and can switch it as needed, takes a code that run concurrently
-`suspend function` - function that can be paused and resumed
+- `coroutine` - is an instance of suspendable computation, that is not dependet on any thread, and can switch it as needed, takes a code that run concurrently
+- `suspend function` - function that can be paused and resumed
 
 
 
@@ -70,7 +70,22 @@ GlobalScope.launch(Dispatcher.IO) {
 ## Suspend functions without coroutine
 
 ```kotlin
-runBlocking {}
+Log.d("before runBlocking")
+runBlocking {
+    Log.d("start of runBlocking")
+    delay(5000)
+    Log.d("end of runBlocking")
+}
+Log.d("after runBlocking")
+```
+```kotlin
+before runBlocking
+start of runBlocking
+---
+delay of 5 seconds
+---
+end of runBlocking
+after runBlocking
 ```
 
 
