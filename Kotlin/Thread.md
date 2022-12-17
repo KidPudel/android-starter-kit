@@ -38,8 +38,11 @@ it is similar to threading, except coroutines are even more light-weight. Also, 
 # Create coroutines 
 
 1. Create corutines scope
-2. Call coroutine builder `launch`, this will launch coroutine
-3. Set a context*
+   - `GlobalScope` alive as long as application
+   - `lifecycleScope` if context is destroyed, coroutines are destroyed
+   - `viewModelScope`
+3. Call coroutine builder `launch`, this will launch coroutine
+4. Set a context*
 ```kotlin
 GlobalScope.launch(context) {
 }
@@ -100,7 +103,7 @@ val job = GlobalScope.launch(Dispatcher.Default) {
 }
 ```
 job has some suspend function
-- `join` block thread, until coroutine is finished
+- `join` block thread, until coroutine is finished (all join coroutines will go together)
 - `cancel` cancel job, but sometimes you need to check it in coroute with `isActive`, because it can be to busy to check that it's cancled
 
 # Timeout
@@ -110,4 +113,13 @@ coroutine has function `withTimeout(timeMills)`, to cancel at some time
 # Await Async
 
 if we put 2 suspend function to into coroutine, they will excute **sequentially**..  
-To prevent that instead of `.launch` ff
+To prevent that instead of `.launch` use `.async` and call it with `.await`
+
+```kotlin
+val job = GlobalScope.launch(Dispatcher.Default) {
+    val response1 = async { networkRequest1 }
+    val response2 = async { networkRequest2 }
+    Log.d(TAG, "${response1.await}, ${response2.await}")
+}
+```
+it will take 3 secons instead of 6
