@@ -15,8 +15,10 @@ it is similar to threading, except coroutines are even more light-weight. Also, 
    - `GlobalScope` alive as long as application
    - `lifecycleScope` if context is destroyed, coroutines are destroyed
    - `viewModelScope` the same as `lyfecycleScope`, but for ViewModel
-3. Call coroutine builder `launch`, this will launch coroutine
-4. Set a context*
+3. Call coroutine builder
+   - `launch`, this will launch coroutine
+   - `async` this will launch coroutine, but it's more
+5. Set a context*
 ```kotlin
 GlobalScope.launch(context) {
 }
