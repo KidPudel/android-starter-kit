@@ -38,3 +38,12 @@ suspend fun main() {
 - The class ```Thread``` allows working with a thread as an object.
 - You can obtain a reference to the currently executing thread using the static method ```Thread.currentThread()```.
 - Any thread has a name, an identifier, a priority, as well as isAlive and isDaemon characteristics, which you can change.
+
+
+# Create coroutines 
+
+1. Create corutines scope
+2. Call coroutine builder `launch`, this will launch coroutine
+```kotlin
+GlobalScope.launh {
+}```
