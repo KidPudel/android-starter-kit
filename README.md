@@ -12,7 +12,7 @@ lookup notes for android development
 ### [Collections](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/Collections.md)
 ### [Strings](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/Strings.md)
 ### [Thread](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/Thread.md)
-### [Coroutines](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/Coroutines.md)
+### [Coroutines](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/coroutines.md)
 ### [Nested and inner classes](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/Nested-and-inner-classes.md)
 ### [Object declaration](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/object-decalration.md)
 ### [Pass by reference](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/pass-by-reference.md)
