@@ -18,4 +18,4 @@ fun triggerLiveData() {
 
 # Observe
 
-`StateFlow` is based on [coroutine](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/coroutines.md) framewrok
+`StateFlow` is based on [coroutine](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/coroutines.md) framework
