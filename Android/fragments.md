@@ -64,8 +64,9 @@ it's **important** to remember that **you must call the `commit()`** method **at
 
 # How to use Fragments?
 
-1. Start by creating a **.xml file to _contain_ the markup for our Fragment**
-2. Import and inherit from Fragment class
+1. To change fragments programmatically, hold it in a `FrameLayout` in xml
+3.  Start by creating a **.xml file to _contain_ the markup for our Fragment**
+4. Import and inherit from Fragment class
    - ```kotlin 
      import androidx.fragment.app.Fragment
      ```
