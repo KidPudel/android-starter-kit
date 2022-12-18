@@ -5,7 +5,7 @@ so it holds your UI state, if any value in your UI changes overtime, then that c
 all observers will be notified of the current data
 
 
-**VIEWMODEL**
+## ViewModel
 ```kotlin
 private val liveData = MutableLiveData("Hello World")
 val getLiveData: LiveData<String>
@@ -20,7 +20,7 @@ fun triggerLiveData() {
 }
 ```
 
-**MAINACTIVITY**
+## Main activity
 
 that will be called whenever there is a change on the livedata value
 ```kotlin
