@@ -66,10 +66,11 @@ delay of 5 seconds
 end of runBlocking
 after runBlocking
 ```
+This coroutine is coroutine that will bock main thread
 
 ## Wait, corputine returns something? 
 
-Yes, it returns `Job`
+Yes, it returns `Job` or `Deffered`
 
 ```kotlin
 val job = GlobalScope.launch(Dispatcher.Default) {
