@@ -4,8 +4,8 @@
 it is similar to threading, except coroutines are even **more light-weight**.
 
 - `coroutine` - is an instance of **suspendable computation**, that is **not dependet on any thread**, and can **switch** it as needed, takes a code that **run concurrently**
-- `suspend function` - function that **can be paused and resumed**
-
+- `suspend function` - function that **can be paused and resumed**  
+[more info](#more-details)
 
 # Creating coroutines 
 
