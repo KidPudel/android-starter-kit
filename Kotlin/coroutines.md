@@ -3,12 +3,11 @@
 **it's a component that allows execution to be suspended and resumed**.  
 it is similar to threading, except coroutines are even **more light-weight**.
 
-- `coroutine` - is an instance of suspendable computation, that is not dependet on any thread, and can switch it as needed, takes a code that run concurrently
-- `suspend function` - function that can be paused and resumed
+- `coroutine` - is an instance of **suspendable computation**, that is **not dependet on any thread**, and can **switch** it as needed, takes a code that **run concurrently**
+- `suspend function` - function that **can be paused and resumed**
 
 
-
-# Create coroutines 
+# Creating coroutines 
 
 1. Create corutines scope
    - `GlobalScope` alive as long as application
@@ -17,7 +16,7 @@ it is similar to threading, except coroutines are even **more light-weight**.
 3. Call coroutine builder
    - `launch`, this will launch coroutine
    - `async` this will launch coroutine, but it will return results of calculation
-5. Set a context*
+5. Set a [context*](#context)
 ```kotlin
 GlobalScope.launch(context) {
 }
