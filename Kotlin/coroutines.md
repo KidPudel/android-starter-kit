@@ -3,8 +3,12 @@
 **it's a component that allows execution to be suspended and resumed**.  
 it is similar to threading, except coroutines are even **more light-weight**.
 
+it's used to asynchronize execution for the **outer** code, **inside coroutine use another coroutine.**  
+
+So what we have?  
 - `coroutine` - is an instance of **suspendable computation**, that is **not dependet on any thread**, and can **switch** it as needed, takes a code that **run concurrently**
 - `suspend function` - function that **can be paused and resumed**  
+
 [more info](#more-details)
 
 # Creating coroutines 
@@ -14,8 +18,8 @@ it is similar to threading, except coroutines are even **more light-weight**.
    - `lifecycleScope` if context is destroyed, coroutines are destroyed
    - `viewModelScope` the same as `lyfecycleScope`, but for ViewModel
 3. Call coroutine builder
-   - `launch`, this will launch coroutine
-   - `async` this will launch coroutine, but it will return results of calculation
+   - `launch`, this will launch coroutine, **is used to fire and forget coroutine**. It is like starting a new thread
+   - `async` this will launch coroutine, but **it will return results of calculation** (used to return something)
 5. Set a [context*](#context)
 ```kotlin
 GlobalScope.launch(context) {
@@ -24,7 +28,7 @@ GlobalScope.launch(context) {
 
 # Context
 
-Context will describe in which thread coroutine will be started
+Context (Dispatcher) will describe which thread corresponding coroutine uses.
 
 - **Dispatcher.Main** - in a main thread for ui operation in coroutine 
 - **.IO** - data operation, networking
@@ -69,7 +73,9 @@ This coroutine is coroutine that will bock main thread
 
 ## Wait, corputine returns something? 
 
-Yes, it returns `Job` or `Deffered`
+Yes, it returns:  
+- `Job` with `launch` constructor
+- `Deffered` with `async` constructor
 
 ```kotlin
 val job = GlobalScope.launch(Dispatcher.Default) {
