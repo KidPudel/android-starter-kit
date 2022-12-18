@@ -20,6 +20,7 @@ So what we have?
 3. Call coroutine builder
    - `launch`, this will launch coroutine, **is used to fire and forget coroutine**. It is like starting a new thread
    - `async` this will launch coroutine, but **it will return results of calculation** (used to return something)
+   - `launchWhenStarted` used to collect from `stateFlow`
 5. Set a [context*](#context)
 ```kotlin
 GlobalScope.launch(context) {
