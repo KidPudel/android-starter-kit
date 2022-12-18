@@ -76,3 +76,8 @@ fun Greeting(name: String) {
   Text("Hello, $name")
 }
 ```
+
+- arrangment - is the main axes
+- alignment - is the cross axes
+
+for a column we have vertical arrangment and horizontal alignment
