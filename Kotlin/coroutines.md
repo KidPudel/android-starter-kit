@@ -49,6 +49,7 @@ GlobalScope.launch(Dispatcher.IO) {
 
 ## Suspend functions without coroutine
 
+`runBlocking` is a coroutine that blocks thread (outside of scope)
 ```kotlin
 Log.d("before runBlocking")
 runBlocking {
