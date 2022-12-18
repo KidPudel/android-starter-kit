@@ -34,6 +34,7 @@ lookup notes for android development
 ### [View binding](https://github.com/KidPudel/android-starter-kit/blob/main/Android/view-binding.md)
 ### [Inflate](https://github.com/KidPudel/android-starter-kit/blob/main/Android/inflate.md)
 ### [LiveData](https://github.com/KidPudel/android-starter-kit/blob/main/Android/live-data.md)
+### [Flow & StateFlow](https://github.com/KidPudel/android-starter-kit/blob/main/Android/flow.md)
 ### [Gradle](https://github.com/KidPudel/android-starter-kit/blob/main/Android/gradle.md)
 ### [Intent](https://github.com/KidPudel/android-starter-kit/blob/main/Android/intent.md)
 ### [Activity](https://github.com/KidPudel/android-starter-kit/blob/main/Android/activity.md)
