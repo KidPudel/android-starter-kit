@@ -108,3 +108,8 @@ Modifier.:
 
 Modifiers are applied sequentially:  
 ![image](https://user-images.githubusercontent.com/63263301/208513544-f3c03680-7c9a-4a2b-a526-2d01e8c0f130.png)
+
+
+# Helpful resourses
+
+- [Compose layout basics](https://developer.android.com/jetpack/compose/layouts/basics)
