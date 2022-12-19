@@ -89,4 +89,5 @@ Modifier.:
 - `.backgroud` draws a shape with a solid color behind the content
 - `.fillMaxSize(->percentage<-), MaxHeight, MaxWidth` scales composable with a percentage of how much is it fill the screen
 - `.width, .height, .required_` just as with xml, but required is fill even furthter (can go out of screen)
-- 
+-  `.padding` pushes content of container inside ([read more about padding](https://github.com/KidPudel/android-starter-kit/blob/main/XML/margin-vs-padding.md)
+-  `.offest` like [margin](https://github.com/KidPudel/android-starter-kit/blob/main/XML/margin-vs-padding.md), but it doesn't push other elements
