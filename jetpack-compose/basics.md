@@ -92,6 +92,9 @@ Modifier.:
 -  `.padding` pushes content of container inside ([read more about padding](https://github.com/KidPudel/android-starter-kit/blob/main/XML/margin-vs-padding.md))
 -  `.offest` like [margin](https://github.com/KidPudel/android-starter-kit/blob/main/XML/margin-vs-padding.md), but it doesn't push other elements (starts from top left corner), but you can use `Spacer` composable (add extra space)
 -  `.border` gives composable a borders
+-  `.clickable`
+-  `.scrollable`
+-  `.draggable`
 
 Modifiers are applied sequentially:  
 ![image](https://user-images.githubusercontent.com/63263301/208513544-f3c03680-7c9a-4a2b-a526-2d01e8c0f130.png)
