@@ -84,7 +84,7 @@ for a column we have vertical arrangment and horizontal alignment
 
 # Useful Composable
 
-- `Column` & `Row` & `Box`
+- `Column` & `Row` & `Box`  
     ![image](https://user-images.githubusercontent.com/63263301/208519000-88281d26-c260-4544-8d33-d489561d4123.png)
 
 - `Text`
