@@ -47,6 +47,7 @@ dependencies {
 
 # How to use it?
 
+`SetContent` is the entry point for Composables
 ```kotlin
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
