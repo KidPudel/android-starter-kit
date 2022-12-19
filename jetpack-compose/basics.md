@@ -81,3 +81,12 @@ fun Greeting(name: String) {
 - alignment - is the cross axes
 
 for a column we have vertical arrangment and horizontal alignment
+
+
+# Modifiers
+
+Modifier.:
+- `.backgroud` draws a shape with a solid color behind the content
+- `.fillMaxSize(->percentage<-), MaxHeight, MaxWidth` scales composable with a percentage of how much is it fill the screen
+- `.width, .height, .required_` just as with xml, but required is fill even furthter (can go out of screen)
+- 
