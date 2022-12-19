@@ -82,8 +82,15 @@ fun Greeting(name: String) {
 
 for a column we have vertical arrangment and horizontal alignment
 
+# Useful Composable
 
-# Modifiers
+- `Column` & `Row` & `Box`
+    ![image](https://user-images.githubusercontent.com/63263301/208519000-88281d26-c260-4544-8d33-d489561d4123.png)
+
+- `Text`
+- `Card`
+
+# Useful modifiers
 
 Modifier.:
 - `.backgroud` draws a shape with a solid color behind the content
