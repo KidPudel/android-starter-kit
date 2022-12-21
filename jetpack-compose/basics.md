@@ -97,7 +97,7 @@ for a column we have vertical arrangment and horizontal alignment
 
 Modifier.:
 - `.backgroud` draws a shape with a solid color behind the content
-- `.fillMaxSize(->percentage<-), MaxHeight, MaxWidth` scales composable with a percentage of how much is it fill the screen
+- `.fillMaxSize(->percentage<-), MaxHeight, MaxWidth` scales composable with a percentage of how much is it fill the parent
 - `.width, .height, .required_` just as with xml, but required is fill even furthter (can go out of screen)
 -  `.padding` pushes content of container inside ([read more about padding](https://github.com/KidPudel/android-starter-kit/blob/main/XML/margin-vs-padding.md))
 -  `.offest` like [margin](https://github.com/KidPudel/android-starter-kit/blob/main/XML/margin-vs-padding.md) (jetpack compose doesn't have margin, but you can use padding instead of it), but it doesn't push other elements (starts from top left corner), but you can use `Spacer` composable (add extra space)
