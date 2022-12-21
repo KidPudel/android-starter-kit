@@ -119,3 +119,6 @@ Modifier.:
 # Helpful resourses
 
 - [Compose layout basics](https://developer.android.com/jetpack/compose/layouts/basics)
+
+# Examples
+[Pin composable](https://github.com/KidPudel/android-starter-kit/blob/main/jetpack-compose/pin-composable.kt)
