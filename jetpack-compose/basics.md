@@ -97,17 +97,23 @@ for a column we have vertical arrangment and horizontal alignment
 
 Modifier.:
 - `.backgroud` draws a shape with a solid color behind the content
-- `.fillMaxSize(->percentage<-), MaxHeight, MaxWidth` scales composable with a percentage of how much is it fill the parent
+- `.fillMaxSize(->percentage<-), MaxHeight, MaxWidth` will make composable occupy all available space (**_If boundaries in parent are set (e.g. if only height is set, then width is going to be filled up for entire screen)_**)
 - `.width, .height, .required_` just as with xml, but required is fill even furthter (can go out of screen)
 -  `.padding` pushes content of container inside ([read more about padding](https://github.com/KidPudel/android-starter-kit/blob/main/XML/margin-vs-padding.md))
+-  `.matchParentSize` - content will scale according to the borders of parent
+-  `.size`
 -  `.offest` like [margin](https://github.com/KidPudel/android-starter-kit/blob/main/XML/margin-vs-padding.md) (jetpack compose doesn't have margin, but you can use padding instead of it), but it doesn't push other elements (starts from top left corner), but you can use `Spacer` composable (add extra space)
 -  `.border` gives composable a borders
 -  `.clickable`
 -  `.scrollable`
 -  `.draggable`
 
-Modifiers are applied sequentially:  
-![image](https://user-images.githubusercontent.com/63263301/208513544-f3c03680-7c9a-4a2b-a526-2d01e8c0f130.png)
+# Helpful adivses
+
+- Modifiers are applied sequentially:  
+    ![image](https://user-images.githubusercontent.com/63263301/208513544-f3c03680-7c9a-4a2b-a526-2d01e8c0f130.png)  
+
+- In order to align individual element in the box, you need to use another Box
 
 
 # Helpful resourses
