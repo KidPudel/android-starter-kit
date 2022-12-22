@@ -54,6 +54,8 @@ lookup notes for android development
 ## Jetpack Compose
 
 ### [Basics](https://github.com/KidPudel/android-starter-kit/blob/main/jetpack-compose/basics.md)
+### [Font](https://github.com/KidPudel/android-starter-kit/blob/main/jetpack-compose/jc-font.md)
+### [State](https://github.com/KidPudel/android-starter-kit/blob/main/jc-state/basics.md)
 
 ---
 
