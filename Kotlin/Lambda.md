@@ -1,3 +1,5 @@
+> Lamda - is the function that **has no name**
+
 Simple lambda:
 ```kotlin
 val mul2: (Int, Int) -> Int = { a: Int, b: Int -> a * b }
