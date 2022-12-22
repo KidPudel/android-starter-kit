@@ -140,4 +140,9 @@ create state: `rememberCoroutineScope`
 ### [State changes](https://github.com/KidPudel/android-starter-kit/blob/main/jetpack-compose/state-changes.kt)  
 ![image](https://user-images.githubusercontent.com/63263301/209205044-b0f7db02-fc72-4528-9771-e367bc4962c7.png)
 
+---
+
+### [Greet user](https://github.com/KidPudel/android-starter-kit/blob/main/jetpack-compose/greet-user.kt)
+![image](https://user-images.githubusercontent.com/63263301/209211845-f7e244a0-1358-4e20-8916-f4aa387e18ca.png)
+
 
