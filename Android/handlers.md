@@ -1,3 +1,5 @@
+[You might want to use coroutines instead of handlers.](https://betterprogramming.pub/drift-away-from-android-handlers-use-coroutines-and-jobs-instead-581815dd3e72)  
+
 **A Handler** operates with a queue of messages. It allows us to **schedule code execution** at a certain point in the future, with or without a specified **delay**.  
 Handlers also enable us to execute code **outside of our thread**.  
 1. put a work into a queue  
