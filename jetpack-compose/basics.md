@@ -89,9 +89,12 @@ for a column we have vertical arrangment and horizontal alignment
     ![image](https://user-images.githubusercontent.com/63263301/208519000-88281d26-c260-4544-8d33-d489561d4123.png)
 
 - `Text`
+- `TextFiled`
 - `Card`
 - `Image`
 - `Scaffold`
+- `Spacer` composable (add extra space)
+- `Button`
 
 # Useful modifiers
 
