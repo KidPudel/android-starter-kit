@@ -39,3 +39,8 @@ or we can use it like that:
 var name = remember by { mutableStateOf("User") }
 ```
 this will provide `String`
+
+
+# Logic in example
+
+For example, we **change** our `TextFiled` value, therefore we shoud use state to recompose composable, also other components would know about current state
