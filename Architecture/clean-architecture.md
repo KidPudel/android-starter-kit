@@ -25,4 +25,5 @@ We have tree _layers_:
 
 ## Data
 - Repository
-- dto (data transfer object, from our JSON response of API (_**use plugin to convert**_))
+- remote (also define interface of routes we want to access from API)
+  - dto (data transfer object, from our JSON response of API (_**use plugin to convert**_))
