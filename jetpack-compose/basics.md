@@ -133,3 +133,8 @@ create state: `rememberCoroutineScope`
 # Examples
 
 [Pin composable](https://github.com/KidPudel/android-starter-kit/blob/main/jetpack-compose/pin-composable.kt)
+---
+[State changes](https://github.com/KidPudel/android-starter-kit/blob/main/jetpack-compose/state-changes.kt)
+![image](https://user-images.githubusercontent.com/63263301/209205044-b0f7db02-fc72-4528-9771-e367bc4962c7.png)
+
+
