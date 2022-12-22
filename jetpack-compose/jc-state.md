@@ -1,4 +1,5 @@
 # What is State?
+> State in any app is the alue that can change overtime.  
 
 State discribes how given UI, will look at the moment.  
 
@@ -16,3 +17,4 @@ After recomposing, function is recalled and therefore reset the state :(
 ### Solution
 We can apply `remember` lambda from J.C.  
 What it will do, **it will rememer the state value from the last composition**
+
