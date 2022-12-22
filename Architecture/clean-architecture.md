@@ -26,3 +26,4 @@ We have tree _layers_:
 ## Data
 - Repository
 - dto (data transfer object, from our JSON response of API (_**use plugin to convert**_))
+- retrofit interface
