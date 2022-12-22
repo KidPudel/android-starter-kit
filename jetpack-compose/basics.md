@@ -110,6 +110,7 @@ Modifier.:
 -  `.clickable`
 -  `.scrollable`
 -  `.draggable`
+-  `.weight` - how much space it will take
 
 # Helpful adivses
 
