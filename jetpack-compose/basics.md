@@ -120,9 +120,13 @@ Modifier.:
 - In order to align individual element in the box, you need to use another Box
 
 
-### How to use coroutines in composable?
+## How to use coroutines in composable?
 
 create state: `rememberCoroutineScope`
+
+## Lazy
+
+Instead of recyclable we can use lazy
 
 
 
