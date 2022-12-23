@@ -8,13 +8,11 @@
    ```<user-permission android:name="android.permission.INTERNET"/>```
 2. Add following dependencies:  
    ```kotlin
-   implementation 'com.google.code.gson:gson:2.8.9'
-   implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-   implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
-   
-   implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.1'
-   implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2-native-mt'
-   implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.4.0'
+   // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation "com.squareup.okhttp3:okhttp:5.0.0-alpha.2"
+    implementation "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2"
    ```
 
 # How to use it?
