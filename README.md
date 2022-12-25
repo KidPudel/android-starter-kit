@@ -26,6 +26,7 @@ lookup notes for android development
 ### [Try catch](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/try-catch.md)
 ### [Data class](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/data-class.md)
 ### [Property accessors](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/property-accessors.md)
+### [Retrofit](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/retrofit.md)
 
 ---
 
@@ -43,7 +44,6 @@ lookup notes for android development
 ### [Fragments](https://github.com/KidPudel/android-starter-kit/blob/main/Android/fragments.md)
 ### [AlertDialog](https://github.com/KidPudel/android-starter-kit/blob/main/Android/alert-dialog.md)
 ### [RecyclerView](https://github.com/KidPudel/android-starter-kit/blob/main/Android/recycler-view.md)
-### [Retrofit](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/retrofit.md)
 
 
 ## XML
