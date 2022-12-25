@@ -43,6 +43,7 @@ lookup notes for android development
 ### [Fragments](https://github.com/KidPudel/android-starter-kit/blob/main/Android/fragments.md)
 ### [AlertDialog](https://github.com/KidPudel/android-starter-kit/blob/main/Android/alert-dialog.md)
 ### [RecyclerView](https://github.com/KidPudel/android-starter-kit/blob/main/Android/recycler-view.md)
+### [Retrofit](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/retrofit.md)
 
 
 ## XML
