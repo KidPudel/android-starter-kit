@@ -60,7 +60,7 @@ lookup notes for android development
 
 ---
 
-## Ktor
+# Ktor
 
 ### [Basics](https://github.com/KidPudel/android-starter-kit/blob/main/ktor/basics.md)
 
