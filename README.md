@@ -60,6 +60,12 @@ lookup notes for android development
 
 ---
 
+## Ktor
+
+### [Basics](https://github.com/KidPudel/android-starter-kit/blob/main/ktor/basics.md)
+
+---
+
 # Architecture
 
 ### [Clean architecture](https://github.com/KidPudel/android-starter-kit/blob/main/Architecture/clean-architecture.md)
