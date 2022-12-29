@@ -39,7 +39,7 @@ lifecycleScope.launchWhenStarted {
 
 # Flow
 
-instead of a fariable we have function trigger flow, that will return `Flow`  
+instead of a variable we have function trigger flow, that will return `Flow`  
 We **have to construct flow** with a `flow` builder, inside which we have a **_coroutine scope_**
 
 ```kotlin
