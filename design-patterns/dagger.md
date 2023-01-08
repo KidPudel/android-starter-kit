@@ -131,7 +131,7 @@ So get rid of this:
 ```kotlin
 @Provides // annotate that this function provides dependency
 @Singleton
-fun getRepository(myApi: MyApi): IMyRepository {
+fun getRepository(myApi: MyApi): MyRepository {
       return MyRepository(myApi) // in example we need an instance of MyApi
 }
 ```
@@ -170,7 +170,7 @@ In Application class we need to use @HildAndroidApp, then we can use:
 ```kotlin
 @Provides // annotate that this function provides dependency
 @Singleton
-fun getRepository(myApi: MyApi, app: Application): IMyRepository {
+fun getRepository(myApi: MyApi, app: Application): MyRepository {
       return MyRepository(myApi, app) // in example we need an instance of MyApi
 }
 ```
