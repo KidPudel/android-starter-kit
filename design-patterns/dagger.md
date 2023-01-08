@@ -55,7 +55,7 @@ object AppModule {
       // now dagger will know how to create MyRepository type of class
       @Provides // annotate that this function provides dependency
       @Singleton
-      fun getRepository(myApi: MyApi): MyRepository { // return implementation -> dagger will go from used interface and look and return implementation on interface
+      fun getRepository(myApi: MyApi): IMyRepository { // return implementation for interface
             return MyRepository(myApi) // in example we need an instance of MyApi
       }
 }
@@ -131,7 +131,7 @@ So get rid of this:
 ```kotlin
 @Provides // annotate that this function provides dependency
 @Singleton
-fun getRepository(myApi: MyApi): MyRepository {
+fun getRepository(myApi: MyApi): IMyRepository {
       return MyRepository(myApi) // in example we need an instance of MyApi
 }
 ```
