@@ -6,7 +6,8 @@
 
 1. In Manifest allow Internet
    ```<user-permission android:name="android.permission.INTERNET"/>```
-2. Add following dependencies:  
+2. `android:usesCleartextTraffic="true"` to enable local interaction
+3. Add following dependencies:  
    ```kotlin
    // Retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
