@@ -27,6 +27,7 @@ lookup notes for android development
 ### [Data class](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/data-class.md)
 ### [Property accessors](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/property-accessors.md)
 ### [Retrofit](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/retrofit.md)
+### [Null safety](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/null-safety.md)
 
 ---
 
