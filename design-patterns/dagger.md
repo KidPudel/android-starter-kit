@@ -261,3 +261,14 @@ dependencies {
 ![image](https://user-images.githubusercontent.com/63263301/205438733-69911a87-fa2f-4613-afef-0752d253e5fd.png)
 ![image](https://user-images.githubusercontent.com/63263301/205438748-92f6a1e4-88b7-4733-a13b-17c6331fc2b7.png)
 ![image](https://user-images.githubusercontent.com/63263301/205438758-342778b7-eb7b-4f56-82ab-00909b297723.png)
+
+## @Provides vs @Binds
+```kotlin
+@Provides
+public static HomePresenter provideHomePresenter(HomePresenterImp presenter) {
+    return presenter;
+}
+```
+```kotlin
+@Binds abstract HomePresenter bindHomePresenter(HomePresenterImp presenter);
+```
