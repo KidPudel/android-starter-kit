@@ -35,7 +35,13 @@ If you have multiple activity result calls that either use different contracts o
 
 ## Launching an activity for result
 
-`registerForActivityResult()` registers your callback, but it does **not** launch the other activity and kick off the request for a result.  
-_This is the **responsibility of the returned `ActivityResultLauncher` instance**._  
+`registerForActivityResult()` registers your callback, but it does **not** launch the _other activity and kick off the request for a result_. 
 
-`If input exists`, the **launcher takes the input that matches the type of the `ActivityResultContract`**.
+- _This is the **responsibility of the returned `ActivityResultLauncher` instance**._  
+- _If input exists_, the **launcher takes the input that matches the type of the `ActivityResultContract`**.
+- Calling `launch()` starts the process of producing the result.
+
+When the user is done with the subsequent activity and returns:
+- the `onActivityResult()` from the `ActivityResultCallback` is then **executed**, as shown in the following example:  
+
+
