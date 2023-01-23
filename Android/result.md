@@ -44,4 +44,20 @@ If you have multiple activity result calls that either use different contracts o
 When the user is done with the subsequent activity and returns:
 - the `onActivityResult()` from the `ActivityResultCallback` is then **executed**, as shown in the following example:  
 
+```kotlin
+val getContent = registerForActivityResult(GetContent()) { uri: Uri? ->
+    // Handle the returned Uri
+}
 
+override fun onCreate(savedInstanceState: Bundle?) {
+    // ...
+
+    val selectButton = findViewById<Button>(R.id.select_button)
+
+    selectButton.setOnClickListener {
+        // Pass in the mime type you'd like to allow the user to select
+        // as the input
+        getContent.launch("image/*")
+    }
+}
+```
