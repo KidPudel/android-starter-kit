@@ -39,7 +39,7 @@ If you have multiple activity result calls that either use different contracts o
 
 - _This is the **responsibility of the returned `ActivityResultLauncher` instance**._  
 - _If input exists_, the **launcher takes the input that matches the type of the `ActivityResultContract`**. _(`String` (1st example), `Intent` (2nd example))_
-- Calling `launch()` starts the process of producing the result.
+- Calling `launch()` **starts** the process of **producing the result**.
 
 When the user is done with the subsequent activity and returns:
 - the `onActivityResult()` from the `ActivityResultCallback` is then **executed**, as shown in the following example:  
