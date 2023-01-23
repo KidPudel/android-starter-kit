@@ -17,6 +17,7 @@ When in a ComponentActivity or a Fragment, the Activity Result APIs provide:
 - `registerForActivityResult()` API for **registering the result callback**.
 - `ActivityResultContract` defines the **input** type needed to produce a result along with the **output** type of the result.
 - `ActivityResultCallback` is a single method interface with an `onActivityResult()` method **that takes an object of the output type defined in the `ActivityResultContract`**
+- `ActivityResultLauncher` which you’ll use **to launch the other activity**.
 
 
 ```kotlin
@@ -31,3 +32,8 @@ val newsResult = registerForActivityResult(ActivityResultContracts.StartActivity
 }
 ```
 If you have multiple activity result calls that either use different contracts or want separate callbacks, you can call `registerForActivityResult()` multiple times to register multiple `ActivityResultLauncher` instances. You must always call registerForActivityResult() in the same order for each creation of your fragment or activity to ensure that the inflight results are delivered to the correct callback.
+
+## Launching an activity for result
+
+`registerForActivityResult()` registers your callback, but it does **not** launch the other activity and kick off the request for a result.  
+IThis is the **responsibility of the returned `ActivityResultLauncher` instance**.
