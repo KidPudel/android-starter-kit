@@ -2,7 +2,7 @@
 
 ## Table of content
 - [Overview](#overview)
-- [Registering a callback for an Activity Result](#registering_a_callback_for_an_activity_result)
+- [Registering a callback for an Activity Result](#registering-a-callback-for-an-activity-result)
 - Launching an activity for result
 - More information
 
