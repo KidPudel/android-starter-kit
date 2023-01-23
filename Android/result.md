@@ -61,3 +61,5 @@ override fun onCreate(savedInstanceState: Bundle?) {
     }
 }
 ```
+
+### For more information, look up [this page](https://developer.android.com/training/basics/intents/result#kotlin)
