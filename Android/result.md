@@ -1,5 +1,6 @@
 # Result from an Activity
 
+## Overview
 Sometimes we need to **get information from activity**, for example:
 > App opens camera, camera takes a photo, and camera activity destroyed, and previous activity need to get that photo
 
