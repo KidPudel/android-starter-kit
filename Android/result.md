@@ -4,7 +4,7 @@
 - [Overview](#overview)
 - [Registering a callback for an Activity Result](#registering-a-callback-for-an-activity-result)
 - [Launching an activity for result](#launching-an-activity-for-result)
-- [More information](#for-more-information,-look-up-this-page)
+- [More information](#for-more-information-look-up-this-page)
 
 ## Overview
 
