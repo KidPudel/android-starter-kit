@@ -35,5 +35,5 @@ If you have multiple activity result calls that either use different contracts o
 
 ## Launching an activity for result
 
-`registerForActivityResult()` registers your callback, but it does **not** launch the other activity and kick off the request for a result.  
-IThis is the **responsibility of the returned `ActivityResultLauncher` instance**.
+`registerForActivityResult()` registers your callback, but it does **not** launch the other activity and kick off the request for a result. 
+This is the **responsibility of the returned `ActivityResultLauncher` instance**.
