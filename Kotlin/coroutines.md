@@ -95,7 +95,8 @@ coroutine has function `withTimeout(timeMills)`, to cancel at some time
 
 # Await Async
 
-if we put 2 suspend function to into coroutine, they will excute **sequentially**..  
+## if we put 2 suspend function to into coroutine, they will excute *sequentially*.. 
+
 To prevent that instead of `.launch` use `.async` and call it with `.await`
 
 ```kotlin
