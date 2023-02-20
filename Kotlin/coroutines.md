@@ -108,6 +108,32 @@ val job = GlobalScope.launch(Dispatcher.Default) {
 ```
 it will take 3 secons instead of 6
 
+## Bad
+![image](https://user-images.githubusercontent.com/63263301/220052755-56d7bab6-8e9c-49bd-8f13-74e65788568e.png)  
+
+
+## Good
+![image](https://user-images.githubusercontent.com/63263301/220052842-a161aba6-25a2-46e4-9b97-22f5c7fff7f3.png)  
+
+
+## Bad
+![image](https://user-images.githubusercontent.com/63263301/220053484-1c4b4e2a-c886-4c37-b746-e8f98e52eeeb.png)  
+
+## Good
+![image](https://user-images.githubusercontent.com/63263301/220053543-7733ebf0-4cfb-45ab-80ba-ebf09b71d04d.png)  
+
+## Bad
+![image](https://user-images.githubusercontent.com/63263301/220055651-b126eed6-c1ea-4ad2-98db-00d4fea763a3.png)  
+![image](https://user-images.githubusercontent.com/63263301/220055859-1bb8fb33-e7c0-42cc-9f32-a1e106bb39b7.png)  
+
+it will be canceled if, you'd rotate it or switch to dark mode
+
+## Good
+![image](https://user-images.githubusercontent.com/63263301/220055959-3bd7f9df-a35f-4c40-ab7a-f652f43b982b.png)  
+![image](https://user-images.githubusercontent.com/63263301/220056017-1a5aceb1-2a38-4c1d-a2ab-2ef679d32981.png)
+
+
+
 
 # More details
 
