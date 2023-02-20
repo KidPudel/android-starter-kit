@@ -86,7 +86,11 @@ val job = GlobalScope.launch(Dispatcher.Default) {
 }
 ```
 job has some suspend function
-- `join` block thread, until coroutine is finished (all join coroutines will go together) - otherwise code will just go further and finish, or print null for some variables
+- `join` block thread, until coroutine is finished (**_all join coroutines will go together_**) - otherwise code will just go further and finish, or print null for some variables
+   ![image](https://user-images.githubusercontent.com/63263301/220058337-3e620a5f-4496-494d-a5c8-58b00699be93.png)  
+   return nulls
+   ![image](https://user-images.githubusercontent.com/63263301/220058437-fa9e675f-23dc-468a-b643-8f58bfce3ac8.png)  
+   return results in a 3 seconds
 - `cancel` cancel job, but sometimes you need to check it in coroute with `isActive`, because it can be to busy to check that it's cancled
 
 # Timeout
