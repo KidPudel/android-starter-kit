@@ -93,7 +93,7 @@ val job = GlobalScope.launch(Dispatcher.Default) {
 ```
 job has some suspend function
 - `join` block code, until coroutine is finished (**_all join coroutines will go together_**) - otherwise code will just go further and finish, or print null for some variables
-   ![image](https://user-images.githubusercontent.com/63263301/220058337-3e620a5f-4496-494d-a5c8-58b00699be93.png)  
+   ![image](https://user-images.githubusercontent.com/63263301/220066669-06132833-bbac-463b-a78f-c1e2190675a4.png) 
    return nulls
    ![image](https://user-images.githubusercontent.com/63263301/220058437-fa9e675f-23dc-468a-b643-8f58bfce3ac8.png)  
    return results in a 3 seconds
