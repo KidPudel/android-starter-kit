@@ -3,6 +3,10 @@
 **it's a component that allows execution to be suspended and resumed**. (they are workers in the construction (thread))  
 They **can be launched on other threads (Dispateched.IO, Default, etc.)** or they **could be launched on the same main thread**, _that would block the UI for example, but it would certanly finish their job_.  
 
+### Reminder on how it would look with all those coroutines in threads  
+![image](https://user-images.githubusercontent.com/63263301/220064187-11e14ccf-30c2-42c6-9ab0-9819ae081690.png)  
+
+
 it is similar to threading, except coroutines are even **more light-weight**.
 
 it's used to asynchronize execution for the **outer** code, **inside coroutine use another coroutine.**  
