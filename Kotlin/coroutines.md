@@ -92,7 +92,7 @@ val job = GlobalScope.launch(Dispatcher.Default) {
 }
 ```
 job has some suspend function
-- `join` will **block code** in the thread it was called, until coroutine is finished (**_all joined coroutines in that scope will go together_**) - otherwise code will just go further and finish, or print null for some variables (in this example async and await is much better solution)
+- `join` will **block code** in the thread it was called, until coroutine is finished (**_all joined coroutines in that scope will go together_**) - otherwise code will just go further and finish, or print null for some variables (in this example `async` and `await` is **much better solution**)
    ![image](https://user-images.githubusercontent.com/63263301/220066669-06132833-bbac-463b-a78f-c1e2190675a4.png) 
    return nulls
    ![image](https://user-images.githubusercontent.com/63263301/220058437-fa9e675f-23dc-468a-b643-8f58bfce3ac8.png)  
