@@ -86,7 +86,7 @@ val job = GlobalScope.launch(Dispatcher.Default) {
 }
 ```
 job has some suspend function
-- `join` block thread, until coroutine is finished (**_all join coroutines will go together_**) - otherwise code will just go further and finish, or print null for some variables
+- `join` block coroutine, until coroutine is finished (**_all join coroutines will go together_**) - otherwise code will just go further and finish, or print null for some variables
    ![image](https://user-images.githubusercontent.com/63263301/220058337-3e620a5f-4496-494d-a5c8-58b00699be93.png)  
    return nulls
    ![image](https://user-images.githubusercontent.com/63263301/220058437-fa9e675f-23dc-468a-b643-8f58bfce3ac8.png)  
@@ -110,7 +110,8 @@ val job = GlobalScope.launch(Dispatcher.Default) {
     Log.d(TAG, "${response1.await}, ${response2.await}")
 }
 ```
-it will take 3 secons instead of 6
+it will take 3 secons instead of 6  
+`await` will block our coroutine until the answer is awailable
 
 ## Bad
 ![image](https://user-images.githubusercontent.com/63263301/220052755-56d7bab6-8e9c-49bd-8f13-74e65788568e.png)  
