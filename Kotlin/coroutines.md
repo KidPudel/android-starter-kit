@@ -97,6 +97,33 @@ job has some suspend function
    return nulls
    ![image](https://user-images.githubusercontent.com/63263301/220058437-fa9e675f-23dc-468a-b643-8f58bfce3ac8.png)  
    return results in a 3 seconds
+   #### Examples
+   that is started on the same thread asynchroniously => therefore not finished
+   ```kotlin
+   @OptIn(DelicateCoroutinesApi::class)
+   fun main() = runBlocking {
+       GlobalScope.launch {
+           println("Coroutine in main has started")
+           delay(5000L)
+       }
+       println("Finish the program")
+   }
+   Finish the program
+   ```
+   that is started on the same thread asynchroniously, but that is joined => therefore blocked main execution
+   ```kotlin
+   @OptIn(DelicateCoroutinesApi::class)
+   fun main() = runBlocking {
+      val job = GlobalScope.launch {
+        println("Coroutine in main has started")
+        delay(5000L)
+    }
+    job.join()
+    println("Finish the program")
+   }
+   Coroutine in main has started
+   Finish the program
+   ```
 - `cancel` cancel job, but sometimes you need to check it in coroute with `isActive`, because it can be to busy to check that it's cancled
 
 # Timeout
