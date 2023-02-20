@@ -1,6 +1,7 @@
 # Coroutines
 
-**it's a component that allows execution to be suspended and resumed**.  
+**it's a component that allows execution to be suspended and resumed**. (they are workers in the construction (thread))  
+They can be launched on other threads (Dispateched.IO, Default, etc.) or they could be launched on the same main thread, that would block the UI for example, but it would certanly finish their job.
 it is similar to threading, except coroutines are even **more light-weight**.
 
 it's used to asynchronize execution for the **outer** code, **inside coroutine use another coroutine.**  
