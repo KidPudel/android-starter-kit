@@ -3,6 +3,19 @@
 So, when you create an object, you invoke a constructor.
 
 ```kotlin
+//CONSTRUCTOR
+constructor() :
+        this(0.0, 0.0)
+
+constructor(vec: Vector2) :
+        this(vec.x, vec.y)
+
+constructor(x: Number, y: Number) :
+        this(x.toRealT(), y.toRealT())
+            
+```
+
+```kotlin
 val size = Size()
 ```
 this is actually a **constructor call**
