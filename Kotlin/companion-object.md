@@ -1,5 +1,7 @@
 # Companion objects
 
+Is just an object that cannot be instantiated (to keep constants for example)
+
 It's like a `static` keyword in other languages
 
 An object declaration inside a class can be marked with the companion keyword:  
