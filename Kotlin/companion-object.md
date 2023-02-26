@@ -1,6 +1,6 @@
 # Companion objects
 
-Is just an object that cannot be instantiated (to keep constants for example)
+Is just an object that cannot be instantiated, but for specific class (to keep constants for example)
 
 It's like a `static` keyword in other languages
 
