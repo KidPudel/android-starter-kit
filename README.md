@@ -3,6 +3,7 @@ lookup notes for android development
 
 # Kotlin
 
+### [val vs const](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/val-vs-const.md)
 ### [Functional programming](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/Functional-Programming.md)
 ### [Lambda](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/Lambda.md)
 ### [Callback](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/Callback.md)
