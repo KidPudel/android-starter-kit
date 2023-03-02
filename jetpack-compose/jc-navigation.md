@@ -8,7 +8,7 @@ In the end, each screen will be a composable
   ```kotlin
       val navController = rememberNavController()
   ```
-  Creates a `NavHostController` that handles the adding of the `ComposeNavigator` and `DialogNavigator`.
+  Creates a `NavHostController` that handles the adding of the `ComposeNavigator` and `DialogNavigator`.  
 2. Create `NavController` composable
   ```kotlin
       NavHost(navController = navConstroller, startDestination = Screen.MainScreen.route (<- sealed class)) {
