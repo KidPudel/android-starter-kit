@@ -8,6 +8,7 @@ In the end, each screen will be a composable
   ```kotlin
       val navController = rememberNavController()
   ```
+  Creates a `NavHostController` that handles the adding of the `ComposeNavigator` and `DialogNavigator`.
 2. Create `NavController` composable
   ```kotlin
       NavHost(navController = navConstroller, startDestination = Screen.MainScreen.route (<- sealed class)) {
@@ -17,6 +18,15 @@ In the end, each screen will be a composable
           }
       }
   ```
+  Provides in place in the Compose hierarchy for self contained navigation to occur.
+  Once this is called, any Composable within the given `NavGraphBuilder` can be navigated to from the provided navController.
+  The builder passed into this method is remembered. This means that for this `NavHost`, the contents of the builder cannot be changed.
+  Params:
+  `navController` - the navController for this host
+  `startDestination` - the route for the start destination
+  `modifier` - The modifier to be applied to the layout.
+  `route` - the route for the graph
+  `builder` - the builder used to construct the graph
 
 `startDestination` instead of navigation graph, it's a routing (routes witch is just a string) between pages
 
