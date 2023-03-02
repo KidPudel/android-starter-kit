@@ -20,6 +20,15 @@ In the end, each screen will be a composable
 
 `startDestination` instead of navigation graph, it's a routing (routes witch is just a string) between pages
 
+```kotlin
+package com.example.adventure_time_characters.presentation.views
+
+sealed class Screen(val route: String) {
+    object CharacterListScreen : Screen(route = "character_list_screen")
+    object CharacterDetailScreen : Screen(route = "character_detail_screen")
+}
+```
+
 
 ## Navigate
 ```kotlin
