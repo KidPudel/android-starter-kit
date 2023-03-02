@@ -19,7 +19,7 @@ In the end, each screen will be a composable
       }
   ```
   Provides in place in the Compose hierarchy for self contained navigation to occur.  
-  Once this is called, any Composable within the given `NavGraphBuilder` can be navigated to from the provided navController.  
+  Once this is called, any Composable within the given `NavGraphBuilder` can be navigated to from the provided `navController`.  
   The builder passed into this method is remembered. This means that for this `NavHost`, the contents of the builder cannot be changed.  
   Params:
   - `navController` - the navController for this host
