@@ -29,6 +29,7 @@ lookup notes for android development
 ### [Property accessors](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/property-accessors.md)
 ### [Retrofit](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/retrofit.md)
 ### [Null safety](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/null-safety.md)
+### [Class parameters](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/class-parameters.md)
 
 ---
 
@@ -47,7 +48,6 @@ lookup notes for android development
 ### [AlertDialog](https://github.com/KidPudel/android-starter-kit/blob/main/Android/alert-dialog.md)
 ### [RecyclerView](https://github.com/KidPudel/android-starter-kit/blob/main/Android/recycler-view.md)
 ### [Result from an Activity](https://github.com/KidPudel/android-starter-kit/blob/main/Android/result.md)
-### [Class parameters](https://github.com/KidPudel/android-starter-kit/blob/main/Android/class-parameters.md)
 
 
 ## XML
