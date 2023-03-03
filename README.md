@@ -48,6 +48,7 @@ lookup notes for android development
 ### [AlertDialog](https://github.com/KidPudel/android-starter-kit/blob/main/Android/alert-dialog.md)
 ### [RecyclerView](https://github.com/KidPudel/android-starter-kit/blob/main/Android/recycler-view.md)
 ### [Result from an Activity](https://github.com/KidPudel/android-starter-kit/blob/main/Android/result.md)
+### [AsyncImage](https://github.com/KidPudel/android-starter-kit/blob/main/Android/async-image.md)
 
 
 ## XML
