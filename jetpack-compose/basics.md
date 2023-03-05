@@ -105,6 +105,8 @@ Modifiers allow you to decorate or augment a composable. Modifiers let you do th
 - Process user input
 - Add high-level interactions, like making an element clickable, scrollable, draggable, or zoomable
 
+Modifier is a concept in Jetpack Compose that allows you to decorate or add behavior to composable UI elements.
+
 # Useful modifiers
 
 Modifier.:
