@@ -1,5 +1,6 @@
 # What is State?
-> State in any app is the value that can change overtime.  
+
+## State in any app is the value that can change overtime. 
 
 State discribes how given UI, will look at the moment.  
 
