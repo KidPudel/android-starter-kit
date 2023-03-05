@@ -96,6 +96,15 @@ for a column we have vertical arrangment and horizontal alignment
 - `Spacer` composable (add extra space)
 - `Button`
 
+
+# Modifier
+Modifiers allow you to decorate or augment a composable. Modifiers let you do these sorts of things:
+
+- Change the composable's size, layout, behavior, and appearance
+- Add information, like accessibility labels
+- Process user input
+- Add high-level interactions, like making an element clickable, scrollable, draggable, or zoomable
+
 # Useful modifiers
 
 Modifier.:
