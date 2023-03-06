@@ -45,3 +45,6 @@ dependencies {
 The database class _**provides your app with instances of the DAOs associated with that database**_.  
 In turn, the _**app can use the DAOs to retrieve data from the database as instances of the associated data entity objects**_.  
 The app can also _use the defined data entities **to update rows from the corresponding tables**, or to **create new rows for insertion**_.
+
+![room_architecture](https://user-images.githubusercontent.com/63263301/223070854-12949a08-a445-4286-8e74-5930ddce46f2.png)
+
