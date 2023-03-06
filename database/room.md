@@ -38,7 +38,7 @@ dependencies {
 
 # Room's major components
 - The `Database` class that holds databases and serves as the main access point for underling connection to persisted data
-- Data `Entities` that represents tables in DB
+- Data `Entities` that represents tables in DB (one instance of one entity is the row in the entity table)
 - `Data access objects (DAO)` that provides methods that app can use to _query_, _update_, _insert_ and _delete_ in DB
 
 
@@ -46,5 +46,23 @@ dependencies {
 In turn, the _**app can use the DAOs to retrieve data from the database as instances of the associated data entity objects**_.  
 The app can also _use the defined data entities **to update rows from the corresponding tables**, or to **create new rows for insertion**_.
 
-![room_architecture](https://user-images.githubusercontent.com/63263301/223070854-12949a08-a445-4286-8e74-5930ddce46f2.png)
+![room_architecture](https://user-images.githubusercontent.com/63263301/223070854-12949a08-a445-4286-8e74-5930ddce46f2.png)  
 
+
+# Simple implementation
+
+DB with a single data entity and DAO.  
+
+### Data entity
+The following code defines `User` data entity. Each instance of the `User` represents a row in a `user` table in app's database
+
+```kotlin
+@Entity
+data class User(
+    @PrimaryKey val id: Int
+    @ColumnInfo(name = "user_name") val userName: String?
+    @ColumnInfo(name = "nickname") val nickname: String?
+)
+```
+
+![image](https://user-images.githubusercontent.com/63263301/223074795-fe59f474-76d5-4b03-ace1-71b2e55468ff.png)
