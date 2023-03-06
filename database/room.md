@@ -56,7 +56,8 @@ DB with a single data entity and DAO.
 ### Data entity
 The following code defines `User` data entity. Each instance of the `User` represents a row in a `user` table in app's database
 
-<img scr="https://user-images.githubusercontent.com/63263301/223074795-fe59f474-76d5-4b03-ace1-71b2e55468ff.png"/>
+![image](https://user-images.githubusercontent.com/63263301/223077337-ba3a91c2-16f7-40fe-a002-02289d7ee97a.png)
+
 
 ```kotlin
 @Entity
