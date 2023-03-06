@@ -67,3 +67,26 @@ data class User(
     @ColumnInfo(name = "nickname") val nickname: String?
 )
 ```
+
+Data access object (DAO)
+The `UserDao` provides methods that the rest of the app can use to interact with data in `user` table
+
+```kotlin
+@Dto
+interface UserDto {
+    @Query("SELECT * FROM user")
+    fun getAll(): List<User>
+    
+    @Query("SELECT * FROM user WHERE id IN (:usersId)")
+    fun getAllById(usersId: IntArray): List<User>
+    
+    @Query("SELECT * FROM user WHERE user_name LIKE :name AND nickname LIKE :nickname LIMIT 1")
+    fun findByName(name: String, nickname: String): User
+    
+    @Insert
+    fun insertAll(vararg users: User)
+    
+    @Delete
+    fun deleteUser(user: User)
+}
+```
