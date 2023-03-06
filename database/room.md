@@ -122,3 +122,6 @@ Now you can get the instance of the DAO and access methods to interact with data
 val userDao = db.userDao()
 val users: List<User>() = userDao.getAll()
 ```
+
+
+Some information about [SQLite](https://github.com/KidPudel/android-starter-kit/blob/main/database/sqlite.md)
