@@ -19,3 +19,29 @@
 - TEXT - text string
 - !(not advisible) BLOB - binary large object (for big objects like JPG, MP3, MOV)  
   **Instead, save it in the directory and put the text of that link in the database** 
+
+# Classes
+- `SQLiteDatabase` - `db: SQLiteDatabase = this.getWritableDatabase()`
+- `SQLiteOpenHelper`
+  - `onCreate`, `onUpdate`
+  - Custom written methods that perform CRUD, such as `getAllCustomers()`
+
+# Methods
+- `openOrCreateDatabase()` - open an existing DB or create one in the application data area
+  ```kotlin
+  val myDatabase: SQLiteDatabase = openOrCreateDatabase("customers.db", SQLiteDatabase.CREATE_IF_NECESSARY, null)
+  ```
+
+## Creating tables
+- Create a string containg the SQLite table definition
+  ```kotlin
+  val queryString: String = "CREATE TABLE CUSTOMER_TABLE (id INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT, AGE INTEGER)
+  ```
+- Use the `execSQL()` method to execute it
+  ```kotlin
+  myDatabase.execSQL(queryString)
+  ```
+
+# Cursor (result set)
+- Is the result set from the query operation
+- We can loop through the cursor items to process each line of a search result
