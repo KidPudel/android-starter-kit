@@ -90,3 +90,19 @@ interface UserDto {
     fun deleteUser(user: User)
 }
 ```
+
+## Database
+the following `AppDatabase` class defined to holds the database.  
+`AppDatabase` **defines database configuration** and **serves as the app's main access to the persisted data**.
+
+`AppDatabase` class must sutisfy following conditions:
+- class must be annotated with `@Database` annotation that includes array of entites that list data entities associated with database.
+- class must be abstract and inherit from RoomDatabase
+- for each DAO that is associatied with database, database must define abstaract method that has no arguments and returns an instance of DAO class
+
+```kotlin
+@Database(entities = [User::class], version = 1)
+abstact class AppDatabase : RoomDatabase() {
+    abstact fun userDao: UserDao()
+}
+```
