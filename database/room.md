@@ -42,7 +42,7 @@ dependencies {
 - `Data access objects (DAO)` that provides methods that app can use to _query_, _update_, _insert_ and _delete_ in DB
 
 
-The database class _**provides your app with instances of the DAOs associated with that database**_.  
+> The database class _**provides your app with instances of the DAOs associated with that database**_.  
 In turn, the _**app can use the DAOs to retrieve data from the database as instances of the associated data entity objects**_.  
 The app can also _use the defined data entities **to update rows from the corresponding tables**, or to **create new rows for insertion**_.
 
