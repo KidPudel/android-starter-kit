@@ -1,7 +1,7 @@
 # SQLite is a local storage very light SQL
 
 > **highly recommended** using the Room Persistence Library as an abstraction layer for accessing information in your app's SQLite databases.
-Go to the [Room](url)
+Go to the [Room](https://github.com/KidPudel/android-starter-kit/blob/main/database/room.md)
 
 # Why local storage?
 - Access fast
