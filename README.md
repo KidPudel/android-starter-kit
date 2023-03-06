@@ -88,7 +88,7 @@ lookup notes for android development
 
 # Database
 
-### [SQLite]()
+### [SQLite](https://github.com/KidPudel/android-starter-kit/blob/main/database/sqlite.md)
 
 # Thanks
 A lot of info taken from:
