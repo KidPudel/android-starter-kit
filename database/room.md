@@ -106,3 +106,19 @@ abstact class AppDatabase : RoomDatabase() {
     abstact fun userDao: UserDao()
 }
 ```
+
+## Usage
+
+the following code creates an instance of the database:
+```kotlin
+val db = Room.databaseBuilder(
+            applicationContext,
+            AppDatabase::class.java, "database-name"
+        ).build()
+```  
+
+Now you can get the instance of the DAO and access methods to interact with database:
+```kotlin
+val userDao = db.userDao()
+val users: List<User>() = userDao.getAll()
+```
