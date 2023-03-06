@@ -53,7 +53,7 @@ The app can also _use the defined data entities **to update rows from the corres
 
 DB with a single data entity and DAO.  
 
-### Data entity
+## Data entity
 The following code defines `User` data entity. Each instance of the `User` represents a row in a `user` table in app's database
 
 ![image](https://user-images.githubusercontent.com/63263301/223077337-ba3a91c2-16f7-40fe-a002-02289d7ee97a.png)
@@ -68,7 +68,7 @@ data class User(
 )
 ```
 
-Data access object (DAO)
+## Data access object (DAO)
 The `UserDao` provides methods that the rest of the app can use to interact with data in `user` table
 
 ```kotlin
