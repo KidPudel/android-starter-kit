@@ -35,3 +35,8 @@ dependencies {
     implementation "androidx.room:room-paging:$room_version"
 }
 ```
+
+# Room's major components
+- The `Database` class that holds databases and serves as the main access point for underling connection to persisted data
+- Data `Entities` that represents tables in DB
+- Data access objects (DAO) that provides methods that app can use to _query_, _update_, _insert_ and _delete_ in DB
