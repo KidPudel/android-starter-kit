@@ -1,4 +1,4 @@
-> Most information is taken from [android docs](https://developer.android.com/training/data-storage/room#kts)
+> Most information is taken from [android docs](https://developer.android.com/training/data-storage/room#kts)  
 The Room persistence library provides an **abstraction layer over SQLite** to allow fluent database access while harnessing the full power of SQLite. In particular, Room provides the following benefits:
 - Compile-time verification of SQL queries.
 - Convenience annotations that minimize repetitive and error-prone boilerplate code.
