@@ -45,3 +45,15 @@
 # Cursor (result set)
 - Is the result set from the query operation
 - We can loop through the cursor items to process each line of a search result
+
+# Content values
+Is an associated array or Hashmap
+```kotlin
+cv: ContentValues = ContentValues()
+cv.put("student_id", 1)
+cv.put("student_name", "Jeff")
+cv.put("student_grade", 9)
+
+val studentGrade = cv.getInt("student_grade")
+val studentName = cv.getString("student_name")
+```
