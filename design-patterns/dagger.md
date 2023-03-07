@@ -35,7 +35,7 @@ Use `@Provides` for code you don’t own.
 
 Use `@Binds` for injecting interfaces while generating less DI code. 
 
-
+@Binds is a very specialized annotation though—it’s used to map an interface to an implementation. It can take only a single parameter and the type return is the interface implemented by the given parameter object.
 
 
 With the `@Inject` annotation: 
