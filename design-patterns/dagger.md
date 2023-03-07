@@ -29,6 +29,15 @@ class MyViewModel @Inject constructor(val repository: IMyRepository): ViewModel(
 
 In Kotlin, **to apply an annotation to the constructor**, you need to **_specifically_ add the keyword `constructor`** and **introduce the annotation just _before_ it as shown in the code snippet above**.
 
+Use `@Inject` for code you own. 
+
+Use `@Provides` for code you don’t own.
+
+Use `@Binds` for injecting interfaces while generating less DI code. 
+
+
+
+
 With the `@Inject` annotation: 
 
 - Dagger knows that `MyViewModel` has `IMyRepository` as dependency since the constructor takes an instance of `IMyRepository` as an argument.
