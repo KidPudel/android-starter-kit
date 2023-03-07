@@ -41,7 +41,7 @@ Use `@Binds` for injecting interfaces while generating less DI code.
 With the `@Inject` annotation: 
 
 - Dagger knows that `MyViewModel` has `IMyRepository` as dependency since the constructor takes an instance of `IMyRepository` as an argument.
-- `@Inject` tells "please inject all dependencies that we have in our `constructor` and look in modules `@Modules`.  
+- `@Inject` tells "please inject all dependencies that we have in our `constructor` and look in modules `@Modules` for that type (interface for example) and give me implementation
 
 ----------------------------------------------------------------------
 🔹
