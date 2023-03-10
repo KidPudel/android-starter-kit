@@ -98,6 +98,9 @@ for a column we have vertical arrangment and horizontal alignment
 
 
 # Modifier
+> Modifiers are not specific for some concrete composable, but rather for general thing.  
+
+
 Modifiers allow you to decorate or augment a composable. Modifiers let you do these sorts of things:
 
 - Change the composable's size, layout, behavior, and appearance
