@@ -49,6 +49,7 @@ lookup notes for android development
 ### [RecyclerView](https://github.com/KidPudel/android-starter-kit/blob/main/Android/recycler-view.md)
 ### [Result from an Activity](https://github.com/KidPudel/android-starter-kit/blob/main/Android/result.md)
 ### [AsyncImage](https://github.com/KidPudel/android-starter-kit/blob/main/Android/async-image.md)
+### [Back stack](https://github.com/KidPudel/android-starter-kit/blob/main/Android/back-stack.md)
 
 
 ## XML
