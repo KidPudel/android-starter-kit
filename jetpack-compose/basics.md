@@ -126,6 +126,11 @@ Modifier.:
 -  `.draggable`
 -  `.weight` - how much space it will take (can take all **free** space)
 
+
+# Arrangment
+![image](https://user-images.githubusercontent.com/63263301/224695686-73e01160-ebc6-4981-bc72-9f6e0e90242c.png)
+
+
 # Helpful adivses
 
 - Modifiers are applied sequentially:  
