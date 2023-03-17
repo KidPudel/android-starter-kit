@@ -87,6 +87,7 @@ fun parseCardNumber(cardNumber: String): Long {
 - `map {}` - returns a **list** containing results of applied function on the original map (collection)
 - `forEach`
 - `split()`
+- `sum()`
 
 
 ## Think
