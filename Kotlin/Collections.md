@@ -52,11 +52,9 @@ val highestTaxIndex = incomes.withIndex().maxByOrNull { it.value * (taxes[it.ind
 
 
 
-**filter** returns a list containing only elements matching the given predicatable/pattern (not changing the list iteslf, just returns filtered/that is satisfied pattern)
 
-**map** returns a list conatining results of applying the given transform function to each element in the original list
 
-**apply** executes a ginven function and applies it right away
+
 
 
 
@@ -75,18 +73,43 @@ fun parseCardNumber(cardNumber: String): Long {
 }
 ```
 
-## Other useful methods
-
+## Useful methods
+- `filter` returns a list containing only elements matching the given predicatable/pattern (not changing the list iteslf, just returns filtered/that is satisfied pattern)
+  ```kotlin
+  val roads = mapOf<Int, Int>()
+  // find a true rome, no road as "from"
+  val trueRome = roads.values.filter { roadsTo -> !roads.keys.contains(roadsTo) }
+  // here first is better
+  ```
+- `apply` -  executes a ginven function and applies it right away
+  ```kotlin
+  val list = listOf(1, 2, 3, 4, 5)
+  val newList = list.apply { forEach{ println(it)}}
+  
+  // or simplified equivalent
+  
+  val list = listOf(1, 2, 3, 4, 5)
+  val newList = list.onEach { println(it)}
+  ```
 - `.joinToString(" ")`
 - `.withIndex()` - wraps element in (index, value)
 - `first()` - first element _that matches predictable_
+   ```kotlin
+   list.first(it < 5)
+   ```
 - `startsWith()`
 - `maxBy()` and `maxOf()`
 - `count()` - amount of occurances
 - `groupingBy().eachCount()` - returns a map with (Element, Number of occurances)
-- `map {}` - returns a **list** containing results of applied function on the original map (collection)
+- `map {}` - returns a **list** containing results of applied function on the original map (collection, to each element in the original list)
+   ```kotlin
+   val translatedList: List<User> = list.map(userDto -> userDto.toUser())
+   ```
 - `forEach`
 - `split()`
+  ```kotlin
+   val stringWithoutSpaces = someString.split(' ')
+   ```
 - `sum()`
 
 
