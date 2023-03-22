@@ -114,6 +114,7 @@ fun parseCardNumber(cardNumber: String): Long {
    ```
 - `sum()`
 
+[Collection usage](https://github.com/KidPudel/android-starter-kit/edit/main/Kotlin/collection_usage.md)
 
 ## Think
 
