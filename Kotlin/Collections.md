@@ -100,8 +100,9 @@ fun parseCardNumber(cardNumber: String): Long {
 - `startsWith()`
 - `maxBy()` and `maxOf()`
 - `count()` - amount of occurances
+- `groupBy` - returns a map `key` is result of operation and `value` is the elements on which this result is returned
 - `groupingBy().eachCount()` - returns a map with (Element, Number of occurances)
-- `map {}` - returns a **list** containing results of applied function on the original map (collection, to each element in the original list)
+- `map {}` - returns a **list** containing results of applied function on the original collection (to each element in the original list)
    ```kotlin
    val translatedList: List<User> = list.map(userDto -> userDto.toUser())
    ```
