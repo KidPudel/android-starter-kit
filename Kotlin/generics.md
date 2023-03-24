@@ -24,7 +24,7 @@ fun demo(strs: Source<String>) {
 
 Sometimes, we have an opposite situation meaning that we have a reference of type `T` and we want to be able to assign it to the subtype of `T`.
 
-**We can use the in keyword on the generic type if we want to assign it to the reference of its subtype.   
+**We can use the `in` keyword on the generic type if we want to assign it to the reference of its subtype.   
 The `in` keyword can be used only on the parameter type that is consumed, not produced:**
 
 ![image](https://user-images.githubusercontent.com/63263301/227530944-462e1b8d-5d05-4900-8a22-fb564528084d.png)
