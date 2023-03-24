@@ -30,6 +30,7 @@ lookup notes for android development
 ### [Retrofit](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/retrofit.md)
 ### [Null safety](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/null-safety.md)
 ### [Class parameters](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/class-parameters.md)
+### [Generics](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/generics.md)
 
 ---
 
