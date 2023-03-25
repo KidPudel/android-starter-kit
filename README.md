@@ -101,6 +101,10 @@ A lot of info taken from:
 
 ---
 
+# AR
+
+### [ARCore basics](https://github.com/KidPudel/android-starter-kit/blob/main/ar/arcore-basics.md)
+
 # nob*tches
 ![download](https://user-images.githubusercontent.com/63263301/202911433-9ef2ceb6-db98-4340-9e36-b98bee1c6be2.jpg)
 ![3990ww](https://user-images.githubusercontent.com/63263301/202911615-a6c8530e-3335-4c23-a651-09b3948a6e13.jpg)
