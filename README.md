@@ -103,7 +103,9 @@ A lot of info taken from:
 
 # AR
 
-### [ARCore basics](https://github.com/KidPudel/android-starter-kit/blob/main/ar/arcore-basics.md)
+### [ARCore basics](https://github.com/KidPudel/android-starter-kit/blob/main/AR/arcore-basics.md)
+
+---
 
 # nob*tches
 ![download](https://user-images.githubusercontent.com/63263301/202911433-9ef2ceb6-db98-4340-9e36-b98bee1c6be2.jpg)
