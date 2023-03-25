@@ -29,3 +29,11 @@ Nodes can be added to other nodes (parent-child relationship)
 - SceneGraph API
 - Depth API
 - HitTest API
+
+
+# Fundamentals
+
+> Fundamental concepts illustrate how ARCore enables experiences that can make virtual content appear to rest on real surfaces or be attached to real world locations.
+
+## Motion tracking
+allows ARCore to determine **where the device is in the world**. ARCore uses simultaneous localization and mapping (SLAM) to detect visually distinct features called feature points and uses these points to calculate the device's position and orientation in relation to the world.
