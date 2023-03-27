@@ -1,7 +1,7 @@
 Before activity i'd like to mention view.  
 What is view? View is building block of a user interface. 
 
-> Side note, in jetpack compose there is composables instead of view
+## > SIDE NOTE, in jetpack compose there is composables instead of view, the composable application is designed to be used in a single-activity architecture with no fragments
 
 # Activity
 
