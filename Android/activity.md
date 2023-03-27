@@ -1,6 +1,10 @@
+Before activity i'd like to mention view.  
+What is view? View is building block of a user interface. 
+
 # Activity
 
-> An **Activity** provides a window in which your application draws the Views that form your UI. Simply put Activity implements a single screen in your app
+> An **Activity** provides a window in which your application draws the Views (building blocks) that form your UI, it provide a visual for you as well as handles user interaction.   
+Simply put Activity implements a single screen in your app
 
 
 ## Activity lyfecycles
