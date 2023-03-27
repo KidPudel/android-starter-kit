@@ -4,10 +4,15 @@ It for example consists of [MVVM](https://github.com/KidPudel/android-starter-ki
 
 ## Inside
 
-We have tree _layers_:
+### We have tree _layers_:
 1. Presentation (UI <-> `ViewModel`)
 2. Domain (`UseCases` <- `Entities`)
 3. Data (`Repositories` <-> (DataBase, Web))
+
+### Knowledge between layers:
+1. Presentation - knows about domain
+2. Domain - doesn't know about other layers. get repository from data layer, but via dependency injection
+3. Data - knows about domain
 
 
 `ViewModel` is binding _data_ with _view_.  
@@ -19,11 +24,11 @@ We have tree _layers_:
 - ViewModel
 
 ## Domain
-- UseCase (**for some specific operation**, _like convert to roman, search in list, get some info from our data or api_)
+- UseCase (**for some specific operation**, _like convert to roman from decimal, search in list, get some info from our data or api_)
 - Model (is adjusted dto)
 - Interface for repository
 
 ## Data
-- Repository
+- Repository (handle data specific things like call API methods from remote, implement interface from domain)
 - remote (also define interface of routes we want to access from API)
   - dto (data transfer object, from our JSON response of API (_**use plugin to convert**_))
