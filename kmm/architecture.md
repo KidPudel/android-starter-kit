@@ -1,48 +1,48 @@
 KMM project consists of following strucuture:
 ```
-├── androidApp/     # Android specific code
+├── androidApp/ 
 │   ├── src/       
-│   │   ├── main/   # Android specific source code
+│   │   ├── main/  
 │   │   │   ├── AndroidManifest.xml
 │   │   │   └── kotlin/
 │   │   │       └── com/example/myapp/
 │   │   │           └── MainActivity.kt
-│   │   └── test/   # Android specific test code
+│   │   └── test/  
 │   └── build.gradle
-├── iosApp/         # iOS specific code
+├── iosApp/      
 │   ├── src/       
-│   │   ├── main/   # iOS specific source code
+│   │   ├── main/  
 │   │   │   ├── Info.plist
 │   │   │   └── kotlin/
 │   │   │       └── com/example/myapp/
 │   │   │           └── AppDelegate.kt
-│   │   └── test/   # iOS specific test code
+│   │   └── test/  
 │   └── build.gradle
-├── shared/         # Shared code
+├── shared/  
 │   ├── src/       
-│   │   ├── commonMain/  # Shared Kotlin code
+│   │   ├── commonMain/
 │   │   │   └── kotlin/
 │   │   │       └── com/example/myapp/
 │   │   │           ├── MyModel.kt
 │   │   │           └── MyService.kt
-│   │   ├── androidMain/  # Android specific Kotlin code
+│   │   ├── androidMain/ 
 │   │   │   └── kotlin/
 │   │   │       └── com/example/myapp/
 │   │   │           └── MyServiceAndroid.kt
-│   │   └── iosMain/      # iOS specific Kotlin code
+│   │   └── iosMain/    
 │   │       └── kotlin/
 │   │           └── com/example/myapp/
 │   │               └── MyServiceiOS.kt
 │   └── build.gradle.kts
-├── androidTest/    # Android specific test code
+├── androidTest/  
 │   ├── src/       
 │   │   └── androidTest/
 │   └── build.gradle
-├── iosTest/        # iOS specific test code
+├── iosTest/     
 │   ├── src/       
 │   │   └── iosTest/
 │   └── build.gradle
-├── build.gradle.kts # Project level build file
+├── build.gradle.kts
 ├── settings.gradle.kts
 └── gradle.properties
 ```
