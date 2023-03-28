@@ -81,3 +81,51 @@ The IDE provides tools that help you create the missing actual declarations.
 🟢
 > Use `expected` and `actual` declarations **_only for Kotlin declarations that have platform-specific dependencies_**. Implementing as much functionality as possible in the shared module is better, even if doing so takes more time.
 Don't overuse expected and actual declarations – in some cases, an interface may be a better choice because it is more flexible and easier to test.
+
+
+## Rules for expected and actual declarations
+The main rules regarding expected and actual declarations are:
+
+- An expected declaration is marked with the `expect` keyword; the `actual` declaration is marked with the actual keyword.
+
+- `expect` and actual declarations have the same name and are located in the same package (have the same fully qualified name).
+
+- `expect` declarations never contain any implementation code and are abstract by default.
+
+- In interfaces, functions in `expect` declarations cannot have bodies, but their `actual` counterparts can be non-abstract and have a body. It allows the inheritors not to implement a particular function.
+
+To indicate that common inheritors don't need to implement a function, mark it as open. All its actual implementations will be required to have a body:
+
+```kotlin
+// Common
+expect interface Mascot {
+    open fun display(): String
+}
+
+class MascotImpl : Mascot {
+    // it's ok not to implement `display()`: all `actual`s are guaranteed to have a default implementation
+}
+
+// Platform-specific
+actual interface Mascot {
+    actual fun display(): String {
+        TODO()
+    }
+}
+```
+
+During each platform compilation, the compiler ensures that every declaration marked with the `expect` keyword in the common or intermediate source set has the corresponding declarations marked with the `actual` keyword in all platform source sets. The IDE provides tools that help you create the missing `actual` declarations.
+
+If you have a platform-specific library that you want to use in shared code while providing your own implementation for another platform, you can provide a `typealias` to an existing class as the actual declaration:
+
+```kotlin
+expect class AtomicRef<V>(value: V) {
+    fun get(): V
+    fun set(value: V)
+    fun getAndSet(value: V): V
+    fun compareAndSet(expect: V, update: V): Boolean
+}
+```
+```kotlin
+actual typealias AtomicRef<V> = java.util.concurrent.atomic.AtomicReference<V>
+```
