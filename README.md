@@ -31,6 +31,7 @@ lookup notes for android development
 ### [Null safety](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/null-safety.md)
 ### [Class parameters](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/class-parameters.md)
 ### [Generics](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/generics.md)
+### [internal keyword](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/internal.md)
 
 ---
 
