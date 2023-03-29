@@ -39,9 +39,13 @@ Common directory
 In common section for example declare a class using ‘expect’ Donn Felker
 And then in android or ios side use ‘actual’
 
-### If you want to cache with coreData (ios), and Room (android)
-### So you have Database class in shared, declare with ‘expect’
-### And in platform specific use ‘actual’
+---
+
+**If you want to cache with coreData (ios), and Room (android)
+So you have Database class in shared, declare with ‘expect’
+And in platform specific use ‘actual’**
+
+---
 
 So you can go both ways
 
