@@ -39,18 +39,18 @@ Common directory
 In common section for example declare a class using ‘expect’ Donn Felker
 And then in android or ios side use ‘actual’
 
----
-
-**If you want to cache with coreData (ios), and Room (android)
+If you want to cache with coreData (ios), and Room (android)
 So you have Database class in shared, declare with ‘expect’
-And in platform specific use ‘actual’**
+And in platform specific use ‘actual’
 
----
 
 So you can go both ways
 
-It’s a safer choice to share code that should be shared, and not share code that shouldn’t be shared
+---
 
+**It’s a safer choice to share code that should be shared, and not share code that shouldn’t be shared**
+
+---
 
 For now, sharing viewmodels is not practical, 
 
