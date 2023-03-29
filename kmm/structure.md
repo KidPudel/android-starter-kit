@@ -118,3 +118,10 @@ For example, all Kotlin/Native features are available in the desktopMain source 
 
 ## Compilations
 
+Each target can have one or more compilation, for example for production and test purposes.
+
+Each target have default compilations:
+- `main` and `test` compilations for JVM, JS and Native targets
+- A compilation per Android build variant, for Android targets.
+<img width="731" alt="compilations" src="https://user-images.githubusercontent.com/63263301/228509510-3a7b5818-6942-442b-a290-2997dc8475ef.png">
+Each compilation has a default source set, which contains sources and dependencies specific to that compilation.
