@@ -30,7 +30,7 @@ The IDE provides tools that help you create the missing actual declarations.
 
 --- 
 
-### expect/actual explained
+### `expect`/`actual` explained
 Imagine you have `Database` class in shared source set and you want to use it later, but database logic is platform specific, so you use `expect` and implement logic in platform specific source set by using `actual` keyword, so what is happening, when you use `Database` in shared source set you use one class, but when you run application `Database` will have platform specific logic
 
 ---
