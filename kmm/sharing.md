@@ -28,6 +28,13 @@ This works for most kotlin declarations such as: functions, classes, interfaces,
 The compiler ensures that for every `expect` declaration in common modules there is `actual` declaration in all platform modules.  
 The IDE provides tools that help you create the missing actual declarations.
 
+--- 
+
+### expect/actual explained
+Imagine you have `Database` class in shared source set and you want to use it later, but database logic is platform specific, so you use `expect` and implement logic in platform specific source set by using `actual` keyword, so what is happening, when you use `Database` in shared source set you use one class, but when you run application `Database` will have platform specific logic
+
+---
+
 
 🟢
 > Use `expected` and `actual` declarations **_only for Kotlin declarations that have platform-specific dependencies_**. Implementing as much functionality as possible in the shared module is better, even if doing so takes more time.
