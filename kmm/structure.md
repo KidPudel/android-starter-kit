@@ -83,7 +83,7 @@ kotlin {
 ```
 
 ## Source sets
-Source sets are collections of Kotlin files with their resources, dependencies that are stored in `src` directory. Source set can be used in Kotlin compilation for one or more Kotlin.  
+Source sets are collections of Kotlin files with their resources, dependencies that are stored in `src` directory. Source set can be used in Kotlin compilation for one or more target (platform).  
 
 <img width="233" alt="source-sets" src="https://user-images.githubusercontent.com/63263301/228498784-170e792f-7641-41ca-96a5-7de9040d7df2.png">  
 
