@@ -145,8 +145,6 @@ after that we need to actually inject that in our activity:
 ```kotlin
 class MainActivity: ComponentActivity(), AndroidScopeComponent {
     private val scope: Scope by activityScope()
-    // kind of viewmodel scope, keep even when activity rotated
-    private val scope: Scope by activityRetainedScope()
     
     private val viewModel by inject<MainViewModel>()
     
