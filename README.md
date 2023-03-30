@@ -87,6 +87,7 @@ lookup notes for android development
 ### [Dependency injection](https://github.com/KidPudel/android-starter-kit/blob/main/design-patterns/dependency-injection.md)
 ### [Simply put dependency injection](https://github.com/KidPudel/android-starter-kit/blob/main/design-patterns/dependency-injection-logic.md)
 ### [Dagger](https://github.com/KidPudel/android-starter-kit/blob/main/design-patterns/dagger.md)
+### [Koin](https://github.com/KidPudel/android-starter-kit/blob/main/design-patterns/koin.md)
 
 ---
 
