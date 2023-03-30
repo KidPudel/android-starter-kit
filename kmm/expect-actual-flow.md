@@ -51,8 +51,7 @@ class Greeting {
 
 As a result we get platform specific greeting.
 For android:  
-
-![first-multiplatform-project-on-android-1](https://user-images.githubusercontent.com/63263301/228821164-64f658d4-10ec-4e7b-8e77-0c2214159fe6.png)  
+<img width="434" alt="first-multiplatform-project-on-android-1" src="https://user-images.githubusercontent.com/63263301/228821164-64f658d4-10ec-4e7b-8e77-0c2214159fe6.png">  
 
 And for IOS:  
 
