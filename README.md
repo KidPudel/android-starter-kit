@@ -85,6 +85,7 @@ lookup notes for android development
 # Design patterns
 
 ### [Dependency injection](https://github.com/KidPudel/android-starter-kit/blob/main/design-patterns/dependency-injection.md)
+### [Simply put dependency injection](https://github.com/KidPudel/android-starter-kit/blob/main/design-patterns/dependency-injection-logic.md)
 ### [Dagger](https://github.com/KidPudel/android-starter-kit/blob/main/design-patterns/dagger.md)
 
 ---
@@ -93,12 +94,6 @@ lookup notes for android development
 
 ### [Room](https://github.com/KidPudel/android-starter-kit/blob/main/database/room.md)
 ### [SQLite](https://github.com/KidPudel/android-starter-kit/blob/main/database/sqlite.md)
-
-# Thanks
-A lot of info taken from:
-- [JetBrains Academy](https://hyperskill.org/tracks/16)
-- [Android developers](https://developer.android.com/)
-- [Philipp Lackner](https://www.youtube.com/@PhilippLackner)
 
 ---
 
@@ -113,6 +108,14 @@ A lot of info taken from:
 ### [Sharing](https://github.com/KidPudel/android-starter-kit/blob/main/kmm/sharing.md)
 ### [Structure](https://github.com/KidPudel/android-starter-kit/blob/main/kmm/structure.md)
 ### [Take away from fragmented kmm](https://github.com/KidPudel/android-starter-kit/blob/main/kmm/take-away-notes.md)
+
+---
+
+# Thanks
+A lot of info taken from:
+- [JetBrains Academy](https://hyperskill.org/tracks/16)
+- [Android developers](https://developer.android.com/)
+- [Philipp Lackner](https://www.youtube.com/@PhilippLackner)
 
 ---
 
