@@ -44,7 +44,7 @@ Now we can complete our `greet()` function :)
 class Greeting {
     privateval platform: Platform = getPlatform()
     fun greet(): String {
-        return "hello, ${platform.platformName}
+        return "hello, ${platform.platformName}!"
     }
 }
 ```
