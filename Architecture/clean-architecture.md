@@ -33,6 +33,17 @@ It for example consists of [MVVM](https://github.com/KidPudel/android-starter-ki
 - remote (also define interface of routes we want to access from API)
   - dto (data transfer object, from our JSON response of API (_**use plugin to convert**_))
 
+# 4 layers
+
+- Presentation layer: This layer is responsible for rendering the user interface and handling user interactions. It typically includes React components and other UI-related code.
+- Application layer: This layer contains the business logic of the application. It is responsible for coordinating data flow and processing, and for implementing the use cases of the system. It can include various modules and services that handle specific aspects of the application logic.
+- Domain layer: This layer contains the core business logic of the application, independent of any specific implementation details. It defines the entities, value objects, and business rules of the system.
+- Data layer: This layer is responsible for managing the persistence and retrieval of data. It can include various repositories, data mappers, and other infrastructure-related code.
+
+## Application layer vs Domain layer
+
+The main difference between the `application layer` and the `domain layer` is that the **_application layer is responsible for managing the overall behavior and flow of the system_**, while the **_domain layer is responsible for implementing the core business logic of the system_**. The application layer interacts with the user interface and other external systems, while the domain layer is focused on the internal behavior of the system.
+
 # UseCase vs Service
 In software development, the terms "services" and "use cases" can have different meanings depending on the context and the specific development methodology being used. However, in general, the main difference between these two concepts is that **_services are typically responsible for performing specific operations or tasks in the system_**, while **_use cases represent the goals or actions that a user or actor can perform_**.
 
