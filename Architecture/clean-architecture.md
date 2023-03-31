@@ -32,3 +32,12 @@ It for example consists of [MVVM](https://github.com/KidPudel/android-starter-ki
 - Repository (handle data specific things like call API methods from remote, implement interface from domain)
 - remote (also define interface of routes we want to access from API)
   - dto (data transfer object, from our JSON response of API (_**use plugin to convert**_))
+
+# UseCase vs Service
+In software development, the terms "services" and "use cases" can have different meanings depending on the context and the specific development methodology being used. However, in general, the main difference between these two concepts is that **_services are typically responsible for performing specific operations or tasks in the system_**, while **_use cases represent the goals or actions that a user or actor can perform_**.
+
+Here are some more details about each concept:
+
+- Services: In software engineering, services are usually modules or components that provide specific functionality to the rest of the system. Services can be thought of as self-contained pieces of logic that operate on data or perform specific operations. Examples of services might include an authentication service, a payment processing service, or a data validation service.
+
+- Use cases: A use case is a description of a user's interaction with the system in order to achieve a particular goal or perform a specific action. Use cases typically describe a sequence of steps or interactions between the user and the system, and are often used to design or specify the behavior of a software system. Examples of use cases might include "place an order", "create a new account", or "search for a product".
