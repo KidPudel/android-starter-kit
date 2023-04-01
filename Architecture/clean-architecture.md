@@ -4,7 +4,15 @@ It for example consists of [MVVM](https://github.com/KidPudel/android-starter-ki
 
 ## Inside
 
-### We have tree _layers_:
+### Devide by features
+For example translator app will have:
+- translate feature
+- text-to-speesh feature
+- core: is just a stuff that is shared between features
+
+instead each feature we have layers
+
+### We have "tree" _layers_:
 1. Presentation (UI <-> `ViewModel`)
 2. Domain (`UseCases` <- `Entities`)
 3. Data (`Repositories` <-> (DataBase, Web))
