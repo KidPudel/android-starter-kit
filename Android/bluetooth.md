@@ -43,3 +43,6 @@ private val bluetoothAdapter by lazy {
     bluetoothManager?.adapter
 }
 ```
+
+# Callback with device information
+To get that we need to use BroadcastReceiver android component
