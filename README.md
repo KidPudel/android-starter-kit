@@ -52,7 +52,7 @@ lookup notes for android development
 ### [Result from an Activity](https://github.com/KidPudel/android-starter-kit/blob/main/Android/result.md)
 ### [AsyncImage](https://github.com/KidPudel/android-starter-kit/blob/main/Android/async-image.md)
 ### [Back stack](https://github.com/KidPudel/android-starter-kit/blob/main/Android/back-stack.md)
-### [Back stack](https://github.com/KidPudel/android-starter-kit/blob/main/Android/bluetooth.md)
+### [Bluetooth](https://github.com/KidPudel/android-starter-kit/blob/main/Android/bluetooth.md)
 
 
 ## XML
