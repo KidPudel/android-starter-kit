@@ -66,11 +66,61 @@ Because discoverable devices might reveal information about the user's location,
 # Query paired devices
 Before performing device discovery it worth to search for already paired devices, to see if desired device if already paired.  
 You can do that by get bonded (paired) devices `bondedDevices`
+```kotlin
+val pairedDevices: Set<BluetoothDevice>? = bluetoothAdapter?.bondedDevices
+pairedDevices?.forEach { device ->
+   val deviceName = device.name
+   val deviceHardwareAddress = device.address // MAC address
+}
 ```
-bluetoothAdapter?.bondedDevices.forEach
+_**To initiate a connection with a Bluetooth device, all that's needed from the associated BluetoothDevice object is the MAC address**_
+
+---
+
+# Discover devices
+To start discovering devices, call `startDiscovery()`. _The process is asynchronous and returns a boolean value indicating whether discovery has successfully started_. The discovery process usually involves an inquiry scan of about 12 seconds, followed by a page scan of each device found to retrieve its Bluetooth name.  
+
+**_To receive information about each device discovered_, your app must register a `BroadcastReceiver` for the `ACTION_FOUND` intent. _The system broadcasts this intent for each device_. The intent contains the extra fields `EXTRA_DEVICE` and `EXTRA_CLASS`, which in turn contain a `BluetoothDevice` and a `BluetoothClass`, respectively. The following code snippet shows how you can register to handle the broadcast when devices are discovered:**
+
+```kotlin
+override fun onCreate(savedInstanceState: Bundle?) {
+   ...
+
+   // Register for broadcasts when a device is discovered.
+   val filter = IntentFilter(BluetoothDevice.ACTION_FOUND)
+   registerReceiver(receiver, filter)
+}
+
+// Create a BroadcastReceiver for ACTION_FOUND.
+private val receiver = object : BroadcastReceiver() {
+
+   override fun onReceive(context: Context, intent: Intent) {
+       val action: String = intent.action
+       when(action) {
+           BluetoothDevice.ACTION_FOUND -> {
+               // Discovery has found a device. Get the BluetoothDevice
+               // object and its info from the Intent.
+               val device: BluetoothDevice =
+                       intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE)
+               val deviceName = device.name
+               val deviceHardwareAddress = device.address // MAC address
+           }
+       }
+   }
+}
+
+override fun onDestroy() {
+   super.onDestroy()
+   ...
+
+   // Don't forget to unregister the ACTION_FOUND receiver.
+   unregisterReceiver(receiver)
+}
 ```
+_To initiate a connection with a Bluetooth device, you call `getAddress()` on the `BluetoothDevice` to retrieve the associated MAC address._
 
 
+---
 
 # Create a connection between two devices
 To create a connection between two devices, you must implement both the server-side and client-side mechanisms because:
