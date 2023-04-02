@@ -170,10 +170,8 @@ To set up a server socket and accept a connection, complete the following sequen
    The name is arbitrary and can simply be your app name. The `Universally Unique Identifier (UUID)` is also included in the SDP entry and forms the basis for the connection agreement with the client device.  
    _**When the client attempts to connect with this device, it carries a UUID that uniquely identifies the service with which it wants to connect** (These UUIDs must match in order for the connection to be accepted.)_  
    
-   ### Definition of UUID
    > In this case, UUID used to uniquely identify your app's Bluetooth service.  
-   A UUID is a standardized 128-bit format for a string ID used to uniquely identify information.  
-   UUID is used to identify information that needs to be unique within a system or a network because the probability of a UUID being repeated is effectively zero.  
+   
    
    ### Generation of UUID
    It is generated independently, without the use of a centralized authority. To get a UUID to use with your app, you can use one of the many random UUID generators on the web, then initialize a UUID with fromString(String).
@@ -315,9 +313,6 @@ To get that we need to use BroadcastReceiver android component
 
 
 # Defenitions
-## RFCOMM
-android introduced single bluetooth profile RFCOMM (wireless serial port profile)
-Creates Low level socket connection between two devices
 
 ## `BluetoothAdapter`
 > (represents device's own bluetooth adapter (the Bluetooth radio)) is hardware module that **_contains all functionality_**, this is an **_entry-point for all bluetooth interaction_**.  
@@ -368,3 +363,19 @@ In order to connect to devices, one must open server socket with this class. Whe
 
 ## `BluetoothProfile`
 > An interface that represents a Bluetooth profile. A Bluetooth profile is a wireless interface specification for Bluetooth-based communication between devices.
+
+## RFCOMM
+android introduced single bluetooth profile RFCOMM (wireless serial port profile)
+Creates Low level socket connection between two devices
+
+## UUID
+> A UUID is a standardized 128-bit format for a string ID used to uniquely identify information.  
+UUID is used to identify information that needs to be unique within a system or a network because the probability of a UUID being repeated is effectively zero.  
+When establishing a Bluetooth connection, devices need to identify which services or attributes they want to communicate with. This is done using UUIDs.
+
+
+For example, **when a client device wants to connect to a server device to exchange data, it needs to specify which service or attribute it wants to communicate with. It does this by using the UUID associated with that service or attribute. The server device then uses the same UUID to identify the correct service or attribute to communicate with.**
+
+UUIDs are generated randomly and are intended to be unique across all devices. This ensures that there is no confusion or conflicts when multiple devices are communicating with each other.
+
+In Android, UUIDs can be generated using the UUID class. The UUID class provides methods to create UUIDs from different inputs, such as a string or a byte array. When creating a UUID, it's important to use a well-known UUID if the service or attribute being used is a standard one, such as the UUID for the Bluetooth Serial Port Profile (SPP). This ensures that other devices can recognize and communicate with the service or attribute correctly.
