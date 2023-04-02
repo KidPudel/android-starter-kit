@@ -54,10 +54,22 @@ Using this information, the device that is performing the discovery process can 
 
 Because discoverable devices might reveal information about the user's location, the device discovery process requires location access. (flag: `never for location` thus location permission is not required)  
 
+#### After connection
+> Once a connection is made with a remote device for the first time, a pairing request is automatically presented to the user. When a device is paired, the basic information about that device—such as the device's name, class, and MAC address—is saved and can be read using the Bluetooth APIs. Using the known MAC address for a remote device, a connection can be initiated with it at any time without performing discovery, assuming the device is still within range.
+
 ## Difference between being paired and being connected:
 
 - To be _**paired**_ means that two devices are aware of each other's existence, have a shared link-key that can be used for authentication, and are capable of establishing an encrypted connection with each other.
-To be _**connected**_ means that the devices currently share an RFCOMM channel and are able to transmit data with each other. The current Bluetooth APIs require devices to be paired before an RFCOMM connection can be established. Pairing is automatically performed when you initiate an encrypted connection with the Bluetooth APIs.
+- To be _**connected**_ means that the devices currently share an RFCOMM channel and are able to transmit data with each other. The current Bluetooth APIs require devices to be paired before an RFCOMM connection can be established. Pairing is automatically performed when you initiate an encrypted connection with the Bluetooth APIs.
+
+
+# Query paired devices
+Before performing device discovery it worth to search for already paired devices, to see if desired device if already paired.  
+You can do that by get bonded (paired) devices `bondedDevices`
+```
+bluetoothAdapter?.bondedDevices.forEach
+```
+
 
 
 # Create a connection between two devices
@@ -86,6 +98,7 @@ To get that we need to use BroadcastReceiver android component
 
 
 # Defenitions
+## RFCOMM
 android introduced single bluetooth profile RFCOMM (wireless serial port profile)
 Creates Low level socket connection between two devices
 
