@@ -34,7 +34,9 @@ Bluetooth uses sockets - an interface for wireless chat between two devices, str
 
 
 # Create a connection between two devices
-To create a connection between two devices, you must implement both the server-side and client-side mechanisms because one device must open a server socket, and the other one must initiate the connection using the server device's MAC address.  
+To create a connection between two devices, you must implement both the server-side and client-side mechanisms because:
+- one device must open a server socket (to listen)
+- and the other one must initiate the connection using the server device's MAC address.  
 
 We have `BluetoothDevice` that represents remote device, it has:
 - `name`: the name which will appear in the list
@@ -116,3 +118,9 @@ To exchange data with another device with `InputStream` and `OutputStream`
 
 #### Usage
 In order to connect to devices, one must open server socket with this class. When a remote Bluetooth device makes a connection request, another device will listen to that request accept it and respond with `BluetoothSocket`
+
+## `BluetoothClass`
+> Describes the general characteristics and capabilities of a Bluetooth device.
+
+## `BluetoothProfile`
+> An interface that represents a Bluetooth profile. A Bluetooth profile is a wireless interface specification for Bluetooth-based communication between devices.
