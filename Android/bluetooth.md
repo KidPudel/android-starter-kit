@@ -163,9 +163,75 @@ _When the `BluetoothSocket` is acquired from the `BluetoothServerSocket`, the `B
 
 
 
+To set up a server socket and accept a connection, complete the following sequence of steps:
 
+1. Get a `BluetoothServerSocket` by calling `listenUsingRfcommWithServiceRecord(String, UUID)`.
+   The **`string` is an identifiable name of your service**, which the system automatically writes to a new Service Discovery Protocol (SDP) database entry on the device.  
+   The name is arbitrary and can simply be your app name. The `Universally Unique Identifier (UUID)` is also included in the SDP entry and forms the basis for the connection agreement with the client device.  
+   _**When the client attempts to connect with this device, it carries a UUID that uniquely identifies the service with which it wants to connect** (These UUIDs must match in order for the connection to be accepted.)_  
+   
+   ### Definition of UUID
+   > In this case, UUID used to uniquely identify your app's Bluetooth service.  
+   A UUID is a standardized 128-bit format for a string ID used to uniquely identify information.  
+   UUID is used to identify information that needs to be unique within a system or a network because the probability of a UUID being repeated is effectively zero.  
+   
+   ### Generation of UUID
+   It is generated independently, without the use of a centralized authority. To get a UUID to use with your app, you can use one of the many random UUID generators on the web, then initialize a UUID with fromString(String).
 
+2. Start listening for connection requests by calling `accept()`.
+   > This is a blocking call. It returns when either a connection has been accepted or an exception has occurred.  
+   A connection is _**accepted only when a remote device has sent a connection request containing a `UUID` that matches the one registered with this listening server socket**_.  
+   _When successful, `accept()` returns a connected `BluetoothSocket`_.
 
+3. Unless you want to accept additional connections, call `close()`.
+   > This method call releases the server socket and all its resources, but doesn't close the connected BluetoothSocket that's been returned by `accept()`. 
+   Unlike TCP/IP, RFCOMM allows only one connected client per channel at a time, so in most cases it makes sense to call close() on the BluetoothServerSocket immediately after accepting a connected socket.
+
+Because the `accept()` call is a _**blocking call, do not execute it in the main activity UI thread**_.  
+Executing it in another thread ensures that your app can still respond to other user interactions.  
+
+**It usually makes sense to do all work that involves a `BluetoothServerSocket` or `BluetoothSocket` in a new thread managed by your app. To abort a blocked call such as `accept()`, call `close()` on the `BluetoothServerSocket` or `BluetoothSocket` !!_**from another thread**_!!. Note that all methods on a `BluetoothServerSocket` or BluetoothSocket are thread-safe.**
+
+```kotlin
+private inner class AcceptThread : Thread() {
+
+   private val mmServerSocket: BluetoothServerSocket? by lazy(LazyThreadSafetyMode.NONE) {
+       bluetoothAdapter?.listenUsingInsecureRfcommWithServiceRecord(NAME, MY_UUID)
+   }
+
+   override fun run() {
+       // Keep listening until exception occurs or a socket is returned.
+       var shouldLoop = true
+       while (shouldLoop) {
+           val socket: BluetoothSocket? = try {
+               mmServerSocket?.accept()
+           } catch (e: IOException) {
+               Log.e(TAG, "Socket's accept() method failed", e)
+               shouldLoop = false
+               null
+           }
+           socket?.also {
+               manageMyConnectedSocket(it)
+               mmServerSocket?.close()
+               shouldLoop = false
+           }
+       }
+   }
+
+   // Closes the connect socket and causes the thread to finish.
+   fun cancel() {
+       try {
+           mmServerSocket?.close()
+       } catch (e: IOException) {
+           Log.e(TAG, "Could not close the connect socket", e)
+       }
+   }
+}
+```
+
+In this example, only one incoming connection is desired, so as soon as a connection is accepted and the `BluetoothSocket` is acquired, _**the app passes the acquired `BluetoothSocket` to a separate thread**_, closes the BluetoothServerSocket, and breaks out of the loop.
+
+> Note that when `accept()` returns the `BluetoothSocket`, the socket is already connected. Therefore, _**you shouldn't call `connect()`, as you do from the client side**_.
 
 # Hints
 
