@@ -8,6 +8,16 @@
 7. After session is complete device that initiated the pairing request releases channel that linked to the discoverable device.
    - Two divices remaining bounded, so that they can automatically reconnect in the future, if they are in range and neighter of devices removed bounding
 
+# To use Bluetooth APIs..
+1. Add permissions in manifest
+   - `BLUETOOTH`
+   - `Scan` (flag: `never for location` thus location permission is not required)
+   - `Connect`
+2. Access `BluetoothAdapter`
+3. Determine if bluetooth is available, and if so:
+   - Find nearby Bluetooth devices (paired and new)
+   - Connect to a device
+   - Tranfer data with a connected device
 
 android introduced single bluetooth profile RFCOMM (wireless serial port profile)
 Creates Low level socket connection between two devices
@@ -36,10 +46,6 @@ We have `BluetoothDevice` that represents remote device, it has:
 - check that we have a permision `context.checkSelfPermission(permission) == PackageManager.PERMISSION_GRANTED`
 - updatePairedDevice
 
-## Persmissions
-- Bluetooth
-- Scan (flag: never for location so you don't need a location permission as by default)
-- Connect
 
 ## Feature
 - `hardwear.bluetooth`
@@ -70,3 +76,6 @@ private val bluetoothAdapter by lazy {
 
 # Callback with device information
 To get that we need to use BroadcastReceiver android component
+
+
+# Defenitions
