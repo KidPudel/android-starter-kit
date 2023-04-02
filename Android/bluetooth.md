@@ -23,7 +23,7 @@
 Once all permissions is set bluetooth setup is accomplished in two steps using `BluetoothAdapter`:
 1. Get the `BluetoothAdapter` (it is required in all Bluetooth activity)  
    You can get a `BluetoothAdapter` via context's `BluetoothManager` system service.  
-   _(if getAdapter() == null, does not supports Bluetooth)_
+   _(`if getAdapter() == null`, does not supports Bluetooth)_
 
    ```kotlin
    val bluetoothManager: BluetoothManager = getSystemService(BluetoothManager::class.java)
