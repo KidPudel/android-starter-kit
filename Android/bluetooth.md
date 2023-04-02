@@ -25,7 +25,24 @@ Once all permissions is set bluetooth setup is accomplished in two steps using `
    You can get a `BluetoothAdapter` via context's `BluetoothManager` system service.  
    _(if getAdapter() == null, does not supports Bluetooth)_
 
-
+   ```kotlin
+   val bluetoothManager: BluetoothManager = getSystemService(BluetoothManager::class.java)
+   val bluetoothAdapter: BluetoothAdapter? = bluetoothManager.getAdapter()
+   if (bluetoothAdapter == null) {
+      // Device doesn't support Bluetooth
+   }
+   ```
+2. Enable Bluetooth
+   Check if bluetooth is enabled by `isEnabled()`, if it's false, then request to enable it with startActivityForResult
+   ```kotlin
+   if (bluetoothAdapter?.isEnabled == false) {
+      val enableBtIntent = Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE)
+      startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT)
+      // REQUEST_ENABLE_BT locally-defined integer that must be greater than or equal to 0.
+      // The system passes this constant back to you in your onActivityResult() implementation as the requestCode parameter.
+   }
+   ```
+   <img width=540px alt="socket is id address + port" src="https://developer.android.com/static/images/guide/topics/connectivity/bluetooth/enable-bluetooth.png"/>
 
 android introduced single bluetooth profile RFCOMM (wireless serial port profile)
 Creates Low level socket connection between two devices
