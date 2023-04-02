@@ -155,6 +155,18 @@ One implementation technique is to automatically prepare each device as a server
 
 > **Note:** _If the two devices have not been previously paired, then the Android framework automatically shows a pairing request notification or dialog to the user during the connection procedure, as shown. Therefore, when your app attempts to connect devices, it doesn't need to be concerned about whether or not the devices are paired_. Your RFCOMM connection attempt gets blocked until the user has successfully paired the two devices, and the attempt fails if the user rejects pairing, or if the pairing process fails or times out.
 
+
+
+# Connect as a server
+**_When you want to connect two devices, one must act as a server by holding an open `BluetoothServerSocket`. The purpose of the server socket is to listen for incoming connection requests and provide a connected BluetoothSocket after a request is accepted._**  
+_When the `BluetoothSocket` is acquired from the `BluetoothServerSocket`, the `BluetoothServerSocket` **can—and should—be discarded**, unless you want the device to accept more connections._
+
+
+
+
+
+
+
 # Hints
 
 
