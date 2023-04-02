@@ -100,5 +100,15 @@ Usage: 1. Use this to request a connection with a remote device through a `Bluet
 
 <img width=540px alt="socket is id address + port" src="https://user-images.githubusercontent.com/63263301/229348248-9e9cc63b-7dd5-4523-85ae-9c3aaf7a5594.png"/>
 
+## Server socket
+> Special type of socket that listens for a request come in over a network, it then performs some infomration based on the request, and then possibly returns a result to a requester
+
 ## `BluetoothSocket`
->  Represents an interface of a Bluetooth socket (similar to Socket) this is a connection point on an app to exchange data with another device using `InputStream` and `OutputStream`
+>  Represents an interface of a Bluetooth socket (similar to TCP socket) this is a connection point on an app
+
+Usage: To exchange data with another device with `InputStream` and `OutputStream`
+
+## `BluetoothServerSocket`
+> Represents an open server socket that listens for incoming requests (similar to TCP server socket).
+
+Usage: In order to connect to devices, one must open server socket with this class. When a remote Bluetooth device makes a connection request, another device will listen to that request accept it and respond with `BluetoothSocket`
