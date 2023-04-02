@@ -101,4 +101,4 @@ Usage: 1. Use this to request a connection with a remote device through a `Bluet
 <img width=540px alt="socket is id address + port" src="https://user-images.githubusercontent.com/63263301/229348248-9e9cc63b-7dd5-4523-85ae-9c3aaf7a5594.png"/>
 
 ## `BluetoothSocket`
->  Represents an interface of a Bluetooth socket (similar to Socket) this is a connection point on an app two exchange data with another device using `InputStream` and `OutputStream`
+>  Represents an interface of a Bluetooth socket (similar to Socket) this is a connection point on an app to exchange data with another device using `InputStream` and `OutputStream`
