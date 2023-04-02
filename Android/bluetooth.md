@@ -233,6 +233,8 @@ In this example, only one incoming connection is desired, so as soon as a connec
 
 > Note that when `accept()` returns the `BluetoothSocket`, the socket is already connected. Therefore, _**you shouldn't call `connect()`, as you do from the client side**_.
 
+The app-specific `manageMyConnectedSocket()` method is _**designed to initiate the thread for transferring data**_, which is discussed in the topic about transferring [Bluetooth data]().
+
 # Hints
 
 
