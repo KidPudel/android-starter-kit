@@ -119,13 +119,44 @@ override fun onDestroy() {
 ```
 _To initiate a connection with a Bluetooth device, you call `getAddress()` on the `BluetoothDevice` to retrieve the associated MAC address._
 
-
 ---
 
-# Create a connection between two devices
+# Enable discoverability
+To make the local device discoverable to other devices, call `startActivityForResult(Intent, int)` with the `ACTION_REQUEST_DISCOVERABLE` intent. (This issues a request to enable the system's discoverable mode without having to navigate to the Settings app) _By default, the device becomes discoverable for two minutes. You can define a different duration, up to one hour, by adding the `EXTRA_DISCOVERABLE_DURATION` extra._
+```kotlin
+val requestCode = 1;
+val discoverableIntent: Intent = Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE).apply {
+   putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 300)
+}
+startActivityForResult(discoverableIntent, requestCode)
+```
+![enable-discoverability](https://user-images.githubusercontent.com/63263301/229359686-df932dc2-0ad3-4d65-9ebe-7be82d6e1094.png)
+
+If the user responds "Allow," then the device becomes _discoverable for the specified amount of time_. Then activity receives a call to the `onActivityResult()` callback, with the result code equal to the duration that the device is discoverable. If the user responded "Deny", or if an error occurred, the result code is `RESULT_CANCELED`.
+
+# Connect Bluetooth devices
 To create a connection between two devices, you must implement both the server-side and client-side mechanisms because:
 - one device must open a server socket (to listen)
 - and the other one must initiate the connection using the server device's MAC address.  
+
+> _**Hunting device is client and listening device is a server**_
+
+The server device and the client device each obtain the required `BluetoothSocket` in different ways.
+- The server receives socket information when an _**incoming connection is accepted**_. 
+- The client provides socket information _**when it opens an RFCOMM channel to the server**_.
+
+> _**The server and client are considered connected to each other when they each have a connected BluetoothSocket on the same RFCOMM channel.**_
+
+At this point, each device can obtain input and output streams, and data transfer can begin
+
+## Connection techniques
+One implementation technique is to automatically prepare each device as a server so that each device has a server socket open and listening for connections. In this case, either device can initiate a connection with the other and become the client. Alternatively, one device can explicitly host the connection and open a server socket on demand, and the other device initiates the connection.
+![bluetooth-pairing](https://user-images.githubusercontent.com/63263301/229361763-2aded5a4-0f1c-47ef-a54b-1bbefc280b3b.png)
+
+> **Note:** _If the two devices have not been previously paired, then the Android framework automatically shows a pairing request notification or dialog to the user during the connection procedure, as shown. Therefore, when your app attempts to connect devices, it doesn't need to be concerned about whether or not the devices are paired_. Your RFCOMM connection attempt gets blocked until the user has successfully paired the two devices, and the attempt fails if the user rejects pairing, or if the pairing process fails or times out.
+
+# Hints
+
 
 We have `BluetoothDeviceDomain` that represents remote device, it has:
 - `name`: the name which will appear in the list
