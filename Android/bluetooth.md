@@ -84,16 +84,18 @@ To get that we need to use BroadcastReceiver android component
 ## `BluetoothAdapter`
 > (represents device's own bluetooth adapter (the Bluetooth radio)) is hardware module that **_contains all functionality_**, this is an **_entry-point for all bluetooth interaction_**.  
 
-Usage: 1. Using this you can discover other bluetooth devices  
-       2. Query a list of bounded (paired) devices  
-       3. Instantiate a `BluetoothDevice` using known MAC address  
-       4. Create a `BluetoothServerSocket` to listen for communication of other devices  
+#### Usage
+1. Using this you can discover other bluetooth devices  
+2. Query a list of bounded (paired) devices  
+3. Instantiate a `BluetoothDevice` using known MAC address  
+4. Create a `BluetoothServerSocket` to listen for communication of other devices  
 
 ## `BluetoothDevice`
 > Representation of remote Bluetooth device
 
-Usage: 1. Use this to request a connection with a remote device through a `BluetoothSocket`  
-       2. Query information about the device, like a name, address, class and bounding state  
+#### Usage
+1. Use this to request a connection with a remote device through a `BluetoothSocket`.  
+2. Query information about the device, like a name, address, class and bounding state.  
 
 ## Socket
 > Endpoint for communication between two machines.
@@ -106,9 +108,11 @@ Usage: 1. Use this to request a connection with a remote device through a `Bluet
 ## `BluetoothSocket`
 >  Represents an interface of a Bluetooth socket (similar to TCP socket) this is a connection point on an app
 
-Usage: To exchange data with another device with `InputStream` and `OutputStream`
+#### Usage
+To exchange data with another device with `InputStream` and `OutputStream`
 
 ## `BluetoothServerSocket`
 > Represents an open server socket that listens for incoming requests (similar to TCP server socket).
 
-Usage: In order to connect to devices, one must open server socket with this class. When a remote Bluetooth device makes a connection request, another device will listen to that request accept it and respond with `BluetoothSocket`
+#### Usage
+In order to connect to devices, one must open server socket with this class. When a remote Bluetooth device makes a connection request, another device will listen to that request accept it and respond with `BluetoothSocket`
