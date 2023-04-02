@@ -244,7 +244,7 @@ The basic procedure is as follows:
 1. Using the `BluetoothDevice`, get a `BluetoothSocket` by calling `createRfcommSocketToServiceRecord(UUID)`.
    This method initializes a `BluetoothSocket` object that allows the client to connect to a `BluetoothDevice`.  
    The UUID passed here must match the UUID used by the server device when it called `listenUsingRfcommWithServiceRecord(String, UUID)` to open its `BluetoothServerSocket`.  
-   To use a matching UUID, hard-code the UUID string into your app, and then reference it from both the server and client code.
+   > To use a matching UUID, hard-code the UUID string into your app, and then reference it from both the server and client code.
 2. Initiate the connection by calling `connect()`. Note that this method is a blocking call.
    After a client calls this method, the system performs an SDP lookup to find the remote device with the matching UUID.  
    If the lookup is successful and the remote device accepts the connection, it shares the RFCOMM channel to use during the connection, and the `connect()` method returns.  
