@@ -235,6 +235,62 @@ In this example, only one incoming connection is desired, so as soon as a connec
 
 The app-specific `manageMyConnectedSocket()` method is _**designed to initiate the thread for transferring data**_, which is discussed in the topic about [transferring Bluetooth data]().
 
+Usually, you should close your `BluetoothServerSocket` as soon as you are done listening for incoming connections. In this example, `close()` is called as soon as the `BluetoothSocket` is acquired. You may also want to provide a public method in your thread that can close the private `BluetoothSocket` in the event that you need to stop listening on that server socket.
+
+# Connect as a client
+In order to initiate a connection with a remote device that is accepting connections on an open server socket, you must first obtain a BluetoothDevice object that represents the remote device.  
+_**You must then use the BluetoothDevice to acquire a BluetoothSocket and initiate the connection.**_
+
+
+The basic procedure is as follows:
+1. Using the BluetoothDevice, get a BluetoothSocket by calling createRfcommSocketToServiceRecord(UUID).
+   This method initializes a `BluetoothSocket` object that allows the client to connect to a `BluetoothDevice`.  
+   The UUID passed here must match the UUID used by the server device when it called `listenUsingRfcommWithServiceRecord(String, UUID)` to open its `BluetoothServerSocket`.  
+   To use a matching UUID, hard-code the UUID string into your app, and then reference it from both the server and client code.
+2. Initiate the connection by calling `connect()`. Note that this method is a blocking call.
+   After a client calls this method, the system performs an SDP lookup to find the remote device with the matching UUID.  
+   If the lookup is successful and the remote device accepts the connection, it shares the RFCOMM channel to use during the connection, and the `connect()` method returns.  
+   If the connection fails, or if the `connect()` method times out (after about 12 seconds), then the method throws an IOException.
+
+Because `connect()` is a blocking call, you should use thread that is separate from the main activity (UI) thread.
+
+```kotlin
+private inner class ConnectThread(device: BluetoothDevice) : Thread() {
+
+   private val mmSocket: BluetoothSocket? by lazy(LazyThreadSafetyMode.NONE) {
+       device.createRfcommSocketToServiceRecord(MY_UUID)
+   }
+
+   public override fun run() {
+       // Cancel discovery because it otherwise slows down the connection.
+       bluetoothAdapter?.cancelDiscovery()
+
+       mmSocket?.let { socket ->
+           // Connect to the remote device through the socket. This call blocks
+           // until it succeeds or throws an exception.
+           socket.connect()
+
+           // The connection attempt succeeded. Perform work associated with
+           // the connection in a separate thread.
+           manageMyConnectedSocket(socket)
+       }
+   }
+
+   // Closes the client socket and causes the thread to finish.
+   fun cancel() {
+       try {
+           mmSocket?.close()
+       } catch (e: IOException) {
+           Log.e(TAG, "Could not close the client socket", e)
+       }
+   }
+}
+```
+
+otice that in this snippet, `cancelDiscovery()` is called before the connection attempt occurs.  
+_**You should always call `cancelDiscovery()` before `connect()`, especially because `cancelDiscovery()` succeeds regardless of whether device discovery is currently in progress**_.  
+If your app needs to determine whether device discovery is in progress, you can check using `isDiscovering()`.
+
 # Hints
 
 
