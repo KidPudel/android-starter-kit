@@ -32,6 +32,8 @@ Bluetoorh LE uses primary profile, called generic attribute profile (gap) - whic
 
 Bluetooth uses sockets - an interface for wireless chat between two devices, streaming data back and forth 
 
+
+# Create a connection between two devices
 To create a connection between two devices, you must implement both the server-side and client-side mechanisms because one device must open a server socket, and the other one must initiate the connection using the server device's MAC address.  
 
 We have `BluetoothDevice` that represents remote device, it has:
@@ -79,3 +81,24 @@ To get that we need to use BroadcastReceiver android component
 
 
 # Defenitions
+## `BluetoothAdapter`
+> (represents device's own bluetooth adapter (the Bluetooth radio)) is hardware module that **_contains all functionality_**, this is an **_entry-point for all bluetooth interaction_**.  
+
+Usage: 1. Using this you can discover other bluetooth devices
+       2. Query a list of bounded (paired) devices
+       3. Instantiate a `BluetoothDevice` using known MAC address
+       4. Create a `BluetoothServerSocket` to listen for communication of other devices
+
+## `BluetoothDevice`
+> Representation of remote Bluetooth device
+
+Usage: 1. Use this to request a connection with a remote device through a `BluetoothSocket`
+       2. Query information about the device, like a name, address, class and bounding state
+
+## Socket
+> Endpoint for communication between two machines.
+
+<img width=540px alt="socket is id address + port" src="https://user-images.githubusercontent.com/63263301/229348248-9e9cc63b-7dd5-4523-85ae-9c3aaf7a5594.png"/>
+
+## `BluetoothSocket`
+>  Represents an interface of a Bluetooth socket (similar to Socket) this is a connection point on an app two exchange data with another device using `InputStream` and `OutputStream`
