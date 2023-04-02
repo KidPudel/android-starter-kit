@@ -150,7 +150,7 @@ The server device and the client device each obtain the required `BluetoothSocke
 At this point, each device can obtain input and output streams, and data transfer can begin
 
 ## Connection techniques
-One implementation technique is to automatically prepare each device as a server so that each device has a server socket open and listening for connections. In this case, either device can initiate a connection with the other and become the client. Alternatively, one device can explicitly host the connection and open a server socket on demand, and the other device initiates the connection.
+One implementation technique is to automatically prepare each device as a server so that each device has a server socket open and listening for connections. In this case, either device can initiate a connection with the other and become the client. Alternatively, one device can explicitly host the connection and open a server socket on demand, and the other device initiates the connection.  
 ![bluetooth-pairing](https://user-images.githubusercontent.com/63263301/229361763-2aded5a4-0f1c-47ef-a54b-1bbefc280b3b.png)
 
 > **Note:** _If the two devices have not been previously paired, then the Android framework automatically shows a pairing request notification or dialog to the user during the connection procedure, as shown. Therefore, when your app attempts to connect devices, it doesn't need to be concerned about whether or not the devices are paired_. Your RFCOMM connection attempt gets blocked until the user has successfully paired the two devices, and the attempt fails if the user rejects pairing, or if the pairing process fails or times out.
