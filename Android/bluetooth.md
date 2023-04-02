@@ -44,17 +44,6 @@ Once all permissions is set bluetooth setup is accomplished in two steps using `
    ```
    <img width=540px alt="socket is id address + port" src="https://developer.android.com/static/images/guide/topics/connectivity/bluetooth/enable-bluetooth.png"/>
 
-android introduced single bluetooth profile RFCOMM (wireless serial port profile)
-Creates Low level socket connection between two devices
-
-Profile in bluetooth is a contract - definition of set of services that a device has to expose
-
-Required step to connecting is pairing, it’s a security step (encryption)
-
-The biggest difference between Bluetooth classic and BLE
-
-Bluetoorh LE uses primary profile, called generic attribute profile (gap) - which is organization of data in key- value store
-
 
 # Create a connection between two devices
 To create a connection between two devices, you must implement both the server-side and client-side mechanisms because:
@@ -100,6 +89,9 @@ To get that we need to use BroadcastReceiver android component
 
 
 # Defenitions
+android introduced single bluetooth profile RFCOMM (wireless serial port profile)
+Creates Low level socket connection between two devices
+
 ## `BluetoothAdapter`
 > (represents device's own bluetooth adapter (the Bluetooth radio)) is hardware module that **_contains all functionality_**, this is an **_entry-point for all bluetooth interaction_**.  
 
