@@ -243,7 +243,7 @@ _**You must then use the `BluetoothDevice` to acquire a `BluetoothSocket` and in
 
 
 The basic procedure is as follows:
-1. Using the BluetoothDevice, get a BluetoothSocket by calling createRfcommSocketToServiceRecord(UUID).
+1. Using the `BluetoothDevice`, get a `BluetoothSocket` by calling `createRfcommSocketToServiceRecord(UUID)`.
    This method initializes a `BluetoothSocket` object that allows the client to connect to a `BluetoothDevice`.  
    The UUID passed here must match the UUID used by the server device when it called `listenUsingRfcommWithServiceRecord(String, UUID)` to open its `BluetoothServerSocket`.  
    To use a matching UUID, hard-code the UUID string into your app, and then reference it from both the server and client code.
