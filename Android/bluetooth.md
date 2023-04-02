@@ -45,6 +45,21 @@ Once all permissions is set bluetooth setup is accomplished in two steps using `
    <img width=540px alt="socket is id address + port" src="https://developer.android.com/static/images/guide/topics/connectivity/bluetooth/enable-bluetooth.png"/>
 
 
+# Find Bluetooth devices
+Using the BluetoothAdapter, you can find remote Bluetooth devices either through device discovery or by querying the list of paired devices.
+> Device discovery is a scanning procedure that searches the local area for Bluetooth-enabled devices and requests some information about each one.  
+A nearby Bluetooth device responds to a discovery request only if it is currently accepting information requests by being discoverable.  
+If a device is discoverable, it responds to the discovery request by sharing some information, such as the device's name, its class, and its unique MAC address.  
+Using this information, the device that is performing the discovery process can then choose to initiate a connection to the discovered device.
+
+Because discoverable devices might reveal information about the user's location, the device discovery process requires location access. (flag: `never for location` thus location permission is not required)  
+
+## Difference between being paired and being connected:
+
+- To be _**paired**_ means that two devices are aware of each other's existence, have a shared link-key that can be used for authentication, and are capable of establishing an encrypted connection with each other.
+To be _**connected**_ means that the devices currently share an RFCOMM channel and are able to transmit data with each other. The current Bluetooth APIs require devices to be paired before an RFCOMM connection can be established. Pairing is automatically performed when you initiate an encrypted connection with the Bluetooth APIs.
+
+
 # Create a connection between two devices
 To create a connection between two devices, you must implement both the server-side and client-side mechanisms because:
 - one device must open a server socket (to listen)
