@@ -19,6 +19,14 @@
    - Connect to a device
    - Tranfer data with a connected device
 
+# Set up Bluetooth
+Once all permissions is set bluetooth setup is accomplished in two steps using `BluetoothAdapter`:
+1. Get the `BluetoothAdapter` (it is required in all Bluetooth activity)  
+   You can get a `BluetoothAdapter` via context's `BluetoothManager` system service.  
+   _(if getAdapter() == null, does not supports Bluetooth)_
+
+
+
 android introduced single bluetooth profile RFCOMM (wireless serial port profile)
 Creates Low level socket connection between two devices
 
@@ -30,15 +38,13 @@ The biggest difference between Bluetooth classic and BLE
 
 Bluetoorh LE uses primary profile, called generic attribute profile (gap) - which is organization of data in key- value store
 
-Bluetooth uses sockets - an interface for wireless chat between two devices, streaming data back and forth 
-
 
 # Create a connection between two devices
 To create a connection between two devices, you must implement both the server-side and client-side mechanisms because:
 - one device must open a server socket (to listen)
 - and the other one must initiate the connection using the server device's MAC address.  
 
-We have `BluetoothDevice` that represents remote device, it has:
+We have `BluetoothDeviceDomain` that represents remote device, it has:
 - `name`: the name which will appear in the list
 - unique MAC `address`
 
@@ -57,12 +63,6 @@ We have `BluetoothDevice` that represents remote device, it has:
 We will have a list of scanned devices and paired devices
 
 How to get bluetooth related **_functionality_**??
-
-> now we need a `BluetoothAdapter` which is hardware module that **_contains all functionality_** (represents device's own bluetooth adapter (the Bluetooth radio))
-> `BluetoothAdapter` is a basic class that provides basic Bluetooth operations on a device.
-
-for that we need `SystemService` (system-level service by class) that is provided from an OS (android `BluetoothManager`)
-> `BluetoothManager` **_provides access to the Bluetooth functionality on a device_**. It allows you to discover nearby Bluetooth devices, establish connections with them, and manage the data transfer between them.
 
 ```kotlin
 private val BluetoothManager by lazy {
@@ -92,6 +92,13 @@ To get that we need to use BroadcastReceiver android component
 3. Instantiate a `BluetoothDevice` using known MAC address  
 4. Create a `BluetoothServerSocket` to listen for communication of other devices  
 
+## `BluetoothManager`
+> High-level manager to obtain `BluetoothAdapter` and conduct overall Bluetooth management
+To get `BluetoothManager`:
+```kotlin
+context.getSystemService(BluetoothManager::class.java)
+```
+
 ## `BluetoothDevice`
 > Representation of remote Bluetooth device
 
@@ -105,10 +112,11 @@ To get that we need to use BroadcastReceiver android component
 <img width=540px alt="socket is id address + port" src="https://user-images.githubusercontent.com/63263301/229348248-9e9cc63b-7dd5-4523-85ae-9c3aaf7a5594.png"/>
 
 ## Server socket
-> Special type of socket that listens for a request come in over a network, it then performs some infomration based on the request, and then possibly returns a result to a requester
+> Special type of socket that listens for a request come in over a network, it then performs some information based on the request, and then possibly returns a result to a requester
 
 ## `BluetoothSocket`
->  Represents an interface of a Bluetooth socket (similar to TCP socket) this is a connection point on an app
+>  Represents an interface of a Bluetooth socket (similar to TCP socket) this is a connection point on an app  
+an interface for wireless chat between two devices, streaming data back and forth 
 
 #### Usage
 To exchange data with another device with `InputStream` and `OutputStream`
