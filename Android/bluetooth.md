@@ -238,8 +238,8 @@ The app-specific `manageMyConnectedSocket()` method is _**designed to initiate t
 Usually, you should close your `BluetoothServerSocket` as soon as you are done listening for incoming connections. In this example, `close()` is called as soon as the `BluetoothSocket` is acquired. You may also want to provide a public method in your thread that can close the private `BluetoothSocket` in the event that you need to stop listening on that server socket.
 
 # Connect as a client
-In order to initiate a connection with a remote device that is accepting connections on an open server socket, you must first obtain a BluetoothDevice object that represents the remote device.  
-_**You must then use the BluetoothDevice to acquire a BluetoothSocket and initiate the connection.**_
+In order to initiate a connection with a remote device that is accepting connections on an open server socket, you must first obtain a `BluetoothDevice` object that represents the remote device.  
+_**You must then use the `BluetoothDevice` to acquire a `BluetoothSocket` and initiate the connection.**_
 
 
 The basic procedure is as follows:
