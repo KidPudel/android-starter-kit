@@ -66,24 +66,6 @@ We have `BluetoothDeviceDomain` that represents remote device, it has:
 ## Feature
 - `hardwear.bluetooth`
 
-We will have a list of scanned devices and paired devices
-
-How to get bluetooth related **_functionality_**??
-
-```kotlin
-private val BluetoothManager by lazy {
-    application.getSystemService(BluetoothManager::class.java)
-}
-```
-
-And now we can get a `BluetoothAdapter`
-
-```kotlin
-private val bluetoothAdapter by lazy {
-    bluetoothManager?.adapter
-}
-```
-
 # Callback with device information
 To get that we need to use BroadcastReceiver android component
 
