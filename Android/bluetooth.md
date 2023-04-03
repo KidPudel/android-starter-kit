@@ -289,6 +289,115 @@ otice that in this snippet, `cancelDiscovery()` is called before the connection 
 _**You should always call `cancelDiscovery()` before `connect()`, especially because `cancelDiscovery()` succeeds regardless of whether device discovery is currently in progress**_.  
 If your app needs to determine whether device discovery is in progress, you can check using `isDiscovering()`.
 
+
+And finally, ***drum roll***.. transfering data between two devices
+
+# Transfer Bluetooth data
+After both devices successfully connected (Each one has a connected `BluetoothSocket`).
+Now share data between two using `BluetoothSocket` in the following way:
+1. We need to get `InputStream` and `OutputStream` that handle transmissions through the socket using `getInputStream()` and `getOutputStream()`.
+2. `read(byte[])` and `write(byte[])` data throught the streams
+
+> Note: You should `read(byte[])` from the stream and `write(byte[])` to the stream on dedicated thread, because these methods are `read(byte[])` (blocking) and `write(byte[])` (*blocking when remote device isn't calling `read(byte[])` quickly enough* and the intermediate buffers become full as a result).  
+So you need to dedicate main loop to reading from `InputStream` and use separate public method in the tread to write to the `OutputStream`
+
+
+## Example how to transfer data between two devices connected over Bluetooth:
+
+```kotlin
+private const val TAG = "MY_APP_DEBUG_TAG"
+
+// Defines several constants used when transmitting messages between the
+// service and the UI.
+const val MESSAGE_READ: Int = 0
+const val MESSAGE_WRITE: Int = 1
+const val MESSAGE_TOAST: Int = 2
+// ... (Add other message types here as needed.)
+
+class MyBluetoothService(
+       // handler that gets info from Bluetooth service
+       private val handler: Handler) {
+
+   private inner class ConnectedThread(private val mmSocket: BluetoothSocket) : Thread() {
+
+       private val mmInStream: InputStream = mmSocket.inputStream
+       private val mmOutStream: OutputStream = mmSocket.outputStream
+       private val mmBuffer: ByteArray = ByteArray(1024) // mmBuffer store for the stream
+
+       override fun run() {
+           var numBytes: Int // bytes returned from read()
+
+           // Keep listening to the InputStream until an exception occurs.
+           while (true) {
+               // Read from the InputStream.
+               numBytes = try {
+                   mmInStream.read(mmBuffer)
+               } catch (e: IOException) {
+                   Log.d(TAG, "Input stream was disconnected", e)
+                   break
+               }
+
+               // Send the obtained bytes to the UI activity.
+               val readMsg = handler.obtainMessage(
+                       MESSAGE_READ, numBytes, -1,
+                       mmBuffer)
+               readMsg.sendToTarget()
+           }
+       }
+
+       // Call this from the main activity to send data to the remote device.
+       fun write(bytes: ByteArray) {
+           try {
+               mmOutStream.write(bytes)
+           } catch (e: IOException) {
+               Log.e(TAG, "Error occurred when sending data", e)
+
+               // Send a failure message back to the activity.
+               val writeErrorMsg = handler.obtainMessage(MESSAGE_TOAST)
+               val bundle = Bundle().apply {
+                   putString("toast", "Couldn't send data to the other device")
+               }
+               writeErrorMsg.data = bundle
+               handler.sendMessage(writeErrorMsg)
+               return
+           }
+
+           // Share the sent message with the UI activity.
+           val writtenMsg = handler.obtainMessage(
+                   MESSAGE_WRITE, -1, -1, mmBuffer)
+           writtenMsg.sendToTarget()
+       }
+
+       // Call this method from the main activity to shut down the connection.
+       fun cancel() {
+           try {
+               mmSocket.close()
+           } catch (e: IOException) {
+               Log.e(TAG, "Could not close the connect socket", e)
+           }
+       }
+   }
+}
+```
+After constructor acquires the necessery streams, thread waits for data to come throw the `InputStream`.  
+
+- `run()` methods reads from the remote device.  
+  - `read(byte[])` returns the data from the stream and then `Handler` from the parent class sends it to the main activity
+  - then thread waits for more bytes from `InputStream`
+- `write()` method sends outgoing data to the remote device.
+  - call this method from the main activity
+  - this method calls `write(byte[])` with provided bytes to write to the `OutputStream`
+  - if error occurs in the proccess (thrown IOException) then toast message is send to the user
+- `cancel()` method is to disconnect by closing `BluetoothSocket`
+
+> Note: Always close `BluetoothSocket` after you're done using the Bluetooth connection.
+
+
+![Alt text](https://media.tenor.com/Pint6dg3go0AAAAd/air-high-five-good-job.gif)
+
+
+
+
 # Hints
 
 
