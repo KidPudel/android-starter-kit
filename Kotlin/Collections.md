@@ -91,6 +91,19 @@ fun parseCardNumber(cardNumber: String): Long {
   val list = listOf(1, 2, 3, 4, 5)
   val newList = list.onEach { println(it)}
   ```
+- `also` like an `apply` but it returns the original block
+  ```kotlin
+  val result = person.apply {
+	age = 31
+  }.age
+  println(result) // 31
+  println(person.age) // 31
+  val result2 = person.also {
+  	it.age = 32
+  }.age
+  println(result) // 31
+  println(person.age) // 32
+  ```
 - `.joinToString(" ")`
 - `.withIndex()` - wraps element in (index, value)
 - `first()` - first element _that matches predictable_
