@@ -32,6 +32,7 @@ lookup notes for android development
 ### [Class parameters](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/class-parameters.md)
 ### [Generics](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/generics.md)
 ### [internal keyword](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/internal.md)
+### ["by" keyword](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/by.md)
 
 ---
 
