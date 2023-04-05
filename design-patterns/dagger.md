@@ -235,8 +235,6 @@ We want Dagger to **create the graph of dependencies** of our project, **manage 
 `build.gradle`
 ```kotlin
 dependencies {
-    for 1.7.0 kotlin
-
     //Dagger - Hilt
     implementation "com.google.dagger:hilt-android:2.42"
     kapt "com.google.dagger:hilt-android-compiler:2.42"
@@ -259,6 +257,8 @@ dependencies {
 }
 ```
 
+> kotlin 1.7.0 - hilt 2.42  
+> kotlin 1.8.0 - hilt 2.45  
 
 # References
 ## [dependency injection](https://github.com/KidPudel/android-starter-kit/blob/main/design-patterns/dependency-injection.md)
