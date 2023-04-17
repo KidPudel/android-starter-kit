@@ -4,6 +4,10 @@ In the end, each screen will be a composable
 
 `NavHost` take composables and replaces it when we want it
 
+```groovy
+implementation "androidx.navigation:navigation-compose:2.5.3"
+```
+
 1. Create `NavConstroller` - we want to controll `NavHost` somehow
   ```kotlin
       val navController = rememberNavController()
