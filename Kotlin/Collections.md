@@ -126,6 +126,7 @@ fun parseCardNumber(cardNumber: String): Long {
    val stringWithoutSpaces = someString.split(' ')
    ```
 - `sum()`
+- `shuffled()`
 
 [Collection usage](https://github.com/KidPudel/android-starter-kit/blob/main/Kotlin/collection_usage.kt)
 
