@@ -87,7 +87,6 @@ for a column we have vertical arrangment and horizontal alignment
 
 - `Column` & `Row` & `Box`  
     ![image](https://user-images.githubusercontent.com/63263301/208519000-88281d26-c260-4544-8d33-d489561d4123.png)
-
 - `Text`
 - `TextFiled`
 - `Card`
@@ -117,6 +116,8 @@ Modifier.:
 - `.fillMaxSize(->percentage<-), MaxHeight, MaxWidth` will make composable occupy all available space (**_If boundaries in parent are set (e.g. if only height is set, then width is going to be filled up for entire screen)_**)
 - `.width, .height, .required_` just as with xml, but required is fill even furthter (can go out of screen)
 -  `.padding` pushes content of container inside ([read more about padding](https://github.com/KidPudel/android-starter-kit/blob/main/XML/margin-vs-padding.md))
+-  `.weight` - how much space it will take (can take all **free** space)
+-  `heightIn` (with min and max, like a flex container)
 -  `.matchParentSize` - content will scale according to the borders of parent
 -  `.size`
 -  `.offest` like [margin](https://github.com/KidPudel/android-starter-kit/blob/main/XML/margin-vs-padding.md) (jetpack compose doesn't have margin, but you can use padding instead of it), but it doesn't push other elements (starts from top left corner), but you can use `Spacer` composable (add extra space)
@@ -124,7 +125,6 @@ Modifier.:
 -  `.clickable`
 -  `.scrollable`
 -  `.draggable`
--  `.weight` - how much space it will take (can take all **free** space)
 
 
 # Arrangment
