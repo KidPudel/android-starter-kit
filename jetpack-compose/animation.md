@@ -8,7 +8,7 @@ val infiniteTransition = rememberInfiniteTransition()
 val animation = inifinteTransition.animateFloat(
   initialValue = 0f,
   targetValue = 360f,
-  animationSpec = infiniteRepeatable(tween(1000, easing = LinearEasing))
+  animationSpec = infiniteRepeatable(tween(1000, easing = LinearEasing), repeatMode = RepeatMode.Reverse)
 )
 ```
 
