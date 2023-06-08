@@ -13,7 +13,7 @@ we have 5 scoped functions: let, with, run, appy, also
 
 -----
 
-4. `apply` - just get the convinient scope of the object `this`, but returns the object itself -> meaning, use it to _apply_ something on it
+4. `apply` - read: "apply this on the object" just get the convinient scope of the object `this`, but returns the object itself -> meaning, use it to _apply_ something on it
 
 -----
 
