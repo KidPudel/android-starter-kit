@@ -5,11 +5,11 @@ we have 5 scoped functions: let, with, run, appy, also
 
 -----
 
-2. `with` - simply reads: "with *this oject* do this {}", you just get the convenient scope of the object `this` istead of the long repetition, u just call object's methods like `build` and returns the result
+2. `with` - simply reads: "with *this oject* do this {}", you just get the convenient scope of the object `this` convenient use when you don't need to use the returned result
 
 -----
  
-3. `run` - just get the convinient scope of the object `this` and returns the result of a lambda
+3. `run` - just get the convinient scope of the object `this` and returns the result of a lambda istead of the long repetition, u just call object's methods like `build` and returns the result
 
 -----
 
