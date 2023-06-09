@@ -62,7 +62,7 @@ override fun analyze(image: ImageProxy) {
 ```
 
 
-# Full code
+# Full analyzer code
 
 ```kotlin
 class QrCodeAnalyzer(
@@ -126,3 +126,20 @@ class QrCodeAnalyzer(
     }
 }
 ```
+
+# Scanner
+
+for that we need:
+1. camera permission
+   - + check permission
+   - + set permission
+2. display camera
+
+camera will be displayed in viewm for that use `AndroidView` with factory that returns `PreviewView`
+in factory in order to set up scanner:
+1. get preview and previewView (to display camera preview)
+2. setup it
+   - set camera selector lens
+   - set analyzer
+   - get camera provider future (to render camera in preview view)
+
