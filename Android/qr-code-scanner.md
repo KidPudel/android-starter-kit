@@ -140,6 +140,6 @@ in factory in order to set up scanner:
 1. get preview and previewView (to display camera preview)
 2. setup it
    - set camera selector lens
-   - set analyzer
+   - set image analyzer
    - get camera provider future (to render camera in preview view)
 
