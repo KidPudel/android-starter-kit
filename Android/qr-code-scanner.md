@@ -142,4 +142,6 @@ in factory in order to set up scanner:
    - set camera selector lens
    - set image analyzer
    - get camera provider future `ProcessCameraProvider`, **_binds a camera's lifecycle to the Lifecycle Owner_**, which helps to render a camera on the view
+      - for heavyweight things like processing something with camera (this case), we should use `bindToLifecycle()`
+> lifecycle state will determine should camera open, start, stop or close
 
