@@ -132,16 +132,89 @@ class QrCodeAnalyzer(
 for that we need:
 1. camera permission
    - + check permission
-   - + set permission
+- + set permission
 2. display camera
 
 camera will be displayed in viewm for that use `AndroidView` with factory that returns `PreviewView`
 in factory in order to set up scanner:
 1. get preview and previewView (to display camera preview)
 2. setup it
+   - bind previewView to preview. Setting a surface provider, tells camera that usecase is ready to reaceive data 
    - set camera selector lens
-   - set image analyzer
-   - get camera provider future `ProcessCameraProvider`, **_binds a camera's lifecycle to the Lifecycle Owner_**, which helps to render a camera on the view
+   - set image analyzer, what to scan and how
+   - get camera provider future `ProcessCameraProvider`, **_binds a camera's lifecycle to the Lifecycle Owner, lifecycle state will determine should camera open, start, stop or close. And when started, use case will receive camera's data_**
       - for heavyweight things like processing something with camera (this case), we should use `bindToLifecycle()`
-> lifecycle state will determine should camera open, start, stop or close, And when started, use case will receive camera's data
+   - and then return previewView from a factory that is for creation a view to be composed
 
+```kotlin
+@Composable
+fun ScannerScreen(navigationController: NavController) {
+
+    val lifecycleOwner = LocalLifecycleOwner.current
+    val context = LocalContext.current
+    val cameraProviderFuture = remember {
+        ProcessCameraProvider.getInstance(context)
+    }
+
+    var hasCameraPermission by remember {
+        mutableStateOf(
+            ContextCompat.checkSelfPermission(
+                context,
+                android.Manifest.permission.CAMERA
+            ) == PackageManager.PERMISSION_GRANTED
+        )
+    }
+
+    val launchCameraRequest = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.RequestPermission(),
+        onResult = { permissionGranted ->
+            hasCameraPermission = permissionGranted
+        }
+    )
+
+    LaunchedEffect(Unit) {
+        launchCameraRequest.launch(android.Manifest.permission.CAMERA)
+    }
+
+    Column(modifier = Modifier.fillMaxSize()) {
+        if (hasCameraPermission) {
+            AndroidView(factory = { viewContext ->
+                val previewView = PreviewView(viewContext)
+                val preview = Preview.Builder().build()
+
+                // setting provider, tells camera that usecase ready to receive a data, if removed, this process stops
+                preview.setSurfaceProvider(previewView.surfaceProvider)
+
+                // setup a selector for the camera's properties and requirements to select a camera
+                val selector = CameraSelector.Builder()
+                    .requireLensFacing(CameraSelector.LENS_FACING_BACK)
+                    .build()
+
+                /*
+                * setup image analyzer with our qr code analyzer
+                * collect only latest if qr code analyzer slower
+                * run it in a main thread
+                * */
+                val imageAnalyzer = ImageAnalysis.Builder()
+                    .setTargetResolution(Size(previewView.width, previewView.height))
+                    .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
+                    .build().apply {
+                        setAnalyzer(ContextCompat.getMainExecutor(viewContext), QrCodeAnalyzer {
+                            TODO(reason = "do on qr code analyzed")
+                        })
+                    }
+
+                try {
+                    // the state of lifecycle determines should camera open, started, stopped and closed
+                    // bind it
+                    cameraProviderFuture.get().bindToLifecycle(lifecycleOwner, selector, preview)
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                }
+
+                previewView
+            })
+        }
+    }
+}
+```
