@@ -141,5 +141,5 @@ in factory in order to set up scanner:
 2. setup it
    - set camera selector lens
    - set image analyzer
-   - get camera provider future (to render camera in preview view)
+   - get camera provider future `ProcessCameraProvider`, **_binds a camera's lifecycle to the Lifecycle Owner_**
 
