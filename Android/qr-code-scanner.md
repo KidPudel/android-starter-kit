@@ -30,3 +30,34 @@ now with the poroject setup, we need:
 2. analyse the qr code
 3. callback (do on find)
 
+
+## analyse the qr code
+
+ImageAnalysis provides CPU accessible images for an app to perform image analysis on
+```kotlin
+class QrCodeAnalyzer(
+    // handler callback
+    onQrCodeScanned: (String) -> Unit
+): ImageAnalysis.Analyzer {
+    // call each frame for an image from the camera, image - info about specific frame
+    override fun analyze(image: ImageProxy) {
+        TODO("handle frame processing to get a QR code")
+    }
+}
+```
+
+now we need to setup formats our analyser will be processing further, or byte formats to support
+```kotlin
+private val acceptableFormats = listOf(
+   ImageFormat.YUV_420_888,
+   ImageFormat.YUV_422_888,
+   ImageFormat.YUV_444_888,
+)
+
+override fun analyze(image: ImageProxy) {
+   if (image.format in acceptableFormats) {
+      //...
+   }
+}
+```
+
