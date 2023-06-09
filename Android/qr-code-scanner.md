@@ -37,7 +37,7 @@ ImageAnalysis provides CPU accessible images for an app to perform image analysi
 ```kotlin
 class QrCodeAnalyzer(
     // handler callback
-    onQrCodeScanned: (String) -> Unit
+    val onQrCodeScanned: (String) -> Unit
 ): ImageAnalysis.Analyzer {
     // call each frame for an image from the camera, image - info about specific frame
     override fun analyze(image: ImageProxy) {
@@ -61,3 +61,68 @@ override fun analyze(image: ImageProxy) {
 }
 ```
 
+
+# Full code
+
+```kotlin
+class QrCodeAnalyzer(
+    val onQrCodeScanned: (String) -> Unit
+): ImageAnalysis.Analyzer {
+
+    private val acceptableFormats = listOf(
+        ImageFormat.YUV_420_888,
+        ImageFormat.YUV_422_888,
+        ImageFormat.YUV_444_888,
+    )
+
+    override fun analyze(image: ImageProxy) {
+        if (image.format in acceptableFormats) {
+            val bytes = image.planes.first().buffer.toByteArray()
+
+            // process the image
+            val source = PlanarYUVLuminanceSource(
+                bytes,
+                image.width,
+                image.height,
+                0,
+                0,
+                image.width,
+                image.height,
+                false
+            )
+            // bitmap information about qr code
+            val binaryBitmap = BinaryBitmap(HybridBinarizer(source))
+
+            // wrap with try-catch block, because when scanning, if in the particular frame no qr code, that would throw an exception
+            try {
+                // MultiFormatReader is the class to read all kinds of forms of data (in this case qr code specified)
+                val result = MultiFormatReader().apply {
+                    setHints(mapOf(
+                        DecodeHintType.POSSIBLE_FORMATS to arrayListOf(
+                            // possible barcode formats
+                            BarcodeFormat.QR_CODE
+                        )
+                    ))
+                }.run {
+                    decode(binaryBitmap)
+                }
+                // return the data inside of qr code
+                onQrCodeScanned(result.text)
+
+            } catch (e: Exception) {
+                Log.v("no QR code", e.message ?: "nothing to show")
+            } finally {
+                image.close()
+            }
+        }
+    }
+
+    private fun ByteBuffer.toByteArray(): ByteArray {
+        rewind()
+        return ByteArray(remaining()).also {
+            // as side-effect
+            get(it)
+        }
+    }
+}
+```
