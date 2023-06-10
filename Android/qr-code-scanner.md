@@ -153,6 +153,7 @@ fun ScannerScreen(navigationController: NavController) {
     val lifecycleOwner = LocalLifecycleOwner.current
     val context = LocalContext.current
     val cameraProviderFuture = remember {
+        // singleton which binds camera's lifecycle to lifecycle owner, and the state of lifefycle lets open a camera and more
         ProcessCameraProvider.getInstance(context)
     }
 
@@ -182,7 +183,7 @@ fun ScannerScreen(navigationController: NavController) {
                 val previewView = PreviewView(viewContext)
                 val preview = Preview.Builder().build()
 
-                // setting provider, tells camera that usecase ready to receive a data, if removed, this process stops
+                // setting provider, tels camera that usecase (preview where to render) ready to receive a data (images), if removed, this process stops
                 preview.setSurfaceProvider(previewView.surfaceProvider)
 
                 // setup a selector for the camera's properties and requirements to select a camera
