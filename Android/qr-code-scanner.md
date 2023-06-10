@@ -104,6 +104,8 @@ class QrCodeAnalyzer(
                         )
                     ))
                 }.run {
+    }
+                    // close image that is analyzed
                     decode(binaryBitmap)
                 }
                 // return the data inside of qr code
@@ -208,7 +210,7 @@ fun ScannerScreen(navigationController: NavController) {
                 try {
                     // the state of lifecycle determines should camera open, started, stopped and closed
                     // bind it
-                    cameraProviderFuture.get().bindToLifecycle(lifecycleOwner, selector, preview)
+                    cameraProviderFuture.get().bindToLifecycle(lifecycleOwner, selector, preview, imageAnalyzer)
                 } catch (e: Exception) {
                     e.printStackTrace()
                 }
