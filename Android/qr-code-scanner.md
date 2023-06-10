@@ -200,7 +200,7 @@ fun ScannerScreen(navigationController: NavController) {
                     .setTargetResolution(Size(previewView.width, previewView.height))
                     .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
                     .build().apply {
-                        setAnalyzer(ContextCompat.getMainExecutor(viewContext), QrCodeAnalyzer {
+                        setAnalyzer(ContextCompat.getMainExecutor(viewContext), QrCodeAnalyzer { qrCodeData ->
                             TODO(reason = "do on qr code analyzed")
                         })
                     }
