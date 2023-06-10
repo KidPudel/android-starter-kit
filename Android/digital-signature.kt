@@ -24,6 +24,7 @@ class DigitalSignature {
                 KeyProperties.PURPOSE_SIGN or KeyProperties.PURPOSE_VERIFY
             )
         }.run {
+            setDigests(KeyProperties.DIGEST_SHA256, KeyProperties.DIGEST_SHA512)
             build()
         }
         // apply specifications
