@@ -1,7 +1,7 @@
 # Scoped functions
 we have 5 scoped functions: let, with, run, appy, also
 
-1. `let` - used to manipulate on the object via getting `it` of the object and returning the result of the lambda
+1. `let` - used to configute + manipulate on the object via getting `it` (object) and returning the result of the lambda
 
 -----
 
@@ -9,7 +9,7 @@ we have 5 scoped functions: let, with, run, appy, also
 
 -----
  
-3. `run` - just get the convinient scope of the object `this` and returns the result of a lambda istead of the long repetition, u just call object's methods like `build` and returns the result
+3. `run` - use to configure the object by just getting the convinient scope of the object `this` and returns the result of a lambda istead of the long repetition, u just call object's methods like `build` and returns the result
 
 -----
 
@@ -21,3 +21,7 @@ we have 5 scoped functions: let, with, run, appy, also
 
 
 `apply` is when you want to setup and return the object itself, `also` is when you want to do some side things on the object and return the object itself
+
+## return
+- lambda result - `let`, `with`, `run`
+- object - `apply`, `also`
