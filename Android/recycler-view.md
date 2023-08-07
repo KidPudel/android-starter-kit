@@ -54,6 +54,47 @@ Adapter is used for:
 
 `ViewHolder` is used to _hold a view_ for particular item
 
+```kotlin
+class NewsAdapter(
+    val onClickListener: ((Article) -> Unit)
+) : ListAdapter<Article, NewsHolder>(NewsDiffCallback()) {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsHolder {
+        val layoutInflater = LayoutInflater.from(parent.context)
+        val binding = ListItemArticleCardBinding.inflate(
+            /* inflater = */ layoutInflater,
+            /* parent = */ parent,
+            /* attachToParent = */ false
+        )
+        return NewsHolder(binding)
+    }
+
+    override fun onBindViewHolder(holder: NewsHolder, position: Int) {
+        val item = getItem(position)
+        holder.binding.apply {
+            cardTitle.text = item.title
+            setImageFromUrl(root.context, Uri.parse(item.urlToImage), cardImage)
+            root.setOnClickListener {
+                onClickListener.invoke(item)
+            }
+        }
+    }
+
+    override fun getItemCount(): Int {
+        return currentList.size
+    }
+
+    private fun setImageFromUrl(context: Context, uri: Uri?, imageView: ImageView) {
+        try {
+            Glide.with(context)
+                .load(uri)
+                .into(imageView)
+        } catch (e: Exception) {
+            Timber.e("Could not set an image (from NewsAdapter) ;((")
+        }
+    }
+}
+```
+
 so it has tree functions:
 - `OnCreateViewHolder` - for an item appearance
 - `OnBindViewHolder` - set content to an item view
@@ -63,6 +104,13 @@ so it has tree functions:
 
 
 ### connect adapter
+```xml
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/newsListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+```
 
 create a list of content
 
@@ -77,9 +125,14 @@ val todos = mutableListOf(
 instantialte an adapter, and set it to recycler view
 
 ```kotlin
-val adapter = TodoAdapter(todos)
-binding.recyclerView.adapter = adapter
+newsAdapter = NewsAdapter(onArticleClickListener)
+        binding.newsListView.apply {
+            adapter = newsAdapter
+            layoutManager = GridLayoutManager(this@MainActivity, 2)
+            visibility = View.VISIBLE
+        }
 ```
+
 
 also we can adjust `layoutManager`
 
