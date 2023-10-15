@@ -20,7 +20,8 @@ A few terms you should be familiar with (including a baking analogy for ease of 
 # Why (as a data scientist) should I care?
 Broadly, there are two use cases for Docker in ML:
 
-`Run Only` (run): A run-only container means you edit your code on a local IDE and run it with the container so that your code runs inside the container. Here is one good example.
+`Run Only` (run): A run-only container means you edit your code on a local IDE and run it with the container so that your code runs inside the container. Here is one good example.  
+
 `End-to-End Platform` (run and interact): An end-to-end platform container means you have an IDE or Jupyter Notebook / Lab, and your entire working environment, running in the container, and also run the code inside it (with the exception of the working file system which can be mounted).
 We will focus on the second use case.
 
