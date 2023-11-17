@@ -32,3 +32,10 @@ Generally, the main advantage Docker provides is standardization. This means you
 Reproducibility: Everyone has the same OS, the same versions of tools etc. This means you don't need to deal with "works on my machine" problems. If it works on your machine, it works on everyone's machine.
 Portability: This means that moving from local development to a super-computing cluster is easy. Also, if you're working on open source data science projects, like we do at DAGsHub, you can provide collaborators with an easy way to bypass setup hassle.
 Another huge advantage – learning to use Docker will make you a better engineer, or turn you into a data scientist with super powers. Many systems rely on Docker, and it will help you turn your ML projects into applications and deploy models into production.
+
+
+docker is reproducing envioronments
+
+by crrating a dockerfile tgat defines a blueprint for images
+images are a tamplets for running a container
+container is a running process like some application with defined environment 
