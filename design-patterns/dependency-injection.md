@@ -5,6 +5,20 @@ By following the principles of DI, you lay the groundwork for a good app archite
 
 Dependency injection **is basically providing the objects that an object needs (its dependencies) instead of having it construct them itself.**   
 
+<img width="500" alt="image" src="https://github.com/KidPudel/android-starter-kit/assets/63263301/30545215-8cde-4bf8-a8aa-a56b817eb63e">  
+
+Instead of using it directly
+
+<img width="500" alt="image" src="https://github.com/KidPudel/android-starter-kit/assets/63263301/9392225f-ad57-4260-beff-0c96e8c257c8">  
+
+we pass it instead (injected)
+
+
+**THAT IS BHASCIALLY ALL YOU NEED TO KNOW. DON'T SWEAT IT.**
+
+
+---
+
 Classes often require references to other classes.   
 For example, a `Car` class might need a reference to an `Engine` class. These **required classes are called dependencies**, and in this example the `Car` class **is dependent** on having an instance of the `Engine` class to run.
 
